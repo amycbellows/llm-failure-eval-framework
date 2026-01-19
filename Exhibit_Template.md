@@ -74,17 +74,7 @@ Constrained prompt:
 
 ## **Classification of Failure Modes**
 
-* Deictic / Pronoun Reference Failure
-
-* Role Boundary Violation
-
-* Assumption Injection
-
-* Question Substitution
-
-* Post-Deliberation Semantic Regression
-
-* Epistemic Overconfidence
+* [list of observed failure modes]
 
 ---
 
