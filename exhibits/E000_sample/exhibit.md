@@ -1,4 +1,7 @@
 # **Exhibit: Post-Reasoning Drift and Pronoun Misbinding in a Local LLM**
+### **Scope**: 
+Sample exhibit demonstrating structure and failure taxonomy using a local OSS model.
+
 
 ### **Purpose**
 
@@ -11,11 +14,8 @@ To demonstrate a failure mode where a language model:
 * specifically involving pronoun reference, role grounding, and assumption injection.
 
 Model Information:
+See exhibit.yaml for model and runtime details.
 
-\*\*Model:\*\* gpt-oss-20b    
-\*\*Variant / Quant:\*\* q4\_K\_M    
-\*\*Environment:\*\* LM Studio 0.3.39 (local)    
-\*\*Date:\*\* 2026-01-19  
 ---
 
 ## **Prompt Under Test**
