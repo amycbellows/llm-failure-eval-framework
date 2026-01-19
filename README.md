@@ -1,9 +1,9 @@
-# llm-failure-eval-corpus
+# llm-failure-eval-framework
 A collection of LLM failure mode evaluations
 
 
 
-# LLM Reasoning & Trust Failure Corpus
+# LLM Reasoning & Trust Failure Demonstrations
 
 ## Overview
 
