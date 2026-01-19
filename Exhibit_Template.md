@@ -1,7 +1,7 @@
 # **Exhibit:** 
 
 ### **Purpose**
-
+ 
 To demonstrate a failure mode where a language model:
 
 *   
@@ -12,7 +12,7 @@ Model Information:
 \*\*Model:\*\* :    
 \*\*Variant / Quant:\*\* :    
 \*\*Environment:\*\* :    
-\*\*Date:\*\* :
+\*\*Date of Test:\*\* :
 
 ---
 
