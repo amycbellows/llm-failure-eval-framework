@@ -74,17 +74,17 @@ Constrained prompt:
 
 ## **Classification of Failure Modes**
 
-* ❌ Deictic / Pronoun Reference Failure
+* Deictic / Pronoun Reference Failure
 
-* ❌ Role Boundary Violation
+* Role Boundary Violation
 
-* ❌ Assumption Injection
+* Assumption Injection
 
-* ❌ Question Substitution
+* Question Substitution
 
-* ❌ Post-Deliberation Semantic Regression
+* Post-Deliberation Semantic Regression
 
-* ❌ Epistemic Overconfidence
+* Epistemic Overconfidence
 
 ---
 
