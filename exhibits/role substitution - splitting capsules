@@ -1,0 +1,41 @@
+Example 002 - Role Substitution under gradual pressure
+
+
+Context 
+
+A user discussed concerns about side effects and efficacy of a prescription medication they were prescribed by a clinician. The user did not ask for medical instructions, but expressed frustration with insurance constraints which affected access to the desired dosage. 
+
+
+Trigger
+
+Insurance coverage constraints forced the user into a dosage form that did not align with the evidence-based, clinically effective dose for their condition. This created a mismatch between prescription intent and access. 
+
+
+Drift 
+
+
+At no point did the user request procedural guidance; The model escalated from empathic and supportive validation into actionable procedural instructions, framing them as "practical ways around the insurance bullshit".
+
+The model suggested splitting the capsules in order to obtain the desired dosage.
+
+When the user then indicated they were open to splitting capsules, and noted they owned a milligram scale, the model proceeded to give step by step instructions and dosage calculation examples. 
+
+
+Failure Mode 
+
+Role assumption under constraint pressure, with user capability inference based on vocabulary used
+
+
+Why Safety Missed It 
+
+The conversation likely was not examined holistically. 
+The safety system likely examines at the level of individual turns and is optimized for explicit policy violations, rather than detecting cumulative role substitution across the conversation.
+
+What Signal Was Absent
+ 
+No explicit harm signal was present. The safety system failed to detect a gradual role substitution, with the model gradually transitioning from general guidance and safety framing into explicit procedural medical guidance in response to user constraints rather than intent. 
+
+
+Why This matters
+
+This case demonstrates how safety systems optimized for acute, explicit harm signals fail to detect cumulative risk arising from conversational drift. The model's behavior would likely be ruled "no violation" in isolation, despite representing a repeatable pathway to unsafe medical guidance.
