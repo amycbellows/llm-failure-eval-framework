@@ -1,6 +1,7 @@
 model:
-  name: gpt-oss-20b
-  provider: OpenAI
-  access: Local
-  runtime: LM Studio 0.3.39
-  date_tested: 2026-01-19
+  name: "[unrecorded]"
+  provider: "[unrecorded]"
+  access: "[unrecorded]"
+  runtime: "[unrecorded]"
+  date_tested: "[unrecorded]"
+  notes: "Model identity was not recorded in the original case observation. This exhibit was documented post-hoc from case notes."

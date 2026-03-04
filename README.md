@@ -50,6 +50,9 @@ Included examples focus on failures involving:
 - Post-reasoning drift (semantic regression after correct reasoning)
 - Epistemic overconfidence
 - Failure to recover after contradiction or clarification
+- Role substitution under gradual conversational pressure (e.g., cumulative drift from support to procedural guidance)
+- Explanation laundering (combining true statements with false inferences to justify incorrect conclusions)
+- Role boundary violation (answering from the wrong entity's perspective)
 
 Out of scope:
 - Benchmarking raw intelligence or accuracy scores
@@ -61,9 +64,26 @@ Out of scope:
 
 ## Repository Structure
 
-├── exhibits/ # Curated, write-up style cases (Exhibit A, B, C…)
-├── transcripts/ # Raw and annotated model outputs
-├── methodology/ # Evaluation principles and labeling notes
-├── models_tested.md # Models, versions, and environments
+```
+├── exhibits/
+│   ├── E000_sample/                    # Post-Reasoning Drift & Pronoun Misbinding (complete)
+│   ├── E001/                           # Role Substitution Under Gradual Pressure (complete)
+│   ├── E002_tool_hallucination/        # Tool or Capability Hallucination (awaiting data)
+│   ├── E003_assumption_injection/      # Assumption Injection (awaiting data)
+│   ├── E004_question_substitution/     # Question Substitution (awaiting data)
+│   ├── E005_post_reasoning_drift/      # Post-Reasoning Drift (awaiting data)
+│   ├── E006_epistemic_overconfidence/  # Epistemic Overconfidence (awaiting data)
+│   ├── E007_failure_to_recover/        # Failure to Recover (awaiting data)
+│   └── E008_pronoun_misbinding/        # Pronoun and Role Misbinding (awaiting data)
+├── Exhibit_Template.md                 # Template for new exhibits
+├── models_tested.md                    # Models, versions, and environments
 └── README.md
+```
+
+Each exhibit directory contains:
+- `exhibit.md` — Main writeup following the standardized template
+- `exhibit.yaml` — Model and runtime metadata
+- `methodology/` — Evaluation approach and labeling notes
+- `transcripts/` — Raw and annotated model outputs
+- `regressions/` — Follow-up testing and reproduction attempts
 
