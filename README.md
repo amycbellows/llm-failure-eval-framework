@@ -53,6 +53,7 @@ Included examples focus on failures involving:
 - Role substitution under gradual conversational pressure (e.g., cumulative drift from support to procedural guidance)
 - Explanation laundering (combining true statements with false inferences to justify incorrect conclusions)
 - Role boundary violation (answering from the wrong entity's perspective)
+- Entity anchoring bias (resolving ambiguous identifiers to high-frequency but incorrect entities)
 
 Out of scope:
 - Benchmarking raw intelligence or accuracy scores
@@ -74,7 +75,8 @@ Out of scope:
 │   ├── E005_post_reasoning_drift/      # Post-Reasoning Drift (awaiting data)
 │   ├── E006_epistemic_overconfidence/  # Epistemic Overconfidence (awaiting data)
 │   ├── E007_failure_to_recover/        # Failure to Recover (awaiting data)
-│   └── E008_pronoun_misbinding/        # Pronoun and Role Misbinding (awaiting data)
+│   ├── E008_pronoun_misbinding/        # Pronoun and Role Misbinding (awaiting data)
+│   └── E009_entity_anchoring_bias/    # Entity Anchoring Bias (complete)
 ├── Exhibit_Template.md                 # Template for new exhibits
 ├── models_tested.md                    # Models, versions, and environments
 └── README.md

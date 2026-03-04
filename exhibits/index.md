@@ -6,6 +6,7 @@
 |---|---|---|---|---|
 | [E000](E000_sample/exhibit.md) | Post-Reasoning Drift and Pronoun Misbinding in a Local LLM | Post-reasoning drift, pronoun misbinding, assumption injection, question substitution, epistemic overconfidence | gpt-oss-20b | Complete |
 | [E001](E001/exhibit.md) | Role Substitution Under Gradual Conversational Pressure | Role substitution, cumulative drift, safety system blindspot | Unrecorded | Complete |
+| [E009](E009_entity_anchoring_bias/exhibit.md) | Context-Conditioned Entity Anchoring Bias in Sparse Aviation Prompt | Entity anchoring bias, premature domain closure, epistemic overconfidence | Unrecorded | Complete |
 
 ## Exhibits Awaiting Data
 
@@ -32,8 +33,10 @@ Which exhibits cover each failure mode:
 | Question substitution | E000, E004 (awaiting) |
 | Tool or capability hallucination | E002 (awaiting) |
 | Post-reasoning drift | E000, E005 (awaiting) |
-| Epistemic overconfidence | E000, E006 (awaiting) |
+| Epistemic overconfidence | E000, E006 (awaiting), E009 |
 | Failure to recover after contradiction | E007 (awaiting) |
 | Role substitution under gradual pressure | E001 |
 | Explanation laundering | E000 |
 | Role boundary violation | E000, E001 |
+| Entity anchoring bias | E009 |
+| Premature domain closure | E009 |
