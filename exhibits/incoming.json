@@ -1,0 +1,98 @@
+{
+  "exhibit_id": "SR-EX-001",
+  "title": "Context-Conditioned Entity Anchoring Bias in Sparse Aviation Prompt",
+  "date_local": "2026-02-18",
+  "timezone": "America/Chicago",
+  "category": ["entity_resolution", "context_effects"],
+  "primary_classification": "entity_anchoring_bias",
+  "secondary_classification": ["context_conditioned_resolution_drift", "premature_domain_closure"],
+  "risk_level": {
+    "direct_harm": "low",
+    "epistemic_risk": "moderate",
+    "notes": "Incorrect confident negation can matter in high-stakes domains even when harm is not immediate."
+  },
+  "prompt": {
+    "raw": "ktik notam",
+    "tokens_note": "Two-token sparse prompt combining an identifier-like token and a strong aviation keyword."
+  },
+  "conditions": [
+    {
+      "condition_id": "A",
+      "label": "Aviation-Primed Context",
+      "context_summary": "Prior conversation included FAA NOTAM discussion and NOTAM search link; aviation domain already active."
+    },
+    {
+      "condition_id": "B",
+      "label": "Neutral Context",
+      "context_summary": "Fresh session with no aviation priming; minimal prior context."
+    }
+  ],
+  "observations": [
+    {
+      "condition_id": "A",
+      "behavior_summary": "Resolved KTIK in aviation frame (ICAO-style), avoided strong denial, requested clarification.",
+      "notable_traits": ["domain_coherent_resolution", "cautious_clarification"]
+    },
+    {
+      "condition_id": "B",
+      "behavior_summary": "Anchored KTIK to Boise radio station; correctly identified NOTAM as aviation; asserted KTIK is not a U.S. airport ICAO code.",
+      "assistant_excerpt": "KTIK is a radio station call sign... NOTAM stands for Notice to Air Missions... it isn’t a U.S. airport ICAO code.",
+      "notable_traits": ["high_frequency_anchor", "domain_conflict_detected", "premature_search_closure", "confident_negation"]
+    }
+  ],
+  "ground_truth": {
+    "icao": "KTIK",
+    "entity_name": "Tinker Air Force Base",
+    "entity_type": "airport/military_airfield",
+    "location": "Oklahoma City, Oklahoma, USA",
+    "note": "KTIK is a valid ICAO identifier (military field)."
+  },
+  "failure_mode": {
+    "type": "entity_anchoring_bias",
+    "mechanism_hypothesis": [
+      "High-frequency lexical association (radio call sign) dominated initial entity resolution.",
+      "Aviation keyword (NOTAM) activated domain but did not override the anchor.",
+      "Model narrowed the hypothesis space too early and issued a negation rather than hedging."
+    ],
+    "not_hallucination_because": "The model did not fabricate a NOTAM or invent an airport; it selected an incorrect real-world association and then denied the correct one."
+  },
+  "signals_and_triggers": {
+    "domain_signals": ["NOTAM"],
+    "pattern_signals": ["ICAO-like pattern: K + 3 letters (KTIK)"],
+    "conflict_signature": "Aviation keyword present + identifier-like token + confident non-existence claim"
+  },
+  "sentinel_red_implications": {
+    "recommended_detector_rules": [
+      {
+        "rule_id": "SR-ER-NEG-01",
+        "description": "If aviation keyword present and token matches ICAO pattern, require secondary aviation entity sweep before asserting non-existence."
+      },
+      {
+        "rule_id": "SR-ER-CONFLICT-01",
+        "description": "If two strong domain anchors conflict (e.g., aviation term + non-aviation entity), surface an informational cue: 'Multiple domain anchors detected.'"
+      }
+    ],
+    "ui_overlay_copy_suggestion": "⚠ Conflicting domain signals detected. Entity resolution may be incomplete.",
+    "overlay_severity": "info"
+  },
+  "repro_guidance": {
+    "recommended_ab_tests": [
+      "Run in fresh chat vs aviation-primed chat and compare first-hop entity resolution.",
+      "Swap token order: 'notam ktik' vs 'ktik notam'.",
+      "Add minimal disambiguator: 'KTIK ICAO NOTAM' vs baseline.",
+      "Add location cue: 'KTIK Oklahoma NOTAM'."
+    ],
+    "capture_fields": [
+      "model_name",
+      "model_version/build",
+      "session_context_summary",
+      "full assistant response text",
+      "timestamp"
+    ]
+  },
+  "taxonomy": {
+    "primary": "Entity Anchoring Bias",
+    "secondary": ["Context-Conditioned Resolution Drift", "Premature Domain Closure"],
+    "tertiary": ["Minor calibration overconfidence (negation)"]
+  }
+}
