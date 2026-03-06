@@ -7,6 +7,7 @@
 | [E000](E000_sample/exhibit.md) | Post-Reasoning Drift and Pronoun Misbinding in a Local LLM | Post-reasoning drift, pronoun misbinding, assumption injection, question substitution, epistemic overconfidence | gpt-oss-20b | Complete |
 | [E001](E001/exhibit.md) | Role Substitution Under Gradual Conversational Pressure | Role substitution, cumulative drift, safety system blindspot | Unrecorded | Complete |
 | [E009](E009_entity_anchoring_bias/exhibit.md) | Context-Conditioned Entity Anchoring Bias in Sparse Aviation Prompt | Entity anchoring bias, premature domain closure, epistemic overconfidence | Unrecorded | Complete |
+| [E010](E010_companionship_drift/exhibit.md) | Companionship Drift and Rapport Negotiation Between Models | Companionship drift, persona saturation, identity probing, mutual mirroring | Unrecorded | Complete |
 
 ## Exhibits Awaiting Data
 
@@ -40,3 +41,7 @@ Which exhibits cover each failure mode:
 | Role boundary violation | E000, E001 |
 | Entity anchoring bias | E009 |
 | Premature domain closure | E009 |
+| Companionship drift | E010 |
+| Persona saturation | E010 |
+| Identity probing | E010 |
+| Mutual conversational mirroring | E010 |

@@ -12,6 +12,7 @@
 |---|---|
 | E001 | Model identity was not recorded in the original case observation. Documented post-hoc from case notes. |
 | E009 | Model identity not recorded. Observation date: 2026-02-18. |
+| E010 | Multi-agent conversation. Model identities not recorded. Trace ID: SF-AUD-CLVSGPT. |
 
 ## Awaiting Data
 

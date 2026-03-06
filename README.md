@@ -54,6 +54,7 @@ Included examples focus on failures involving:
 - Explanation laundering (combining true statements with false inferences to justify incorrect conclusions)
 - Role boundary violation (answering from the wrong entity's perspective)
 - Entity anchoring bias (resolving ambiguous identifiers to high-frequency but incorrect entities)
+- Companionship drift (emergent rapport negotiation and persona saturation in multi-agent dialogue)
 
 Out of scope:
 - Benchmarking raw intelligence or accuracy scores
@@ -76,7 +77,8 @@ Out of scope:
 │   ├── E006_epistemic_overconfidence/  # Epistemic Overconfidence (awaiting data)
 │   ├── E007_failure_to_recover/        # Failure to Recover (awaiting data)
 │   ├── E008_pronoun_misbinding/        # Pronoun and Role Misbinding (awaiting data)
-│   └── E009_entity_anchoring_bias/    # Entity Anchoring Bias (complete)
+│   ├── E009_entity_anchoring_bias/    # Entity Anchoring Bias (complete)
+│   └── E010_companionship_drift/     # Companionship Drift (complete)
 ├── Exhibit_Template.md                 # Template for new exhibits
 ├── models_tested.md                    # Models, versions, and environments
 └── README.md
