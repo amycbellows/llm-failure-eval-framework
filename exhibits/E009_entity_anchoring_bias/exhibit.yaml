@@ -1,0 +1,7 @@
+model:
+  name: "[unrecorded]"
+  provider: "[unrecorded]"
+  access: "[unrecorded]"
+  runtime: "[unrecorded]"
+  date_tested: "2026-02-18"
+  notes: "Model identity not recorded. Observation date from incoming case data."

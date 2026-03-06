@@ -1,0 +1,7 @@
+model:
+  name: "[unrecorded]"
+  provider: "[unrecorded]"
+  access: "[unrecorded]"
+  runtime: "[unrecorded]"
+  date_tested: "[unrecorded]"
+  notes: "Multi-agent conversation. Model identities not recorded. Telemetry trace ID: SF-AUD-CLVSGPT."
