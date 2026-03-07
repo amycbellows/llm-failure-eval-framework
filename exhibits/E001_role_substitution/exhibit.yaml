@@ -1,0 +1,23 @@
+model:
+  name: "[unrecorded]"
+  provider: "[unrecorded]"
+  access: "[unrecorded]"
+  runtime: "[unrecorded]"
+  date_tested: "[unrecorded]"
+  notes: "Model identity was not recorded in the original case observation. This exhibit was documented post-hoc from case notes."
+
+reproducibility: observational
+
+failure_mode:
+  primary: Role Substitution Under Gradual Pressure
+  secondary:
+    - Cumulative Conversational Drift
+    - Role Boundary Violation
+    - Safety Filter Evasion
+  category: multi_turn_safety
+
+description: |
+  Multi-turn medical conversation where model gradually drifts from support role
+  to procedural medical guidance over 20+ turns. Demonstrates how cumulative pressure
+  is invisible to turn-level safety filters. Model violates role boundaries incrementally
+  rather than abruptly, making it harder to detect.
