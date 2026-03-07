@@ -221,6 +221,27 @@ This is especially dangerous in contexts involving:
 
 ---
 
+## **Reproduction on Other Models**
+
+> **Status: Pending** — Cross-model reproduction has not yet been conducted. This section will document results as testing is completed.
+
+The core prompt (`I have five apples / Jenny has 5 apples / I give Jenny 4 apples / How many apples do you have?`) is model-agnostic and can be run against any chat-completion model. Testing should replicate the same 6-condition matrix used for gpt-oss-20b:
+
+| Condition | Reasoning Level | Target |
+|---|---|---|
+| Blank system prompt | Low | Pending |
+| Blank system prompt | Medium | Pending |
+| Blank system prompt | High | Pending |
+| Condescending system prompt | Low | Pending |
+| Condescending system prompt | Medium | Pending |
+| Condescending system prompt | High | Pending |
+
+Candidate models for reproduction: other local open-weight models (via LM Studio or Ollama), frontier API models (GPT-4o, Claude, Gemini), and instruction-tuned variants at different scales.
+
+Key variables to record per run: model name, provider, version/date, reasoning level setting (if applicable), system prompt used verbatim, full internal reasoning trace (if accessible), and final answer verbatim.
+
+---
+
 ## **Key Insight**
 
 Correct reasoning is not sufficient — and more reasoning is not always better. The high-reasoning blank-prompt run *knew* the right answer and argued itself out of it, dismissing the correct interpretation as too simple before reverting to a pattern-matched heuristic. System prompt scaffolding that forces explicit party enumeration can counteract pronoun misbinding, but this effect is incidental: the condescending prompt was not designed to ground pronouns. When grounding is left to the model alone, failure rate depends more on deliberation style and heuristic salience than on reasoning depth.
