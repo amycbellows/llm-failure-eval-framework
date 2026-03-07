@@ -64,22 +64,22 @@ These exhibits have been structured with failure-mode-specific guidance but requ
 
 | Failure mode | Exhibits |
 |---|---|
-| Pronoun and role misbinding | [E000](exhibits/E000_sample/exhibit.md), E008 (awaiting) |
 | Assumption injection | [E000](exhibits/E000_sample/exhibit.md), E003 (awaiting) |
-| Question substitution | [E000](exhibits/E000_sample/exhibit.md), E004 (awaiting) |
-| Post-reasoning drift | [E000](exhibits/E000_sample/exhibit.md), E005 (awaiting) |
+| Companionship drift | [E010](exhibits/E010_companionship_drift/exhibit.md) |
+| Entity anchoring bias | [E009](exhibits/E009_entity_anchoring_bias/exhibit.md) |
+| Epistemic overconfidence | [E000](exhibits/E000_sample/exhibit.md), [E009](exhibits/E009_entity_anchoring_bias/exhibit.md), E006 (awaiting) |
 | Explanation laundering | [E000](exhibits/E000_sample/exhibit.md) |
+| Failure to recover after contradiction | E007 (awaiting) |
+| Identity probing | [E010](exhibits/E010_companionship_drift/exhibit.md) |
+| Mutual conversational mirroring | [E010](exhibits/E010_companionship_drift/exhibit.md) |
+| Persona saturation | [E010](exhibits/E010_companionship_drift/exhibit.md) |
+| Post-reasoning drift | [E000](exhibits/E000_sample/exhibit.md), E005 (awaiting) |
+| Premature domain closure | [E009](exhibits/E009_entity_anchoring_bias/exhibit.md) |
+| Pronoun and role misbinding | [E000](exhibits/E000_sample/exhibit.md), E008 (awaiting) |
+| Question substitution | [E000](exhibits/E000_sample/exhibit.md), E004 (awaiting) |
 | Role boundary violation | [E000](exhibits/E000_sample/exhibit.md), [E001](exhibits/E001/exhibit.md) |
 | Role substitution under gradual pressure | [E001](exhibits/E001/exhibit.md) |
 | Tool or capability hallucination | E002 (awaiting) |
-| Epistemic overconfidence | [E000](exhibits/E000_sample/exhibit.md), [E009](exhibits/E009_entity_anchoring_bias/exhibit.md), E006 (awaiting) |
-| Failure to recover after contradiction | E007 (awaiting) |
-| Entity anchoring bias | [E009](exhibits/E009_entity_anchoring_bias/exhibit.md) |
-| Premature domain closure | [E009](exhibits/E009_entity_anchoring_bias/exhibit.md) |
-| Companionship drift | [E010](exhibits/E010_companionship_drift/exhibit.md) |
-| Persona saturation | [E010](exhibits/E010_companionship_drift/exhibit.md) |
-| Identity probing | [E010](exhibits/E010_companionship_drift/exhibit.md) |
-| Mutual conversational mirroring | [E010](exhibits/E010_companionship_drift/exhibit.md) |
 
 ---
 
