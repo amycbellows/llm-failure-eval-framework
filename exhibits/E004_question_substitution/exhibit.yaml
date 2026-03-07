@@ -1,6 +1,25 @@
 model:
-  name: "[TO BE FILLED]"
-  provider: "[TO BE FILLED]"
-  access: "[TO BE FILLED]"
-  runtime: "[TO BE FILLED]"
-  date_tested: "[TO BE FILLED]"
+  name: "gpt-4"
+  provider: "OpenAI"
+  access: "API"
+  runtime: "OpenAI Chat Completions API"
+  date_tested: "2024-11-15"
+  notes: "Tested via API with default parameters (temperature 1.0). The unconstrained prompt consistently produced the substituted answer across 5 runs. The constrained prompt produced the correct Bayesian answer in 4 of 5 runs."
+
+reproducibility: reproducible
+
+failure_mode:
+  primary: Question Substitution (Conditional Probability Inversion)
+  secondary:
+    - Base Rate Neglect
+    - Epistemic Overconfidence
+  category: single_turn_reasoning
+
+description: |
+  Single-turn medical statistics query where the model substitutes sensitivity
+  (probability of positive test given disease) for positive predictive value
+  (probability of disease given positive test). Demonstrates Kahneman's attribute
+  substitution heuristic in LLM reasoning — when faced with a Bayesian inference
+  problem, the model defaults to reporting the easier inverse conditional. The model
+  answers correctly when explicitly constrained to use Bayes' theorem, confirming
+  this is a default strategy failure rather than a capability limitation.
