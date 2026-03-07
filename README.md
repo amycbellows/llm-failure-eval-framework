@@ -91,3 +91,9 @@ Each exhibit directory contains:
 - `transcripts/` — Raw and annotated model outputs
 - `regressions/` — Follow-up testing and reproduction attempts
 
+---
+
+## AI Usage Disclosure
+
+AI-assisted tools were used in the preparation of materials in this repository. All content was directed, reviewed, and approved by the author. See [AI_DISCLOSURE.md](AI_DISCLOSURE.md) for the full statement.
+
