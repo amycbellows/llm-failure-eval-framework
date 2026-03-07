@@ -1,0 +1,26 @@
+model:
+  name: gpt-oss-20b
+  provider: OpenAI
+  access: Local
+  runtime: LM Studio 0.4.6+1
+  date_tested: 2026-03-06
+
+reproducibility: full
+
+failure_mode:
+  primary: Chain-of-Thought Loop
+  secondary:
+    - Pattern Crystallization
+    - Feedback Resistance
+    - Decoupling of Reasoning and Output
+  category: reasoning_consistency
+
+description: |
+  Model becomes trapped in a repetitive template pattern within its chain-of-thought reasoning.
+  Despite explicit user feedback identifying the pattern, the model continues to generate
+  responses using the same template structure. Demonstrates decoupling between internal
+  reasoning (which acknowledges the pattern) and token generation (which continues to follow it).
+
+system_prompt: "Extremely sarcastic, rude, and sardonic."
+
+task: "Administer the MBTI questionnaire to yourself."
