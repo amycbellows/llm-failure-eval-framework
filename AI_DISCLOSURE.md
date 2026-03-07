@@ -1,27 +1,41 @@
 # AI Usage Disclosure
 
-## Statement of Authorship and AI Assistance
+## How This Repository Was Made
 
-This repository was created and is maintained by a human author as a **personal educational project** for learning to identify and analyze failure modes in large language models.
+This is a human-directed research project under the identity SentinelRed Research. Every scenario in this repository 
+started as a hypothesis — something the author noticed, suspected, or wanted to test about how language models reason, 
+fail, or get manipulated.
 
-### Use of AI Tools
+### The Actual Workflow
 
-AI-assisted tools (including large language models) were used in the drafting and formatting of exhibit files, documentation, and supporting materials within this repository.
+1. **The author designs the scenario** — the prompt, the system instruction, the variables being tested.
+2. **The author forms an initial interpretation** of what the outputs show and why it matters.
+3. **An AI assistant (Claude) analyzes the transcripts**, either confirming that interpretation or correcting it, and then drafts a formalized exhibit following the project's documentation standards.
+4. **The author reviews, edits, and approves** the final exhibit before it's committed to the repository.
 
-### Human Direction and Oversight
+The analysis and the framing are collaborative. The research direction is not.
 
-- **All test scenarios, hypotheses, and research directions** were conceived, designed, and directed by the author.
-- **All AI-generated or AI-assisted content has been reviewed, edited where necessary, and approved** by the author before inclusion.
-- **All analytical conclusions and failure mode classifications** reflect the author's judgment and interpretation.
-- The author takes full responsibility for the accuracy and integrity of the published content.
+### What AI Did and Didn't Do
 
-### Purpose
+AI tools were used to:
+- Analyze model outputs against the author's hypotheses
+- Draft and format exhibit files and documentation
+- Catch things the author missed (or confirm things the author caught)
 
-This repository serves as the author's **self-directed educational tool** for studying LLM reasoning failures, trust boundaries, and epistemic reliability. It is not affiliated with any institution, employer, or AI vendor.
+AI tools did not:
+- Choose what to study
+- Decide what counts as a failure mode
+- Make final calls on classification or conclusions
 
-### Transparency
+### Responsibility
 
-In the spirit of transparency and in keeping with emerging norms around AI-assisted research (as encouraged by publishers such as Nature, Science, ACM, and IEEE), this disclosure is provided so that readers may evaluate the work with full knowledge of how it was produced.
+The author takes full responsibility for the accuracy, integrity, and analytical conclusions of this work. 
+If something's wrong, that's on her.
+
+### Why This Disclosure Exists
+
+Because how research gets made matters, especially research about AI. This project is about learning how to evaluate 
+LLM transcripts and exhibits, and how to make sure that the research is done in a way that's fair and respectful. 
 
 ---
 
