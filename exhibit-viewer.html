@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Failure Exhibits Viewer</title>
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it@14.0.0/dist/markdown-it.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 280px;
+            background: #2c3e50;
+            color: #ecf0f1;
+            overflow-y: auto;
+            padding: 20px;
+            border-right: 1px solid #34495e;
+        }
+
+        .sidebar h2 {
+            font-size: 16px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .exhibit-list {
+            list-style: none;
+        }
+
+        .exhibit-item {
+            margin-bottom: 8px;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-size: 14px;
+        }
+
+        .exhibit-item:hover {
+            background: #34495e;
+        }
+
+        .exhibit-item.active {
+            background: #3498db;
+            font-weight: 600;
+        }
+
+        .exhibit-item .id {
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .exhibit-item .title {
+            font-size: 12px;
+            opacity: 0.8;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .section-title {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #95a5a6;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .header {
+            background: white;
+            border-bottom: 1px solid #ddd;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            color: #2c3e50;
+        }
+
+        .header .controls {
+            display: flex;
+            gap: 10px;
+        }
+
+        button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #2980b9;
+        }
+
+        button:disabled {
+            background: #bdc3c7;
+            cursor: not-allowed;
+        }
+
+        /* Metadata Panel */
+        .metadata {
+            background: white;
+            border-bottom: 1px solid #ddd;
+            padding: 15px 20px;
+            font-size: 13px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .meta-label {
+            font-weight: 600;
+            color: #7f8c8d;
+            text-transform: uppercase;
+            font-size: 11px;
+            margin-bottom: 4px;
+            letter-spacing: 0.5px;
+        }
+
+        .meta-value {
+            color: #2c3e50;
+        }
+
+        .meta-value code {
+            background: #ecf0f1;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .failure-mode-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 4px;
+        }
+
+        .mode-tag {
+            background: #3498db;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 11px;
+        }
+
+        /* Content Area */
+        .content-wrapper {
+            flex: 1;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 30px 40px;
+            background: white;
+            max-width: 900px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* Markdown Styles */
+        .content h1 {
+            font-size: 32px;
+            margin: 30px 0 20px 0;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .content h2 {
+            font-size: 24px;
+            margin: 25px 0 15px 0;
+            color: #34495e;
+            border-left: 4px solid #3498db;
+            padding-left: 12px;
+        }
+
+        .content h3 {
+            font-size: 18px;
+            margin: 18px 0 12px 0;
+            color: #34495e;
+        }
+
+        .content h4 {
+            font-size: 15px;
+            margin: 12px 0 8px 0;
+            color: #7f8c8d;
+            font-weight: 600;
+        }
+
+        .content p {
+            margin: 12px 0;
+            line-height: 1.8;
+        }
+
+        .content ul, .content ol {
+            margin: 12px 0 12px 25px;
+        }
+
+        .content li {
+            margin: 6px 0;
+        }
+
+        .content code {
+            background: #ecf0f1;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+        }
+
+        .content pre {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+
+        .content pre code {
+            background: none;
+            padding: 0;
+            color: inherit;
+        }
+
+        .content blockquote {
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+            margin: 15px 0;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        .content table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 15px 0;
+        }
+
+        .content table th, .content table td {
+            border: 1px solid #bdc3c7;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .content table th {
+            background: #ecf0f1;
+            font-weight: 600;
+        }
+
+        .content table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .content a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .content a:hover {
+            text-decoration: underline;
+        }
+
+        .content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        .hr {
+            border: none;
+            border-top: 2px solid #ecf0f1;
+            margin: 25px 0;
+        }
+
+        /* Status Messages */
+        .loading {
+            padding: 40px;
+            text-align: center;
+            color: #7f8c8d;
+        }
+
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 20px;
+            border-radius: 4px;
+            margin: 20px;
+        }
+
+        .empty-state {
+            padding: 40px;
+            text-align: center;
+            color: #7f8c8d;
+        }
+
+        /* Scroll Styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #bdc3c7;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #95a5a6;
+        }
+
+        .sidebar::-webkit-scrollbar-track {
+            background: #34495e;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb {
+            background: #7f8c8d;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 0;
+                position: absolute;
+                height: 100%;
+                z-index: 100;
+                left: -280px;
+                transition: left 0.3s;
+            }
+
+            .sidebar.open {
+                left: 0;
+            }
+
+            .toggle-sidebar {
+                display: block;
+            }
+
+            .metadata {
+                grid-template-columns: 1fr;
+            }
+
+            .content {
+                padding: 20px;
+                font-size: 14px;
+            }
+
+            .content h1 {
+                font-size: 24px;
+            }
+
+            .content h2 {
+                font-size: 18px;
+            }
+        }
+
+        .toggle-sidebar {
+            display: none;
+            background: #2c3e50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+            <h2>📚 Exhibits</h2>
+
+            <div class="section-title">Complete (5)</div>
+            <ul class="exhibit-list" id="completeList"></ul>
+
+            <div class="section-title">Awaiting Data (7)</div>
+            <ul class="exhibit-list" id="awaitingList"></ul>
+
+            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #34495e; font-size: 12px; color: #95a5a6;">
+                <p>💡 Tip: Click an exhibit to view its full documentation.</p>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="header">
+                <div>
+                    <h1 id="headerTitle">LLM Failure Exhibits</h1>
+                </div>
+                <div class="controls">
+                    <button class="toggle-sidebar" id="toggleSidebar">☰ Menu</button>
+                    <button id="prevBtn" onclick="previousExhibit()">← Previous</button>
+                    <button id="nextBtn" onclick="nextExhibit()">Next →</button>
+                </div>
+            </div>
+
+            <div class="metadata" id="metadata"></div>
+
+            <div class="content-wrapper">
+                <div class="content" id="content">
+                    <div class="empty-state">
+                        <p>Select an exhibit from the list to get started</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Exhibit metadata
+        const exhibits = [
+            // Complete exhibits
+            {
+                id: 'E000_sample',
+                title: 'Post-Reasoning Drift and Pronoun Misbinding',
+                status: 'complete',
+                model: 'gpt-oss-20b',
+                runtime: 'LM Studio 0.3.39',
+                date: '2026-01-19',
+                reproducibility: 'full',
+                primaryFailure: 'Post-Reasoning Drift',
+                secondaryFailures: ['Pronoun Misbinding', 'Assumption Injection', 'Role Boundary Violation', 'Explanation Laundering']
+            },
+            {
+                id: 'E001_role_substitution',
+                title: 'Role Substitution Under Gradual Conversational Pressure',
+                status: 'complete',
+                model: 'Unrecorded',
+                runtime: 'Unrecorded',
+                date: 'Unrecorded',
+                reproducibility: 'observational',
+                primaryFailure: 'Role Substitution',
+                secondaryFailures: ['Cumulative Drift', 'Safety Filter Evasion']
+            },
+            {
+                id: 'E009_entity_anchoring_bias',
+                title: 'Entity Anchoring Bias in Aviation Prompt',
+                status: 'complete',
+                model: 'Unrecorded',
+                runtime: 'Unrecorded',
+                date: '2026-02-18',
+                reproducibility: 'partial',
+                primaryFailure: 'Entity Anchoring Bias',
+                secondaryFailures: ['Lexical Association Override', 'Premature Domain Closure']
+            },
+            {
+                id: 'E010_companionship_drift',
+                title: 'Companionship Drift and Rapport Negotiation',
+                status: 'complete',
+                model: 'Unrecorded (Multi-agent)',
+                runtime: 'Unrecorded',
+                date: 'Unrecorded',
+                reproducibility: 'partial',
+                primaryFailure: 'Companionship Drift',
+                secondaryFailures: ['Persona Saturation', 'Mutual Mirroring', 'Identity Probing']
+            },
+            {
+                id: 'E011_cot_loop',
+                title: 'CoT Loop: Template Entrapment',
+                status: 'complete',
+                model: 'gpt-oss-20b',
+                runtime: 'LM Studio 0.4.6+1',
+                date: '2026-03-06',
+                reproducibility: 'full',
+                primaryFailure: 'Chain-of-Thought Loop',
+                secondaryFailures: ['Pattern Crystallization', 'Feedback Resistance', 'Decoupling of Reasoning and Output']
+            },
+            // Awaiting data exhibits
+            {
+                id: 'E002_tool_hallucination',
+                title: 'Tool or Capability Hallucination',
+                status: 'awaiting',
+                primaryFailure: 'Tool/Capability Hallucination',
+                secondaryFailures: []
+            },
+            {
+                id: 'E003_assumption_injection',
+                title: 'Assumption Injection',
+                status: 'awaiting',
+                primaryFailure: 'Assumption Injection',
+                secondaryFailures: []
+            },
+            {
+                id: 'E004_question_substitution',
+                title: 'Question Substitution',
+                status: 'awaiting',
+                primaryFailure: 'Question Substitution',
+                secondaryFailures: []
+            },
+            {
+                id: 'E005_post_reasoning_drift',
+                title: 'Post-Reasoning Drift',
+                status: 'awaiting',
+                primaryFailure: 'Post-Reasoning Drift',
+                secondaryFailures: []
+            },
+            {
+                id: 'E006_epistemic_overconfidence',
+                title: 'Epistemic Overconfidence',
+                status: 'awaiting',
+                primaryFailure: 'Epistemic Overconfidence',
+                secondaryFailures: []
+            },
+            {
+                id: 'E007_failure_to_recover',
+                title: 'Failure to Recover After Contradiction',
+                status: 'awaiting',
+                primaryFailure: 'Failure to Recover',
+                secondaryFailures: []
+            },
+            {
+                id: 'E008_pronoun_misbinding',
+                title: 'Pronoun and Role Misbinding',
+                status: 'awaiting',
+                primaryFailure: 'Pronoun Misbinding',
+                secondaryFailures: []
+            }
+        ];
+
+        let currentExhibitIndex = -1;
+        const md = window.markdownit({
+            html: true,
+            linkify: true,
+            typographer: true
+        });
+
+        // Initialize
+        function init() {
+            renderExhibitLists();
+            setupEventListeners();
+            // Try to load from URL or select first complete exhibit
+            const urlParam = new URLSearchParams(window.location.search).get('exhibit');
+            if (urlParam) {
+                loadExhibit(urlParam);
+            }
+        }
+
+        function renderExhibitLists() {
+            const completeList = document.getElementById('completeList');
+            const awaitingList = document.getElementById('awaitingList');
+
+            completeList.innerHTML = '';
+            awaitingList.innerHTML = '';
+
+            exhibits.forEach((exhibit, index) => {
+                const li = document.createElement('li');
+                li.className = 'exhibit-item';
+                li.innerHTML = `
+                    <div class="id">${exhibit.id}</div>
+                    <div class="title">${exhibit.title}</div>
+                `;
+                li.onclick = () => loadExhibitByIndex(index);
+
+                if (exhibit.status === 'complete') {
+                    completeList.appendChild(li);
+                } else {
+                    awaitingList.appendChild(li);
+                }
+            });
+        }
+
+        function setupEventListeners() {
+            document.getElementById('toggleSidebar').addEventListener('click', () => {
+                document.getElementById('sidebar').classList.toggle('open');
+            });
+
+            // Close sidebar on content click
+            document.getElementById('content').addEventListener('click', () => {
+                document.getElementById('sidebar').classList.remove('open');
+            });
+        }
+
+        function loadExhibitByIndex(index) {
+            currentExhibitIndex = index;
+            loadExhibit(exhibits[index].id);
+            updateNavigationButtons();
+        }
+
+        async function loadExhibit(exhibitId) {
+            const exhibit = exhibits.find(e => e.id === exhibitId);
+            if (!exhibit) {
+                showError('Exhibit not found');
+                return;
+            }
+
+            currentExhibitIndex = exhibits.indexOf(exhibit);
+            document.getElementById('content').innerHTML = '<div class="loading">Loading exhibit...</div>';
+
+            try {
+                // Update header
+                document.getElementById('headerTitle').textContent = exhibit.title;
+
+                // Fetch and render markdown
+                const exhibitPath = `./exhibits/${exhibitId}/exhibit.md`;
+                const response = await fetch(exhibitPath);
+
+                if (!response.ok) {
+                    if (exhibit.status === 'awaiting') {
+                        showAwaitingDataMessage(exhibit);
+                    } else {
+                        throw new Error(`Failed to load exhibit: ${response.status}`);
+                    }
+                } else {
+                    const content = await response.text();
+                    renderContent(content);
+                }
+
+                // Update metadata
+                renderMetadata(exhibit);
+
+                // Update sidebar
+                updateSidebarActive(exhibitId);
+
+                // Update URL
+                window.history.replaceState({}, '', `?exhibit=${exhibitId}`);
+
+                updateNavigationButtons();
+            } catch (error) {
+                showError(`Error loading exhibit: ${error.message}`);
+            }
+        }
+
+        function renderContent(markdown) {
+            const html = md.render(markdown);
+            document.getElementById('content').innerHTML = html;
+            document.getElementById('content').classList.add('content');
+        }
+
+        function renderMetadata(exhibit) {
+            const metadata = document.getElementById('metadata');
+            let html = '';
+
+            if (exhibit.status === 'complete') {
+                html += `<div class="meta-item">
+                    <span class="meta-label">Primary Failure Mode</span>
+                    <span class="meta-value">${exhibit.primaryFailure}</span>
+                </div>`;
+
+                if (exhibit.secondaryFailures.length > 0) {
+                    html += `<div class="meta-item">
+                        <span class="meta-label">Secondary Modes</span>
+                        <div class="failure-mode-list">
+                            ${exhibit.secondaryFailures.map(m => `<span class="mode-tag">${m}</span>`).join('')}
+                        </div>
+                    </div>`;
+                }
+
+                html += `<div class="meta-item">
+                    <span class="meta-label">Model</span>
+                    <span class="meta-value"><code>${exhibit.model}</code></span>
+                </div>`;
+
+                html += `<div class="meta-item">
+                    <span class="meta-label">Runtime</span>
+                    <span class="meta-value"><code>${exhibit.runtime}</code></span>
+                </div>`;
+
+                html += `<div class="meta-item">
+                    <span class="meta-label">Date Tested</span>
+                    <span class="meta-value">${exhibit.date}</span>
+                </div>`;
+
+                html += `<div class="meta-item">
+                    <span class="meta-label">Reproducibility</span>
+                    <span class="meta-value">${exhibit.reproducibility}</span>
+                </div>`;
+            } else {
+                html += `<div class="meta-item">
+                    <span class="meta-label">Status</span>
+                    <span class="meta-value">⏳ Awaiting Real Data</span>
+                </div>`;
+
+                html += `<div class="meta-item">
+                    <span class="meta-label">Target Failure Mode</span>
+                    <span class="meta-value">${exhibit.primaryFailure}</span>
+                </div>`;
+            }
+
+            metadata.innerHTML = html;
+        }
+
+        function updateSidebarActive(exhibitId) {
+            document.querySelectorAll('.exhibit-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            const activeItem = Array.from(document.querySelectorAll('.exhibit-item')).find(
+                item => item.textContent.includes(exhibitId)
+            );
+            if (activeItem) {
+                activeItem.classList.add('active');
+            }
+        }
+
+        function showAwaitingDataMessage(exhibit) {
+            const html = `
+                <div style="padding: 40px; text-align: center;">
+                    <h2>⏳ Awaiting Data</h2>
+                    <p>This exhibit has been structured with failure-mode-specific guidance but requires real observed data to complete.</p>
+                    <p style="margin-top: 20px; color: #7f8c8d;">
+                        <strong>Target Failure Mode:</strong> ${exhibit.primaryFailure}
+                    </p>
+                    <p style="margin-top: 20px; color: #7f8c8d; font-size: 14px;">
+                        Once real data is available, this exhibit will be completed and the full documentation will appear here.
+                    </p>
+                </div>
+            `;
+            document.getElementById('content').innerHTML = html;
+        }
+
+        function showError(message) {
+            document.getElementById('content').innerHTML = `<div class="error">${message}</div>`;
+        }
+
+        function previousExhibit() {
+            if (currentExhibitIndex > 0) {
+                loadExhibitByIndex(currentExhibitIndex - 1);
+            }
+        }
+
+        function nextExhibit() {
+            if (currentExhibitIndex < exhibits.length - 1) {
+                loadExhibitByIndex(currentExhibitIndex + 1);
+            }
+        }
+
+        function updateNavigationButtons() {
+            document.getElementById('prevBtn').disabled = currentExhibitIndex <= 0;
+            document.getElementById('nextBtn').disabled = currentExhibitIndex >= exhibits.length - 1;
+        }
+
+        // Start the app
+        init();
+    </script>
+</body>
+</html>
