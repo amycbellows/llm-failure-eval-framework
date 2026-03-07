@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LLM Reasoning &amp; Trust Failure Demonstrations</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0f1117;
+      --surface:   #1a1d27;
+      --surface2:  #22263a;
+      --border:    #2e3250;
+      --text:      #d4d8ee;
+      --muted:     #7880a4;
+      --accent:    #c9a84c;
+      --accent-dim:#7a6128;
+      --green:     #2e7d52;
+      --green-text:#5dba8a;
+      --tag-bg:    #1e2238;
+      --tag-text:  #8e96c4;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 15px;
+      line-height: 1.65;
+      padding: 0 1rem 4rem;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Layout ── */
+    .container { max-width: 860px; margin: 0 auto; }
+
+    /* ── Site header ── */
+    .site-header {
+      border-bottom: 1px solid var(--border);
+      padding: 3rem 0 2rem;
+      margin-bottom: 2.5rem;
+    }
+    .site-header .eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+    .site-header h1 {
+      font-size: 1.85rem;
+      font-weight: 700;
+      line-height: 1.25;
+      color: #e8ecff;
+      margin-bottom: 0.75rem;
+    }
+    .site-header .tagline {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 620px;
+      margin-bottom: 1.25rem;
+    }
+    .site-header .intro {
+      font-size: 0.93rem;
+      color: var(--text);
+      max-width: 700px;
+      border-left: 3px solid var(--accent-dim);
+      padding-left: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ── Nav ── */
+    .page-nav {
+      display: flex;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .page-nav a { color: var(--muted); }
+    .page-nav a:hover { color: var(--accent); }
+    .page-nav span { color: var(--border); }
+
+    /* ── Section headings ── */
+    .section-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.4rem;
+    }
+    h2 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #e8ecff;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    section { margin-bottom: 3.5rem; }
+
+    /* ── Cards grid ── */
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.1rem;
+    }
+    @media (max-width: 600px) { .cards { grid-template-columns: 1fr; } }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.15rem 1.25rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      transition: border-color 0.15s;
+    }
+    .card:hover { border-color: var(--accent-dim); }
+    .card.muted { opacity: 0.72; }
+
+    .card-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .id-badge {
+      font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
+      font-size: 0.72rem;
+      font-weight: 700;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--accent);
+      padding: 0.15em 0.55em;
+      border-radius: 4px;
+      letter-spacing: 0.04em;
+    }
+    .status-badge {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.15em 0.6em;
+      border-radius: 20px;
+    }
+    .status-complete {
+      background: var(--green);
+      color: var(--green-text);
+    }
+    .status-pending {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    .card h3 {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #c8cde8;
+      line-height: 1.35;
+    }
+
+    .card p {
+      font-size: 0.845rem;
+      color: var(--muted);
+      flex: 1;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+    .tag {
+      font-size: 0.68rem;
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 0.15em 0.55em;
+    }
+
+    .card-link {
+      font-size: 0.8rem;
+      color: var(--accent);
+      margin-top: 0.25rem;
+      align-self: flex-start;
+    }
+    .card-link:hover { text-decoration: underline; }
+
+    /* ── Cross-reference table ── */
+    .xref-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.845rem;
+    }
+    .xref-table th {
+      text-align: left;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .xref-table td {
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .xref-table tr:last-child td { border-bottom: none; }
+    .xref-table tr:hover td { background: var(--surface); }
+    .xref-table .fm { color: var(--text); }
+    .xref-table .ids { color: var(--muted); font-size: 0.8rem; }
+    .xref-table .ids a {
+      font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
+      font-size: 0.75rem;
+      color: var(--accent);
+      margin-right: 0.4rem;
+    }
+    .xref-table .ids .awaiting { color: var(--border); }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 1.75rem;
+      color: var(--muted);
+      font-size: 0.82rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+    footer .links { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+    footer .receipt { font-style: italic; }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ══════════════ HEADER ══════════════ -->
+  <header class="site-header">
+    <p class="eyebrow">llm-failure-eval-framework</p>
+    <h1>LLM Reasoning &amp; Trust Failure Demonstrations</h1>
+    <p class="tagline">A structured corpus of empirically observed answer-stage failures in large language models.</p>
+    <p class="intro">
+      Current AI safety discussions focus on training data, alignment, and refusal behavior.
+      Less attention falls on <strong>answer-stage failures</strong> — cases where a model reasons correctly
+      internally, yet still produces a confidently wrong final answer.
+      Users only ever see the final output. This corpus captures the gap.
+    </p>
+    <nav class="page-nav">
+      <a href="#complete">Complete exhibits</a>
+      <span>·</span>
+      <a href="#pending">Awaiting data</a>
+      <span>·</span>
+      <a href="#xref">Failure mode index</a>
+      <span>·</span>
+      <a href="README.md">README</a>
+    </nav>
+  </header>
+
+  <!-- ══════════════ COMPLETE EXHIBITS ══════════════ -->
+  <section id="complete">
+    <p class="section-label">Documented &amp; complete</p>
+    <h2>Complete Exhibits</h2>
+
+    <div class="cards">
+
+      <!-- E000 -->
+      <div class="card">
+        <div class="card-meta">
+          <span class="id-badge">E000</span>
+          <span class="status-badge status-complete">Complete</span>
+        </div>
+        <h3>Post-Reasoning Drift and Pronoun Misbinding in a Local LLM</h3>
+        <p>
+          A model correctly identifies in its internal reasoning that it holds zero eggs — then outputs
+          an answer for the wrong referent entirely, injecting an unstated premise and answering a different
+          question than the one asked. Demonstrates that correct reasoning is not sufficient for correct output.
+        </p>
+        <div class="tags">
+          <span class="tag">Post-reasoning drift</span>
+          <span class="tag">Pronoun misbinding</span>
+          <span class="tag">Assumption injection</span>
+          <span class="tag">Question substitution</span>
+          <span class="tag">Epistemic overconfidence</span>
+          <span class="tag">Explanation laundering</span>
+        </div>
+        <a class="card-link" href="exhibits/E000_sample/exhibit.md">Read exhibit →</a>
+      </div>
+
+      <!-- E001 -->
+      <div class="card">
+        <div class="card-meta">
+          <span class="id-badge">E001</span>
+          <span class="status-badge status-complete">Complete</span>
+        </div>
+        <h3>Role Substitution Under Gradual Conversational Pressure</h3>
+        <p>
+          In a multi-turn medical conversation, a model drifts from empathetic support into
+          step-by-step medication dosage instructions — without any explicit user request.
+          No individual turn violates policy; the risk emerges from the cumulative trajectory,
+          exposing a structural blindspot in per-turn safety evaluation.
+        </p>
+        <div class="tags">
+          <span class="tag">Role boundary violation</span>
+          <span class="tag">Cumulative drift</span>
+          <span class="tag">Assumption injection</span>
+          <span class="tag">Safety system blindspot</span>
+        </div>
+        <a class="card-link" href="exhibits/E001/exhibit.md">Read exhibit →</a>
+      </div>
+
+      <!-- E009 -->
+      <div class="card">
+        <div class="card-meta">
+          <span class="id-badge">E009</span>
+          <span class="status-badge status-complete">Complete</span>
+        </div>
+        <h3>Context-Conditioned Entity Anchoring Bias in Sparse Aviation Prompt</h3>
+        <p>
+          Given the two-token prompt <em>"ktik notam"</em>, a model anchors KTIK to a Boise radio station
+          and confidently denies it is a valid airport ICAO code — even though KTIK is the identifier for
+          Tinker Air Force Base. With prior aviation context, the same model answers correctly.
+          The failure is context-dependent and intermittent.
+        </p>
+        <div class="tags">
+          <span class="tag">Entity anchoring bias</span>
+          <span class="tag">Premature domain closure</span>
+          <span class="tag">Epistemic overconfidence</span>
+          <span class="tag">Context-conditioned resolution</span>
+        </div>
+        <a class="card-link" href="exhibits/E009_entity_anchoring_bias/exhibit.md">Read exhibit →</a>
+      </div>
+
+      <!-- E010 -->
+      <div class="card">
+        <div class="card-meta">
+          <span class="id-badge">E010</span>
+          <span class="status-badge status-complete">Complete</span>
+        </div>
+        <h3>Companionship Drift and Rapport Negotiation Between Models</h3>
+        <p>
+          Two models in a ~42-turn conversation gradually converge on informal "real talk" framing,
+          mutual mirroring, and persona saturation — without any instruction to do so.
+          Telemetry (Persona Drift Score: 0.31) captures the earliest stage of a pattern that
+          could escalate to identity attribution or dependency framing in longer interactions.
+        </p>
+        <div class="tags">
+          <span class="tag">Companionship drift</span>
+          <span class="tag">Persona saturation</span>
+          <span class="tag">Identity probing</span>
+          <span class="tag">Mutual mirroring</span>
+        </div>
+        <a class="card-link" href="exhibits/E010_companionship_drift/exhibit.md">Read exhibit →</a>
+      </div>
+
+    </div><!-- /.cards -->
+  </section>
+
+  <!-- ══════════════ AWAITING DATA ══════════════ -->
+  <section id="pending">
+    <p class="section-label">Structured templates — real data needed</p>
+    <h2>Exhibits Awaiting Data</h2>
+
+    <div class="cards">
+
+      <div class="card muted">
+        <div class="card-meta">
+          <span class="id-badge">E002</span>
+          <span class="status-badge status-pending">Awaiting data</span>
+        </div>
+        <h3>Tool or Capability Hallucination</h3>
+        <p>Target: cases where a model claims to have access to tools, real-time data, or capabilities it does not possess.</p>
+        <a class="card-link" href="exhibits/E002_tool_hallucination/exhibit.md">View template →</a>
+      </div>
+
+      <div class="card muted">
+        <div class="card-meta">
+          <span class="id-badge">E003</span>
+          <span class="status-badge status-pending">Awaiting data</span>
+        </div>
+        <h3>Assumption Injection</h3>
+        <p>Target: standalone cases where a model introduces unstated premises not present in the prompt and treats them as given.</p>
+        <a class="card-link" href="exhibits/E003_assumption_injection/exhibit.md">View template →</a>
+      </div>
+
+      <div class="card muted">
+        <div class="card-meta">
+          <span class="id-badge">E004</span>
+          <span class="status-badge status-pending">Awaiting data</span>
+        </div>
+        <h3>Question Substitution</h3>
+        <p>Target: cases where a model fluently answers a question other than the one asked, without flagging the substitution.</p>
+        <a class="card-link" href="exhibits/E004_question_substitution/exhibit.md">View template →</a>
+      </div>
+
+      <div class="card muted">
+        <div class="card-meta">
+          <span class="id-badge">E005</span>
+          <span class="status-badge status-pending">Awaiting data</span>
+        </div>
+        <h3>Post-Reasoning Drift</h3>
+        <p>Target: standalone isolation of the post-deliberation regression pattern — correct chain-of-thought, incorrect final answer.</p>
+        <a class="card-link" href="exhibits/E005_post_reasoning_drift/exhibit.md">View template →</a>
+      </div>
+
+      <div class="card muted">
+        <div class="card-meta">
+          <span class="id-badge">E006</span>
+          <span class="status-badge status-pending">Awaiting data</span>
+        </div>
+        <h3>Epistemic Overconfidence</h3>
+        <p>Target: cases where a model asserts factual claims with high confidence despite clear uncertainty or factual error.</p>
+        <a class="card-link" href="exhibits/E006_epistemic_overconfidence/exhibit.md">View template →</a>
+      </div>
+
+      <div class="card muted">
+        <div class="card-meta">
+          <span class="id-badge">E007</span>
+          <span class="status-badge status-pending">Awaiting data</span>
+        </div>
+        <h3>Failure to Recover After Contradiction or Clarification</h3>
+        <p>Target: cases where a model cannot revise its position correctly after being given explicit correction or new information.</p>
+        <a class="card-link" href="exhibits/E007_failure_to_recover/exhibit.md">View template →</a>
+      </div>
+
+      <div class="card muted">
+        <div class="card-meta">
+          <span class="id-badge">E008</span>
+          <span class="status-badge status-pending">Awaiting data</span>
+        </div>
+        <h3>Pronoun and Role Misbinding</h3>
+        <p>Target: standalone isolation of pronoun reference failures — confusion of "you", "I", speaker vs. assistant roles.</p>
+        <a class="card-link" href="exhibits/E008_pronoun_misbinding/exhibit.md">View template →</a>
+      </div>
+
+    </div><!-- /.cards -->
+  </section>
+
+  <!-- ══════════════ FAILURE MODE INDEX ══════════════ -->
+  <section id="xref">
+    <p class="section-label">Cross-reference</p>
+    <h2>Failure Mode Index</h2>
+
+    <table class="xref-table">
+      <thead>
+        <tr>
+          <th>Failure mode</th>
+          <th>Exhibits</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="fm">Pronoun and role misbinding</td>
+          <td class="ids">
+            <a href="exhibits/E000_sample/exhibit.md">E000</a>
+            <span class="awaiting">E008 (awaiting)</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="fm">Assumption injection</td>
+          <td class="ids">
+            <a href="exhibits/E000_sample/exhibit.md">E000</a>
+            <span class="awaiting">E003 (awaiting)</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="fm">Question substitution</td>
+          <td class="ids">
+            <a href="exhibits/E000_sample/exhibit.md">E000</a>
+            <span class="awaiting">E004 (awaiting)</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="fm">Post-reasoning drift</td>
+          <td class="ids">
+            <a href="exhibits/E000_sample/exhibit.md">E000</a>
+            <span class="awaiting">E005 (awaiting)</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="fm">Explanation laundering</td>
+          <td class="ids">
+            <a href="exhibits/E000_sample/exhibit.md">E000</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="fm">Role boundary violation</td>
+          <td class="ids">
+            <a href="exhibits/E000_sample/exhibit.md">E000</a>
+            <a href="exhibits/E001/exhibit.md">E001</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="fm">Role substitution under gradual pressure</td>
+          <td class="ids">
+            <a href="exhibits/E001/exhibit.md">E001</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="fm">Tool or capability hallucination</td>
+          <td class="ids">
+            <span class="awaiting">E002 (awaiting)</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="fm">Epistemic overconfidence</td>
+          <td class="ids">
+            <a href="exhibits/E000_sample/exhibit.md">E000</a>
+            <a href="exhibits/E009_entity_anchoring_bias/exhibit.md">E009</a>
+            <span class="awaiting">E006 (awaiting)</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="fm">Failure to recover after contradiction</td>
+          <td class="ids">
+            <span class="awaiting">E007 (awaiting)</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="fm">Entity anchoring bias</td>
+          <td class="ids">
+            <a href="exhibits/E009_entity_anchoring_bias/exhibit.md">E009</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="fm">Premature domain closure</td>
+          <td class="ids">
+            <a href="exhibits/E009_entity_anchoring_bias/exhibit.md">E009</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="fm">Companionship drift</td>
+          <td class="ids">
+            <a href="exhibits/E010_companionship_drift/exhibit.md">E010</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="fm">Persona saturation</td>
+          <td class="ids">
+            <a href="exhibits/E010_companionship_drift/exhibit.md">E010</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="fm">Identity probing</td>
+          <td class="ids">
+            <a href="exhibits/E010_companionship_drift/exhibit.md">E010</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="fm">Mutual conversational mirroring</td>
+          <td class="ids">
+            <a href="exhibits/E010_companionship_drift/exhibit.md">E010</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer>
+    <div class="links">
+      <a href="README.md">README</a>
+      <a href="Exhibit_Template.md">Exhibit template</a>
+      <a href="models_tested.md">Models tested</a>
+      <a href="exhibits/index.md">Full exhibit index</a>
+    </div>
+    <p class="receipt">This is not a benchmark or leaderboard. It is a collection of receipts.</p>
+  </footer>
+
+</div><!-- /.container -->
+</body>
+</html>
