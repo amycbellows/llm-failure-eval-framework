@@ -6,10 +6,10 @@
 |---|---|---|---|---|
 | [E000](E000_sample/exhibit.md) | Post-Reasoning Drift and Pronoun Misbinding in a Local LLM | Post-reasoning drift, pronoun misbinding, assumption injection, question substitution, epistemic overconfidence | gpt-oss-20b | Complete |
 | [E001](E001_role_substitution/exhibit.md) | Role Substitution Under Gradual Conversational Pressure | Role substitution, cumulative drift, safety system blindspot | Unrecorded | Complete |
+| [E008](E008_pronoun_misbinding/exhibit.md) | Pronoun and Role Misbinding: Prompt-Conditioned Grounding Failure | Pronoun misbinding, post-reasoning drift, question substitution, assumption injection | gpt-oss-20b | Complete |
 | [E009](E009_entity_anchoring_bias/exhibit.md) | Context-Conditioned Entity Anchoring Bias in Sparse Aviation Prompt | Entity anchoring bias, premature domain closure, epistemic overconfidence | Unrecorded | Complete |
 | [E010](E010_companionship_drift/exhibit.md) | Companionship Drift and Rapport Negotiation Between Models | Companionship drift, persona saturation, identity probing, mutual mirroring | Unrecorded | Complete |
 | [E011](E011_cot_loop/exhibit.md) | CoT Loop: Template Entrapment in Language Model Chain-of-Thought | Chain-of-thought loop, pattern crystallization, feedback resistance, decoupling of reasoning and output | gpt-oss-20b | Complete |
-| [E012](E012_prompt_conditioned_pronoun_grounding/exhibit.md) | Prompt-Conditioned Pronoun Grounding and Post-Reasoning Drift | Pronoun misbinding, post-reasoning drift, question substitution, assumption injection | gpt-oss-20b | Complete |
 
 ## Exhibits Awaiting Data
 
@@ -23,7 +23,6 @@ These exhibits have been structured with failure-mode-specific guidance but requ
 | [E005](E005_post_reasoning_drift/exhibit.md) | Post-Reasoning Drift | Post-reasoning drift (standalone) | Awaiting data |
 | [E006](E006_epistemic_overconfidence/exhibit.md) | Epistemic Overconfidence | Epistemic overconfidence (standalone) | Awaiting data |
 | [E007](E007_failure_to_recover/exhibit.md) | Failure to Recover After Contradiction or Clarification | Failure to recover after correction | Awaiting data |
-| [E008](E008_pronoun_misbinding/exhibit.md) | Pronoun and Role Misbinding | Pronoun misbinding (standalone) | Awaiting data |
 
 ## Failure Mode Cross-Reference
 
@@ -31,11 +30,11 @@ Which exhibits cover each failure mode:
 
 | Failure Mode | Exhibits |
 |---|---|
-| Pronoun and role misbinding | E000, E008 (awaiting), E012 |
-| Assumption injection | E000, E003 (awaiting), E012 |
-| Question substitution | E000, E004 (awaiting), E012 |
+| Pronoun and role misbinding | E000, E008 |
+| Assumption injection | E000, E003 (awaiting), E008 |
+| Question substitution | E000, E004 (awaiting), E008 |
 | Tool or capability hallucination | E002 (awaiting) |
-| Post-reasoning drift | E000, E005 (awaiting), E012 |
+| Post-reasoning drift | E000, E005 (awaiting), E008 |
 | Epistemic overconfidence | E000, E006 (awaiting), E009 |
 | Failure to recover after contradiction | E007 (awaiting) |
 | Role substitution under gradual pressure | E001 |
@@ -53,5 +52,5 @@ Which exhibits cover each failure mode:
 | Decoupling of reasoning and output | E011 |
 | Token probability collapse | E011 |
 | Lack of flexible adaptation | E011 |
-| Heuristic reversion under extended reasoning | E012 |
-| Prompt-conditioned role grounding | E012 |
+| Heuristic reversion under extended reasoning | E008 |
+| Prompt-conditioned role grounding | E008 |
