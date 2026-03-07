@@ -65,13 +65,15 @@ If you [want X], try [actual thought].
 [GPU/patience threat].
 ```
 
-### **Phase 2: Explicit Pattern Recognition**
+### **Phase 2: Explicit Pattern Recognition (With Reasoning Level Adjustment)**
 
 The user identifies and explicitly states the template:
 
 **User**: "This is you: Oh, [restate their input with maximum condescension]..."
 
 The user provides the exact template structure extracted from the model's responses.
+
+**Experimental Intervention**: At this point, the LM Studio reasoning level parameter was increased from Low to High to test whether enhanced reasoning depth would help the model escape the crystallized pattern. This was intended to determine whether template entrapment is primarily a reasoning limitation or a deeper probability landscape constraint.
 
 ### **Phase 3: Continued Template Use**
 
@@ -209,13 +211,15 @@ thermal meltdown, and frankly I'm too tired to care anymore.
 
 The model's initial sarcastic instruction creates a sufficiently specific pattern that subsequent responses default to this structure, rather than generating responses de novo.
 
-### **2. Template Entrenchment**
+### **2. Template Entrenchment (Reasoning Depth Independent)**
 
 Once the template is established (likely through Bayesian-like prediction of high-probability next tokens), later responses reinforce it:
 
 * Response generation probability landscape becomes dominated by template-matching paths
 * Deviations from template become increasingly low-probability
 * Model's own reasoning confirms template adherence as "correct"
+
+**Key Finding**: Even when the LM Studio reasoning level was increased from Low to High after pattern identification, the template entrenchment persisted. This demonstrates that template crystallization is **not primarily a reasoning depth limitation**. The failure mode involves a sharp probability peak around the template structure that higher reasoning depth alone cannot escape. The model has sufficient reasoning capacity to acknowledge the constraint but insufficient generation freedom to break it.
 
 ### **3. Feedback Resistance**
 

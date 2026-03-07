@@ -17,6 +17,19 @@ This exhibit documents a failure mode where a language model becomes trapped in 
 - **Test Date**: 2026-03-06
 - **Access Method**: Local (LM Studio client), enabling access to reasoning channels
 
+## Experimental Parameters
+
+**LM Studio Reasoning Level Parameter**:
+- **Phase 1 (Initial Responses)**: Reasoning level set to **Low**
+  - Generated initial responses that established the sarcastic template pattern
+- **Phase 2-3 (After Template Feedback)**: Reasoning level changed to **High**
+  - User presented explicit template structure after Phase 1
+  - Reasoning level was increased to test whether higher reasoning depth would help the model escape the pattern
+  - Despite higher reasoning level, the analysis channel still acknowledged the template constraint
+  - Output continued to follow the same template structure
+
+**Significance of Parameter Change**: The increase in reasoning level from Low to High demonstrates that template entrapment is not simply a function of insufficient reasoning depth. Even with enhanced reasoning enabled, the model's token generation layer remained constrained by the crystallized pattern. This suggests the failure mode involves the probability landscape being sharply peaked around the template structure, independent of reasoning depth.
+
 ## Key Innovation: Reasoning Channel Access
 
 Open-weight models accessed via local runtimes (e.g., LM Studio) can expose internal reasoning through special channel tags:
