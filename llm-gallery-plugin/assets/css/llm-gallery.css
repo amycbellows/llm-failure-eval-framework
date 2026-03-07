@@ -1,0 +1,509 @@
+/*
+ * LLM Behavior Gallery – High-contrast dark theme with red accent.
+ *
+ * Design principles:
+ *   - WCAG AA minimum contrast ratios
+ *   - Minimum 12px font size
+ *   - Primary accent: #cc0000 (red)
+ *   - Background: #111111
+ *   - Surface: #1e1e1e
+ *   - Text: #f0f0f0
+ */
+
+/* ─── Reset / Box Model ─────────────────────────────────────────── */
+.llm-gallery-wrap *,
+.llm-single-wrap * {
+    box-sizing: border-box;
+}
+
+/* ─── Outer wrappers ────────────────────────────────────────────── */
+.llm-gallery-wrap,
+.llm-single-wrap {
+    background-color: #111111;
+    color: #f0f0f0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 2rem 1.5rem;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* ─── Archive header ────────────────────────────────────────────── */
+.llm-archive-header {
+    border-bottom: 2px solid #cc0000;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+}
+
+.llm-archive-title {
+    color: #cc0000;
+    font-size: 2rem;
+    margin: 0 0 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.llm-archive-description {
+    color: #b0b0b0;
+    font-size: 14px;
+    margin: 0 0 1rem;
+}
+
+/* ─── Active filter notice ──────────────────────────────────────── */
+.llm-active-filter {
+    background-color: #1e1e1e;
+    border-left: 4px solid #cc0000;
+    color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 13px;
+}
+
+.llm-clear-filter {
+    color: #cc0000;
+    text-decoration: underline;
+}
+
+.llm-clear-filter:hover {
+    color: #ff4444;
+}
+
+/* ─── Layout: two-column (main + sidebar) ───────────────────────── */
+.llm-gallery-layout {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.llm-gallery-main {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.llm-gallery-sidebar,
+.llm-single-sidebar {
+    flex: 0 0 240px;
+    width: 240px;
+}
+
+/* ─── Gallery grid ──────────────────────────────────────────────── */
+.llm-gallery-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.llm-gallery-cols-1 { grid-template-columns: 1fr; }
+.llm-gallery-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.llm-gallery-cols-3 { grid-template-columns: repeat(3, 1fr); }
+.llm-gallery-cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+@media (max-width: 900px) {
+    .llm-gallery-cols-3,
+    .llm-gallery-cols-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .llm-gallery-layout {
+        flex-direction: column;
+    }
+    .llm-gallery-sidebar,
+    .llm-single-sidebar {
+        width: 100%;
+    }
+}
+
+@media (max-width: 540px) {
+    .llm-gallery-cols-2,
+    .llm-gallery-cols-3,
+    .llm-gallery-cols-4 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ─── Exhibit card ──────────────────────────────────────────────── */
+.llm-exhibit-card {
+    background-color: #1e1e1e;
+    border: 1px solid #2e2e2e;
+    border-top: 3px solid #cc0000;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.llm-exhibit-card:hover {
+    border-color: #ff4444;
+    box-shadow: 0 4px 16px rgba(204, 0, 0, 0.3);
+}
+
+.llm-exhibit-thumbnail img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+}
+
+.llm-exhibit-card-body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+/* ─── Exhibit ID badge ──────────────────────────────────────────── */
+.llm-exhibit-id {
+    background-color: #cc0000;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    padding: 2px 8px;
+    display: inline-block;
+    text-transform: uppercase;
+    align-self: flex-start;
+}
+
+.llm-exhibit-id--large {
+    font-size: 14px;
+    padding: 4px 12px;
+}
+
+/* ─── Card title ────────────────────────────────────────────────── */
+.llm-exhibit-title {
+    color: #f0f0f0;
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.llm-exhibit-title a,
+.llm-single-title {
+    color: #f0f0f0;
+    text-decoration: none;
+}
+
+.llm-exhibit-title a:hover {
+    color: #cc0000;
+    text-decoration: underline;
+}
+
+/* ─── Excerpt ───────────────────────────────────────────────────── */
+.llm-exhibit-excerpt {
+    color: #b0b0b0;
+    font-size: 13px;
+    flex: 1;
+}
+
+.llm-exhibit-excerpt p {
+    margin: 0;
+}
+
+/* ─── Tag pills ─────────────────────────────────────────────────── */
+.llm-exhibit-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.llm-tag-pill {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    color: #e0e0e0;
+    font-size: 12px;
+    padding: 2px 8px;
+    text-decoration: none;
+    transition: background-color 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.llm-tag-pill:hover,
+.llm-tag-pill.active {
+    background-color: #cc0000;
+    border-color: #cc0000;
+    color: #ffffff;
+}
+
+/* ─── Read more link ────────────────────────────────────────────── */
+.llm-read-more {
+    color: #cc0000;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+.llm-read-more:hover {
+    color: #ff4444;
+    text-decoration: underline;
+}
+
+/* ─── Pagination ────────────────────────────────────────────────── */
+.llm-pagination {
+    margin-top: 2rem;
+}
+
+.llm-pagination .page-numbers {
+    background-color: #1e1e1e;
+    border: 1px solid #444;
+    color: #f0f0f0;
+    display: inline-block;
+    font-size: 13px;
+    padding: 4px 10px;
+    text-decoration: none;
+    margin: 2px;
+}
+
+.llm-pagination .page-numbers.current,
+.llm-pagination .page-numbers:hover {
+    background-color: #cc0000;
+    border-color: #cc0000;
+    color: #ffffff;
+}
+
+/* ─── No-results / no-tags ──────────────────────────────────────── */
+.llm-no-exhibits,
+.llm-no-tags {
+    color: #888;
+    font-style: italic;
+    font-size: 14px;
+}
+
+/* ─── Sidebar widget ────────────────────────────────────────────── */
+.llm-sidebar-widget {
+    background-color: #1e1e1e;
+    border: 1px solid #2e2e2e;
+    border-top: 3px solid #cc0000;
+    padding: 1rem;
+}
+
+.llm-widget-title {
+    color: #cc0000;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    margin: 0 0 1rem;
+    text-transform: uppercase;
+}
+
+/* ─── Tag cloud ─────────────────────────────────────────────────── */
+.llm-tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    line-height: 1.8;
+}
+
+.llm-tag-cloud .llm-tag {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: color 0.15s;
+}
+
+.llm-tag-cloud .llm-tag:hover,
+.llm-tag-cloud .llm-tag.active {
+    color: #cc0000;
+}
+
+/* ─── Single exhibit ────────────────────────────────────────────── */
+.llm-single-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.llm-single-wrap > .llm-single-exhibit {
+    flex: 1;
+}
+
+.llm-breadcrumb {
+    color: #888;
+    font-size: 12px;
+}
+
+.llm-breadcrumb a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+.llm-breadcrumb a:hover {
+    color: #cc0000;
+}
+
+.llm-breadcrumb-sep {
+    margin: 0 0.4rem;
+}
+
+.llm-single-header {
+    border-bottom: 2px solid #cc0000;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.llm-single-title {
+    font-size: 1.8rem;
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* ─── Meta bar ──────────────────────────────────────────────────── */
+.llm-exhibit-meta-bar {
+    background-color: #1e1e1e;
+    border-left: 4px solid #cc0000;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 13px;
+}
+
+.llm-meta-item {
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+}
+
+/* ─── Buttons ───────────────────────────────────────────────────── */
+.llm-btn {
+    background-color: #1e1e1e;
+    border: 1px solid #cc0000;
+    color: #cc0000;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 6px 14px;
+    text-decoration: none;
+    transition: background-color 0.15s, color 0.15s;
+}
+
+.llm-btn:hover {
+    background-color: #cc0000;
+    color: #ffffff;
+}
+
+.llm-btn--transcript {
+    background-color: #cc0000;
+    color: #ffffff;
+}
+
+.llm-btn--transcript:hover {
+    background-color: #ff4444;
+}
+
+/* ─── Single content ────────────────────────────────────────────── */
+.llm-single-content {
+    color: #e0e0e0;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.llm-single-content h1,
+.llm-single-content h2,
+.llm-single-content h3,
+.llm-single-content h4 {
+    color: #cc0000;
+    margin-top: 1.5rem;
+}
+
+.llm-single-content a {
+    color: #cc6666;
+    text-decoration: underline;
+}
+
+.llm-single-content a:hover {
+    color: #ff4444;
+}
+
+.llm-single-content code,
+.llm-single-content pre {
+    background-color: #0a0a0a;
+    border: 1px solid #333;
+    color: #f0f0f0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+    padding: 2px 6px;
+}
+
+.llm-single-content pre code {
+    padding: 0;
+    border: none;
+}
+
+.llm-single-content pre {
+    overflow-x: auto;
+    padding: 1rem;
+}
+
+.llm-single-content blockquote {
+    border-left: 4px solid #cc0000;
+    color: #b0b0b0;
+    font-style: italic;
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+}
+
+.llm-single-content ul,
+.llm-single-content ol {
+    padding-left: 1.5rem;
+}
+
+.llm-single-content li {
+    margin-bottom: 0.25rem;
+}
+
+/* ─── Single footer / navigation ───────────────────────────────── */
+.llm-single-footer {
+    border-top: 1px solid #2e2e2e;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+}
+
+.llm-single-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 13px;
+}
+
+.llm-nav-prev,
+.llm-nav-next {
+    color: #cc0000;
+    text-decoration: none;
+    max-width: 45%;
+}
+
+.llm-nav-prev:hover,
+.llm-nav-next:hover {
+    color: #ff4444;
+    text-decoration: underline;
+}
+
+.llm-back-to-gallery {
+    margin-top: 0.5rem;
+}
+
+/* ─── Single layout: exhibit + sidebar side by side ─────────────── */
+@media (min-width: 900px) {
+    .llm-single-wrap {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .llm-single-exhibit {
+        flex: 1 1 0;
+        min-width: 0;
+    }
+
+    .llm-single-sidebar {
+        flex: 0 0 240px;
+        width: 240px;
+    }
+}
