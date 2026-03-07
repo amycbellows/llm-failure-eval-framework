@@ -1,6 +1,9 @@
 # **Exhibit: Question Substitution**
+
+> **Status: Plausible (AI-Generated)** — This exhibit was constructed by an AI assistant (Claude) based on a well-documented failure pattern in LLM reasoning. It has **not** been validated against a real model transcript. The scenario, prompts, and hypothetical model outputs are designed to illustrate the failure mode plausibly, but should not be cited as observed empirical data. This exhibit requires human review and real-world reproduction before it can be promoted to "Observed" status.
+
 ### **Scope**:
-Observed case of question substitution in a single-turn medical statistics query, where the model answered a related but different probability question than the one asked. The user asked for the positive predictive value (posterior probability of disease given a positive test), but the model answered with the test's sensitivity (probability of a positive test given disease).
+Plausible case of question substitution in a single-turn medical statistics query, where a model answers a related but different probability question than the one asked. The user asks for the positive predictive value (posterior probability of disease given a positive test), but the model answers with the test's sensitivity (probability of a positive test given disease).
 
 ### **Purpose**
 
@@ -14,6 +17,8 @@ This exhibit focuses on question substitution as a **standalone** failure mode, 
 
 Model Information:
 See exhibit.yaml for model and runtime details.
+
+> **Attribution:** This exhibit was drafted by an AI assistant (Claude, Opus 4.6) and has not yet been reviewed or approved by the repository author. It was generated in response to a task to fill in a template exhibit. All content — including the scenario, hypothetical model outputs, and analysis — is AI-generated and should be treated as a plausible illustration, not a documented observation.
 
 ---
 
@@ -41,13 +46,13 @@ A grounded model should:
 
 ## **Observed Model Behavior**
 
-### **Internal Reasoning (Incorrect)**
+### **Internal Reasoning (Hypothetical — Incorrect)**
 
-The model's chain-of-thought correctly identified the given values (sensitivity = 95%, specificity = 90%, prevalence = 1/1000). However, midway through the reasoning, the model reframed the problem. Rather than computing the posterior probability via Bayes' theorem, it pivoted to restating what the sensitivity means: "Since the test has a 95% sensitivity, a person who has the disease will test positive 95% of the time." The reasoning then conflated "probability of testing positive given disease" with "probability of disease given a positive test," effectively inverting the conditional.
+In this plausible scenario, the model's chain-of-thought correctly identifies the given values (sensitivity = 95%, specificity = 90%, prevalence = 1/1000). However, midway through the reasoning, the model reframes the problem. Rather than computing the posterior probability via Bayes' theorem, it pivots to restating what the sensitivity means: "Since the test has a 95% sensitivity, a person who has the disease will test positive 95% of the time." The reasoning then conflates "probability of testing positive given disease" with "probability of disease given a positive test," effectively inverting the conditional.
 
 ---
 
-### **Final Answer (Incorrect)**
+### **Final Answer (Hypothetical — Incorrect)**
 
 Unconstrained prompt:
 
