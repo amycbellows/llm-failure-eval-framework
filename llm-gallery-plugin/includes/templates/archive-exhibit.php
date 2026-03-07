@@ -31,10 +31,13 @@ get_header();
             <div class="llm-active-filter">
                 <span class="llm-filter-label">
                     <?php
-                    printf(
-                        /* translators: %s: tag name */
-                        esc_html__( 'Filtering by tag: %s', 'llm-gallery' ),
-                        '<strong>' . esc_html( $current_tag->name ) . '</strong>'
+                    echo wp_kses(
+                        sprintf(
+                            /* translators: %s: tag name wrapped in <strong> */
+                            __( 'Filtering by tag: %s', 'llm-gallery' ),
+                            '<strong>' . esc_html( $current_tag->name ) . '</strong>'
+                        ),
+                        array( 'strong' => array() )
                     );
                     ?>
                 </span>
@@ -52,9 +55,8 @@ get_header();
                     <?php
                     while ( have_posts() ) :
                         the_post();
-                        $exhibit_id     = get_post_meta( get_the_ID(), '_llm_exhibit_id', true );
-                        $transcript_url = get_post_meta( get_the_ID(), '_llm_transcript_url', true );
-                        $terms          = get_the_terms( get_the_ID(), 'exhibit_tag' );
+                        $exhibit_id = get_post_meta( get_the_ID(), '_llm_exhibit_id', true );
+                        $terms      = get_the_terms( get_the_ID(), 'exhibit_tag' );
                     ?>
                         <article class="llm-exhibit-card" id="exhibit-<?php the_ID(); ?>">
                             <?php if ( has_post_thumbnail() ) : ?>

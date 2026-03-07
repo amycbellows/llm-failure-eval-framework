@@ -9,25 +9,12 @@
 ( function () {
     'use strict';
 
-    // ── Helpers ───────────────────────────────────────────────────────────────
-
-    /**
-     * Returns the value of a query-string parameter.
-     *
-     * @param {string} name - Parameter name.
-     * @returns {string|null}
-     */
-    function getQueryParam( name ) {
-        var params = new URLSearchParams( window.location.search );
-        return params.get( name );
-    }
-
     // ── Tag highlight on term archive ─────────────────────────────────────────
 
     /**
-     * Reads the current page URL and marks the matching tag cloud link active.
-     * Works when the URL contains the term slug in its path (WordPress default)
-     * or as a ?tag= query parameter.
+     * Reads the current page URL path and marks the matching tag cloud link active.
+     * Matches when the term slug appears as a path segment
+     * (e.g. /exhibit-tag/pronoun-misbinding/).
      */
     function markActiveTagFromURL() {
         var cloud = document.querySelector( '.llm-tag-cloud' );
@@ -40,11 +27,7 @@
 
         links.forEach( function ( link ) {
             var slug = link.getAttribute( 'data-tag-slug' );
-            if ( ! slug ) {
-                return;
-            }
-            // Match slug in URL path (e.g. /exhibit-tag/pronoun-misbinding/)
-            if ( currentPath.indexOf( '/' + slug ) !== -1 ) {
+            if ( slug && currentPath.indexOf( '/' + slug ) !== -1 ) {
                 link.classList.add( 'active' );
             }
         } );
@@ -69,28 +52,21 @@
         activeSlug = slug;
 
         cards.forEach( function ( card ) {
-            if ( ! slug ) {
-                card.style.opacity = '1';
-                card.style.transform = 'scale(1)';
-                card.removeAttribute( 'aria-hidden' );
-                return;
+            var show = ! slug;
+            if ( slug ) {
+                var pills = card.querySelectorAll( '.llm-tag-pill[data-tag-slug]' );
+                pills.forEach( function ( pill ) {
+                    if ( pill.getAttribute( 'data-tag-slug' ) === slug ) {
+                        show = true;
+                    }
+                } );
             }
 
-            var pills = card.querySelectorAll( '.llm-tag-pill[data-tag-slug]' );
-            var hasTag = false;
-            pills.forEach( function ( pill ) {
-                if ( pill.getAttribute( 'data-tag-slug' ) === slug ) {
-                    hasTag = true;
-                }
-            } );
-
-            if ( hasTag ) {
-                card.style.opacity = '1';
-                card.style.transform = 'scale(1)';
+            card.style.opacity = show ? '1' : '0.25';
+            card.style.transform = show ? 'scale(1)' : 'scale(0.97)';
+            if ( show ) {
                 card.removeAttribute( 'aria-hidden' );
             } else {
-                card.style.opacity = '0.25';
-                card.style.transform = 'scale(0.97)';
                 card.setAttribute( 'aria-hidden', 'true' );
             }
         } );
@@ -128,26 +104,24 @@
 
         var slug = target.getAttribute( 'data-tag-slug' );
 
-        if ( activeSlug === slug ) {
-            // Second click on the same tag clears the filter.
-            filterByTag( null );
-        } else {
-            filterByTag( slug );
-        }
+        // Second click on the same tag clears the filter.
+        filterByTag( activeSlug === slug ? null : slug );
     }
 
     // ── Initialise ────────────────────────────────────────────────────────────
 
+    var initialized = false;
+
     function init() {
+        if ( initialized ) {
+            return;
+        }
+        initialized = true;
+
         markActiveTagFromURL();
 
         // Delegate tag clicks from the document.
         document.addEventListener( 'click', onTagClick );
-
-        // Style transitions for smooth filtering.
-        var style = document.createElement( 'style' );
-        style.textContent = '.llm-exhibit-card { transition: opacity 0.25s ease, transform 0.25s ease; }';
-        document.head.appendChild( style );
     }
 
     if ( document.readyState === 'loading' ) {

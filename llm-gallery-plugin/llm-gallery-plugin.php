@@ -93,7 +93,7 @@ class LLM_Tag_Cloud_Widget extends WP_Widget {
         $title = ! empty( $instance['title'] ) ? $instance['title'] : __( 'Exhibit Tags', 'llm-gallery' );
         echo wp_kses_post( $args['before_widget'] );
         echo wp_kses_post( $args['before_title'] ) . esc_html( $title ) . wp_kses_post( $args['after_title'] );
-        echo do_shortcode( '[llm_tag_cloud]' );
+        echo llm_gallery_build_tag_cloud(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- output is pre-escaped by builder
         echo wp_kses_post( $args['after_widget'] );
     }
 

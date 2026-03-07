@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 function llm_gallery_shortcode( $atts ) {
     $atts = shortcode_atts(
         array(
-            'posts_per_page' => -1,
+            'posts_per_page' => 20,
             'tag'            => '',
             'columns'        => 3,
         ),
@@ -62,9 +62,8 @@ function llm_gallery_shortcode( $atts ) {
         echo '<div class="llm-gallery-grid llm-gallery-cols-' . esc_attr( $columns ) . '">';
         while ( $exhibits->have_posts() ) {
             $exhibits->the_post();
-            $exhibit_id     = get_post_meta( get_the_ID(), '_llm_exhibit_id', true );
-            $transcript_url = get_post_meta( get_the_ID(), '_llm_transcript_url', true );
-            $terms          = get_the_terms( get_the_ID(), 'exhibit_tag' );
+            $exhibit_id = get_post_meta( get_the_ID(), '_llm_exhibit_id', true );
+            $terms      = get_the_terms( get_the_ID(), 'exhibit_tag' );
             ?>
             <article class="llm-exhibit-card">
                 <?php if ( has_post_thumbnail() ) : ?>

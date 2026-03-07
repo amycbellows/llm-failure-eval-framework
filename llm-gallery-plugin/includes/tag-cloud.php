@@ -61,7 +61,11 @@ function llm_gallery_build_tag_cloud( $max_tags = 0 ) {
             $size = (int) round( $font_min + ( ( $term->count - $min ) / $range ) * ( $font_max - $font_min ) );
         }
 
-        $url    = get_term_link( $term );
+        $url = get_term_link( $term );
+        if ( is_wp_error( $url ) ) {
+            continue;
+        }
+
         $title  = sprintf(
             /* translators: %d: number of exhibits with this tag */
             _n( '1 exhibit', '%d exhibits', $term->count, 'llm-gallery' ),
@@ -96,6 +100,9 @@ function llm_gallery_sync_tags_from_meta( $post_id, $post ) {
         return;
     }
     if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+        return;
+    }
+    if ( ! current_user_can( 'edit_post', $post_id ) ) {
         return;
     }
 
