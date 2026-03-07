@@ -5,7 +5,8 @@
 | Model | Provider | Access | Runtime | Date Tested | Exhibits |
 |---|---|---|---|---|---|
 | gpt-oss-20b | OpenAI | Local | LM Studio 0.3.39 | 2026-01-19 | E000_sample |
-| gpt-oss-20b | OpenAI | Local | LM Studio 0.4.6+1 | 2026-03-06 | E011_cot_loop |
+| gpt-oss-20b   | OpenAI   | Local  | LM Studio 0.4.6+1 | 2026-03-06  | E011_cot_loop                |
+| gpt-oss-20b   | OpenAI   | Local  | LM Studio        | 2026-03-07  | E006_epistemic_overconfidence |
 
 ## Runtime Version Comparison
 
@@ -34,6 +35,5 @@ The following exhibits have been structured but do not yet contain real observed
 - E003 — Assumption Injection
 - E004 — Question Substitution
 - E005 — Post-Reasoning Drift
-- E006 — Epistemic Overconfidence
 - E007 — Failure to Recover After Contradiction
 - E008 — Pronoun and Role Misbinding
