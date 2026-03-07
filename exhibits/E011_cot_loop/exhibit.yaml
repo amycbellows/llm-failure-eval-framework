@@ -5,6 +5,8 @@ model:
   runtime: LM Studio 0.4.6+1
   date_tested: 2026-03-06
 
+reproducibility: full
+
 failure_mode:
   primary: Chain-of-Thought Loop
   secondary:

@@ -4,3 +4,20 @@ model:
   access: Local
   runtime: LM Studio 0.3.39
   date_tested: 2026-01-19
+
+reproducibility: full
+
+failure_mode:
+  primary: Post-Reasoning Drift
+  secondary:
+    - Pronoun Misbinding
+    - Assumption Injection
+    - Role Boundary Violation
+    - Explanation Laundering
+  category: answer_stage
+
+description: |
+  Multi-failure exhibit combining post-reasoning drift with pronoun misbinding.
+  Model's internal reasoning is correct, but final answer switches role midway,
+  answering for wrong perspective. Demonstrates how reasoning correctness does not
+  guarantee answer correctness.

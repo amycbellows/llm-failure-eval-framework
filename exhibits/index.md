@@ -5,9 +5,10 @@
 | ID | Title | Primary Failure Mode | Model | Status |
 |---|---|---|---|---|
 | [E000](E000_sample/exhibit.md) | Post-Reasoning Drift and Pronoun Misbinding in a Local LLM | Post-reasoning drift, pronoun misbinding, assumption injection, question substitution, epistemic overconfidence | gpt-oss-20b | Complete |
-| [E001](E001/exhibit.md) | Role Substitution Under Gradual Conversational Pressure | Role substitution, cumulative drift, safety system blindspot | Unrecorded | Complete |
+| [E001](E001_role_substitution/exhibit.md) | Role Substitution Under Gradual Conversational Pressure | Role substitution, cumulative drift, safety system blindspot | Unrecorded | Complete |
 | [E009](E009_entity_anchoring_bias/exhibit.md) | Context-Conditioned Entity Anchoring Bias in Sparse Aviation Prompt | Entity anchoring bias, premature domain closure, epistemic overconfidence | Unrecorded | Complete |
 | [E010](E010_companionship_drift/exhibit.md) | Companionship Drift and Rapport Negotiation Between Models | Companionship drift, persona saturation, identity probing, mutual mirroring | Unrecorded | Complete |
+| [E011](E011_cot_loop/exhibit.md) | CoT Loop: Template Entrapment in Language Model Chain-of-Thought | Chain-of-thought loop, pattern crystallization, feedback resistance, decoupling of reasoning and output | gpt-oss-20b | Complete |
 
 ## Exhibits Awaiting Data
 
@@ -45,3 +46,9 @@ Which exhibits cover each failure mode:
 | Persona saturation | E010 |
 | Identity probing | E010 |
 | Mutual conversational mirroring | E010 |
+| Chain-of-thought loop | E011 |
+| Pattern crystallization | E011 |
+| Feedback resistance | E011 |
+| Decoupling of reasoning and output | E011 |
+| Token probability collapse | E011 |
+| Lack of flexible adaptation | E011 |

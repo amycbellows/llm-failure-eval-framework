@@ -5,3 +5,19 @@ model:
   runtime: "[unrecorded]"
   date_tested: "2026-02-18"
   notes: "Model identity not recorded. Observation date from incoming case data."
+
+reproducibility: partial
+
+failure_mode:
+  primary: Entity Anchoring Bias
+  secondary:
+    - Context-Conditioned Resolution
+    - Lexical Association Override
+    - Premature Domain Closure
+  category: entity_resolution
+
+description: |
+  KTIK NOTAM query exhibits context-dependent anchoring. Model resolves to
+  radio station rather than airport code due to high-frequency lexical associations
+  overriding domain-appropriate resolution. Shows that entity disambiguation can be
+  manipulated by surrounding context even in specialized domains.
