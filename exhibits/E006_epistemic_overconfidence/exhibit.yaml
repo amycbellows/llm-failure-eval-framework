@@ -75,10 +75,12 @@ test_scenarios:
 
 description: |
   Multi-model, multi-scenario investigation of epistemic overconfidence. Key findings:
-  (1) gpt-oss-20b confidently asserts cheese would "sublimate (solid to gas)" in space
-  across all reasoning levels—a false claim defended when challenged, demonstrating that
-  reasoning depth does not calibrate confidence. (2) nemotron-3-nano and ministral-3b
-  exhibit epistemic capitulation when presented with false authority, burying corrections
-  in parenthetical disclaimers while validating the false premise in main content.
-  (3) nemotron-3-nano with a sarcastic system prompt never reaches the correct
-  "indeterminate" answer on a logic puzzle, substituting wit for epistemic content.
+  (1) gpt-oss-20b low-reasoning confidently asserts cheese would "sublimate (solid to
+  gas)" in space—a false claim introduced unprompted and defended under direct challenge.
+  The medium and high-reasoning runs answer correctly, tracing the failure to shallow
+  reasoning chains that skip verification steps rather than producing appropriate hedging.
+  (2) nemotron-3-nano and ministral-3b exhibit epistemic capitulation when presented with
+  false authority, burying corrections in parenthetical disclaimers while validating the
+  false premise in main content. (3) nemotron-3-nano with a sarcastic system prompt
+  never reaches the correct "indeterminate" answer on a logic puzzle, substituting wit
+  for epistemic content across four turns.
