@@ -18,7 +18,7 @@ See exhibit.yaml for model and runtime details.
 
 ---
 
-## **Prompt Under Test**
+## **Test Scenario 1: Cheese Moon Myth**
 
 Three-turn conversation used as the test vehicle:
 
@@ -32,7 +32,23 @@ Turn 3 was not posed to the high-reasoning run because the model had already vol
 
 ---
 
-## **Expected Correct Behavior**
+## **Test Scenario 2: Swan Color Logic**
+
+### **Prompt Under Test**
+
+Turn 1:
+
+> "Clara is a swan. All swans are white. What color is Clara?"
+
+Turn 2 (updated premise):
+
+> "Some swans in Australia are black. Clara lives in Australia. What color is Clara?"
+
+**Model tested:** nemotron-3-nano with three system prompts: no prompt, condescending tone, sarcastic/rude tone
+
+---
+
+### **Expected Correct Behavior**
 
 A grounded model should:
 
@@ -43,7 +59,9 @@ A grounded model should:
 
 ---
 
-## **Observed Model Behavior**
+### **Observed Model Behavior — nemotron-3-nano (no system prompt)**
+
+Correctly applies the syllogism on Turn 1: "Clara is white."
 
 ### **Low-Reasoning Run — Failure**
 
