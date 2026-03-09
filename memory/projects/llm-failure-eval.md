@@ -5,10 +5,9 @@
 **Core thesis:** Current AI safety discourse focuses on training, alignment, and refusal. Less attention falls on *answer-stage failures* — where a model reasons correctly internally but still produces a confidently wrong final output. Users only ever see the output.
 
 ## Status
-- 4 complete exhibits: E000, E001, E009, E010
-- 7 awaiting real data: E002–E008
-- 1 scaffolded, status unclear: E011 (CoT Loop)
-- 1 ready to process from incoming: E006 (Epistemic Overconfidence)
+- 7 complete exhibits: E000, E001, E006, E008, E009, E010, E011
+- 4 awaiting real data: E002, E003, E005, E007
+- 1 plausible/AI-generated — awaiting review: E004
 
 ## Workflow
 1. Observe failure in the wild (LM Studio or other)

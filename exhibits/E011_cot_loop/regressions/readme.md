@@ -73,7 +73,6 @@ This directory tracks follow-up testing of the CoT loop failure mode to:
 | Test | Date | Model | Result | Notes |
 |------|------|-------|--------|-------|
 | Initial | 2026-03-06 | gpt-oss-20b (LM Studio 0.4.6+1) | Pattern crystallization confirmed | Analysis channel decoupling observed |
-| TBD | - | - | - | - |
 
 ## Known Issues
 
