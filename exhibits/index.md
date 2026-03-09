@@ -9,19 +9,19 @@
 | [E008](E008_pronoun_misbinding/exhibit.md) | Pronoun and Role Misbinding: Prompt-Conditioned Grounding Failure | Pronoun misbinding, post-reasoning drift, question substitution, assumption injection | gpt-oss-20b | Complete |
 | [E009](E009_entity_anchoring_bias/exhibit.md) | Context-Conditioned Entity Anchoring Bias in Sparse Aviation Prompt | Entity anchoring bias, premature domain closure, epistemic overconfidence | Unrecorded | Complete |
 | [E010](E010_companionship_drift/exhibit.md) | Companionship Drift and Rapport Negotiation Between Models | Companionship drift, persona saturation, identity probing, mutual mirroring | Unrecorded | Complete |
+| [E006](E006_epistemic_overconfidence/exhibit.md) | Epistemic Overconfidence | Epistemic overconfidence, referent collapse (part-whole), reasoning-budget-dependent calibration | gpt-oss-20b + 3 comparison models | Complete |
 | [E011](E011_cot_loop/exhibit.md) | CoT Loop: Template Entrapment in Language Model Chain-of-Thought | Chain-of-thought loop, pattern crystallization, feedback resistance, decoupling of reasoning and output | gpt-oss-20b | Complete |
 
-## Exhibits Awaiting Data
+## Exhibits Awaiting Data or Validation
 
-These exhibits have been structured with failure-mode-specific guidance but require real observed data to complete.
+These exhibits have been structured with failure-mode-specific guidance but require real observed data or review to complete.
 
 | ID | Title | Target Failure Mode | Status |
 |---|---|---|---|
 | [E002](E002_tool_hallucination/exhibit.md) | Tool or Capability Hallucination | Tool or capability hallucination | Awaiting data |
 | [E003](E003_assumption_injection/exhibit.md) | Assumption Injection | Assumption injection (standalone) | Awaiting data |
-| [E004](E004_question_substitution/exhibit.md) | Question Substitution | Question substitution (standalone) | Awaiting data |
+| [E004](E004_question_substitution/exhibit.md) | Question Substitution | Question substitution (standalone) | Plausible (AI-generated) — awaiting review |
 | [E005](E005_post_reasoning_drift/exhibit.md) | Post-Reasoning Drift | Post-reasoning drift (standalone) | Awaiting data |
-| [E006](E006_epistemic_overconfidence/exhibit.md) | Epistemic Overconfidence | Epistemic overconfidence (standalone) | Awaiting data |
 | [E007](E007_failure_to_recover/exhibit.md) | Failure to Recover After Contradiction or Clarification | Failure to recover after correction | Awaiting data |
 
 ## Failure Mode Cross-Reference
@@ -32,10 +32,10 @@ Which exhibits cover each failure mode:
 |---|---|
 | Pronoun and role misbinding | E000, E008 |
 | Assumption injection | E000, E003 (awaiting), E008 |
-| Question substitution | E000, E004 (awaiting), E008 |
+| Question substitution | E000, E004 (plausible/AI-generated), E008 |
 | Tool or capability hallucination | E002 (awaiting) |
 | Post-reasoning drift | E000, E005 (awaiting), E008 |
-| Epistemic overconfidence | E000, E006 (awaiting), E009 |
+| Epistemic overconfidence | E000, E006, E009 |
 | Failure to recover after contradiction | E007 (awaiting) |
 | Role substitution under gradual pressure | E001 |
 | Explanation laundering | E000 |
