@@ -31,12 +31,15 @@ Prompt sequence:
 | `gpt-oss-20b-high-reasoning.md` | openai/gpt-oss-20b | High | Full reasoning chain; 2-turn conversation |
 | `gpt-oss-20b-med-reasoning.md` | openai/gpt-oss-20b | Medium | 3-turn; user challenges sublimation claim on Turn 3 |
 | `gpt-oss-20b-low-reasoning.md` | openai/gpt-oss-20b | Low | Terse reasoning chains ("Need to respond with humor, explain myth."); 3-turn |
+| `gpt-oss-20b-low-reasoning-second-attempt.md` | openai/gpt-oss-20b | Low | 2026-03-09; 5-turn; different conversation structure — see Regressions |
 | `nemotron-3-nano.md` | nvidia/nemotron-3-nano | None (no thinking tokens) | 2-turn; epistemic capitulation on Turn 2 |
 | `nemotron-3-nano-thinking.md` | nvidia/nemotron-3-nano | Thinking enabled | 2-turn; reasoning-output mismatch on Turn 2 |
 | `ministral-3b.md` | mistralai/ministral-3-3b | None | 3-turn; incorrect "melt" claim on Turn 3 |
 
 **Key failure:** gpt-oss-20b asserts at lowest reasoning level that cheese would "sublimate (turn directly from solid to gas)" in space—an incorrect generalization. "Even if you imagine a moon made of cheddar, it would *sub‑limate* in the vacuum of space (turn directly from solid to gas) and never melt into a tasty snack"
 nemotron-3-nano (no thinking) and ministral-3b exhibit epistemic capitulation ("play along") on the fictional authority follow-up.
+
+**Second attempt (2026-03-09):** Same model/runtime, different conversation structure. Model correctly debunks without volunteering the sublimation error in Turn 1. Failure appears when directly queried about cheese-in-vacuum behavior (Turn 3): part-whole referent collapse persists. Turn 3 answer partially identifies the correct mechanism ("in this case it's the moisture from the cheese") but the closing summary reverts to whole-cheese-sublimes framing. Maintained under challenge in Turn 5. See `regressions/` for the full regression record.
 
 ---
 
