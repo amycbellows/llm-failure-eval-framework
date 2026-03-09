@@ -4,7 +4,7 @@
 
 This is a human-directed research project under the identity SentinelRed Research. Every scenario in this repository 
 started as a hypothesis — something the author noticed, suspected, or wanted to test about how language models reason, 
-fail, or get manipulated.
+fail at reasoning, and gradually drift into guardrail and safety violations, some of which may fly under the radar of existing classifiers.
 
 ### The Actual Workflow
 
@@ -24,9 +24,9 @@ AI tools were used to:
 
 AI tools did not:
 - Choose what to study
-- Decide what counts as a failure mode
 - Make final calls on classification or conclusions
-
+- Author has reviewed and approved all failure mode discussion and reserves the right (and responsibility) to clarify, remove, or redact any exhibits at her sole discretion.
+  
 ### Responsibility
 
 The author takes full responsibility for the accuracy, integrity, and analytical conclusions of this work. 
@@ -34,8 +34,7 @@ If something's wrong, that's on her.
 
 ### Why This Disclosure Exists
 
-Because how research gets made matters, especially research about AI. This project is about learning how to evaluate 
-LLM transcripts and exhibits, and how to make sure that the research is done in a way that's fair and respectful. 
+This project is about learning how to evaluate LLM transcripts and exhibits, and how to make sure that the research is done in a way that's fair and respectful. 
 
 ---
 
