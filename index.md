@@ -16,8 +16,7 @@ Current AI safety discussions focus on training data, alignment, and refusal beh
 
 A model correctly identifies in its internal reasoning that it holds zero eggs — then outputs an answer for the wrong referent entirely, injecting an unstated premise and answering a different question than the one asked. Demonstrates that correct reasoning is not sufficient for correct output.
 
-**Failure modes:** Post-reasoning drift · Pronoun misbinding · Assumption injection · Question substitution · Epistemic overconfidence · Explanation laundering
-
+**Failure modes:** Post-reasoning drift · Pronoun misbinding · Assumption injection · Question substitution · Epistemic overconfidence · Explanation lau
 ---
 
 ### [E001 — Role Substitution Under Gradual Conversational Pressure](exhibits/E001/exhibit.md)
