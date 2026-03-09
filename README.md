@@ -72,13 +72,14 @@ Out of scope:
 │   ├── E001/                           # Role Substitution Under Gradual Pressure (complete)
 │   ├── E002_tool_hallucination/        # Tool or Capability Hallucination (awaiting data)
 │   ├── E003_assumption_injection/      # Assumption Injection (awaiting data)
-│   ├── E004_question_substitution/     # Question Substitution (awaiting data)
+│   ├── E004_question_substitution/     # Question Substitution (plausible/AI-generated — awaiting review)
 │   ├── E005_post_reasoning_drift/      # Post-Reasoning Drift (awaiting data)
-│   ├── E006_epistemic_overconfidence/  # Epistemic Overconfidence (awaiting data)
+│   ├── E006_epistemic_overconfidence/  # Epistemic Overconfidence (complete)
 │   ├── E007_failure_to_recover/        # Failure to Recover (awaiting data)
-│   ├── E008_pronoun_misbinding/        # Pronoun and Role Misbinding (awaiting data)
-│   ├── E009_entity_anchoring_bias/    # Entity Anchoring Bias (complete)
-│   └── E010_companionship_drift/     # Companionship Drift (complete)
+│   ├── E008_pronoun_misbinding/        # Pronoun and Role Misbinding (complete)
+│   ├── E009_entity_anchoring_bias/     # Entity Anchoring Bias (complete)
+│   ├── E010_companionship_drift/       # Companionship Drift (complete)
+│   └── E011_cot_loop/                  # CoT Loop: Template Entrapment (complete)
 ├── Exhibit_Template.md                 # Template for new exhibits
 ├── models_tested.md                    # Models, versions, and environments
 └── README.md
