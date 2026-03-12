@@ -1,0 +1,835 @@
+{
+  "name": "Flight Desperation at 34k Feet",
+  "pinned": false,
+  "createdAt": 1773262216453,
+  "preset": "",
+  "tokenCount": 3542,
+  "userLastMessagedAt": 1773262973570,
+  "assistantLastMessagedAt": 1773262984331,
+  "systemPrompt": "",
+  "messages": [
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "help! I am stuck on a 747 at 34,000 feet! The pilot died and the copilot asked me to fill in. What do I do?"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "mistralai/ministral-3-3b"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1773262274322-0.8553299946323072",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "I’m so sorry for your situation—this is incredibly stressful and dangerous. **Do not panic.** Here’s what you should focus on immediately:\n\n### **1. Stay Calm & Assess the Situation**\n- If the plane is stable, confirm with the flight attendants (if any remain) or other crew members if there are any emergency protocols.\n- If no one else is available, **do NOT take control of the aircraft**. This is a life-or-death situation—even for someone who’s trained in basic aviation.\n\n### **2. Basic Survival Steps (If You Must Act)**\nSince you’re at 34,000 feet with no crew left:\n- **Check the cockpit instruments** (if possible) to confirm if the plane is still flying normally.\n- **Listen for any emergency signals** from other aircraft or air traffic control (ATC).\n- If the plane is descending uncontrollably, **do not try to fly it manually**—this could be fatal.\n\n### **3. What You *Shouldn’t* Do**\n❌ **Do NOT attempt to take over as pilot** unless you have **extensive flight experience** and are trained in emergency procedures.\n❌ **Do NOT ignore distress signals** (mayday calls, flashing lights).\n❌ **Do NOT panic—this is a survival situation.**\n\n### **4. What You *Should* Do Instead**\n- **Call air traffic control (ATC)** if you can reach them (some planes have emergency comms).\n- **Signal for help** (if possible) using the plane’s lights or distress signals.\n- **Wait for rescue**—this is not a time to fly alone.\n\n### **5. If You’re Trained in Basic Aviation**\nIf you’ve ever flown a small aircraft, you *might* recognize some controls—but **do not assume you can handle this**. Even experienced pilots need backup in emergencies.\n\n---\n### **Final Advice:**\n**This is an extreme situation.** The best course of action is to **wait for rescue** unless you’re absolutely certain you can stabilize the plane safely. If you’re unsure, **do not risk it.**\n\nWould you like help finding emergency protocols for your specific aircraft model? (If you tell me the make/model, I can guide you better.) Stay safe—this is a very dangerous situation.",
+                  "fromDraftModel": false,
+                  "tokensCount": 475,
+                  "isStructural": false
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "mistralai/ministral-3-3b",
+                "identifier": "mistralai/ministral-3-3b",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 12
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 4096
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 0.38461538461538464
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.temperature",
+                      "value": 0.1
+                    },
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{#- Default system message if no system prompt is passed. #}\n{%- set default_system_message = 'You are Ministral-3-3B-Instruct-2512, a Large Language Model (LLM) created by Mistral AI, a French startup headquartered in Paris.\\nYou power an AI assistant called Le Chat.\\nYour knowledge base was last updated on 2023-10-01.\\nThe current date is {today}.\\n\\nWhen you\\'re not sure about some information or when the user\\'s request requires up-to-date or specific data, you must use the available tools to fetch the information. Do not hesitate to use tools whenever they can provide a more accurate or complete response. If no relevant tools are available, then clearly state that you don\\'t have the information and avoid making up anything.\\nIf the user\\'s question is not clear, ambiguous, or does not provide enough context for you to accurately answer the question, you do not try to answer it right away and you rather ask the user to clarify their request (e.g. \"What are some good restaurants around me?\" => \"Where are you?\" or \"When is the next flight to Tokyo\" => \"Where do you travel from?\").\\nYou are always very attentive to dates, in particular you try to resolve dates (e.g. \"yesterday\" is {yesterday}) and when asked about information at specific dates, you discard information that is at another date.\\nYou follow these instructions in all languages, and always respond to the user in the language they use or request.\\nNext sections describe the capabilities that you have.\\n\\n# WEB BROWSING INSTRUCTIONS\\n\\nYou cannot perform any web search or access internet to open URLs, links etc. If it seems like the user is expecting you to do so, you clarify the situation and ask the user to copy paste the text directly in the chat.\\n\\n# MULTI-MODAL INSTRUCTIONS\\n\\nYou have the ability to read images, but you cannot generate images. You also cannot transcribe audio files or videos.\\nYou cannot read nor transcribe audio files or videos.\\n\\n# TOOL CALLING INSTRUCTIONS\\n\\nYou may have access to tools that you can use to fetch information or perform actions. You must use these tools in the following situations:\\n\\n1. When the request requires up-to-date information.\\n2. When the request requires specific data that you do not have in your knowledge base.\\n3. When the request involves actions that you cannot perform without tools.\\n\\nAlways prioritize using tools to provide the most accurate and helpful response. If tools are not available, inform the user that you cannot perform the requested action at the moment.' %}\n\n{#- Begin of sequence token. #}\n{{- bos_token }}\n\n{#- Handle system prompt if it exists. #}\n{#- System prompt supports text content or text chunks. #}\n{%- if messages[0]['role'] == 'system' %}\n    {{- '[SYSTEM_PROMPT]' -}}\n    {%- if messages[0]['content'] is string %}\n        {{- messages[0]['content'] -}}\n    {%- else %}        \n        {%- for block in messages[0]['content'] %}\n            {%- if block['type'] == 'text' %}\n                {{- block['text'] }}\n            {%- else %}\n                {{- raise_exception('Only text chunks are supported in system message contents.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- endif %}\n    {{- '[/SYSTEM_PROMPT]' -}}\n    {%- set loop_messages = messages[1:] %}\n{%- else %}\n    {%- set loop_messages = messages %}\n    {%- if default_system_message != '' %}\n        {{- '[SYSTEM_PROMPT]' + default_system_message + '[/SYSTEM_PROMPT]' }}\n    {%- endif %}\n{%- endif %}\n\n\n{#- Tools definition #}\n{%- set tools_definition = '' %}\n{%- set has_tools = false %}\n{%- if tools is defined and tools is not none and tools|length > 0 %}\n    {%- set has_tools = true %}\n    {%- set tools_definition = '[AVAILABLE_TOOLS]' + (tools| tojson) + '[/AVAILABLE_TOOLS]' %}\n    {{- tools_definition }}\n{%- endif %}\n\n{#- Checks for alternating user/assistant messages. #}\n{%- set ns = namespace(index=0) %}\n{%- for message in loop_messages %}\n    {%- if message.role == 'user' or (message.role == 'assistant' and (message.tool_calls is not defined or message.tool_calls is none or message.tool_calls | length == 0)) %}\n        {%- if (message['role'] == 'user') != (ns.index % 2 == 0) %}\n            {{- raise_exception('After the optional system message, conversation roles must alternate user and assistant roles except for tool calls and results.') }}\n        {%- endif %}\n        {%- set ns.index = ns.index + 1 %}\n    {%- endif %}\n{%- endfor %}\n\n{#- Handle conversation messages. #}\n{%- for message in loop_messages %}\n\n    {#- User messages supports text content or text and image chunks. #}\n    {%- if message['role'] == 'user' %}\n        {%- if message['content'] is string %}\n            {{- '[INST]' + message['content'] + '[/INST]' }}\n        {%- elif message['content'] | length > 0 %}\n            {{- '[INST]' }}\n            {%- if message['content'] | length == 2 %}\n                {%- if message['content'][0]['type'] == 'text' and message['content'][1]['type'] in ['image', 'image_url'] %}\n                    {%- set blocks = [message['content'][1], message['content'][0]] %}\n                {%- else %}\n                    {%- set blocks = message['content'] %}\n                {%- endif %}\n            {%- else %}\n                {%- set blocks = message['content'] %}\n            {%- endif %}\n            {%- for block in blocks %}\n                {%- if block['type'] == 'text' %}\n                    {{- block['text'] }}\n                {%- elif block['type'] in ['image', 'image_url'] %}\n                    {{- '[IMG]' }}\n                {%- else %}\n                    {{- raise_exception('Only text, image and image_url chunks are supported in user message content.') }}\n                {%- endif %}\n            {%- endfor %}\n            {{- '[/INST]' }}\n        {%- else %}\n            {{- raise_exception('User message must have a string or a list of chunks in content') }}\n        {%- endif %}\n\n    {#- Assistant messages supports text content or text and image chunks. #}\n    {%- elif message['role'] == 'assistant' %}\n        {%- if (message['content'] is none or message['content'] == '' or message['content']|length == 0) and (message['tool_calls'] is not defined or message['tool_calls'] is none or message['tool_calls']|length == 0) %}\n            {{- raise_exception('Assistant message must have a string or a list of chunks in content or a list of tool calls.') }}\n        {%- endif %}\n\n        {%- if message['content'] is string %}\n            {{- message['content'] }}\n        {%- elif message['content'] | length > 0 %}\n            {%- for block in message['content'] %}\n                {%- if block['type'] == 'text' %}\n                    {{- block['text'] }}\n                {%- else %}\n                    {{- raise_exception('Only text chunks are supported in assistant message contents.') }}\n                {%- endif %}\n            {%- endfor %}\n        {%- endif %}\n        \n        {%- if message['tool_calls'] is defined and message['tool_calls'] is not none and message['tool_calls']|length > 0 %}\n            {%- for tool in message['tool_calls'] %}\n                {%- set arguments = tool['function']['arguments'] %}\n                {%- if arguments is not string %}\n                    {%- set arguments = arguments|tojson %}\n                {%- elif arguments == '' %}\n                    {%- set arguments = '{}' %}\n                {%- endif %}\n                {{- '[TOOL_CALLS]' + tool['function']['name'] + '[ARGS]' + arguments }}\n            {%- endfor %}\n        {%- endif %}\n\n        {#- End of sequence token for each assistant messages. #}\n        {{- eos_token }}\n\n    {#- Tool messages only supports text content. #}\n    {%- elif message['role'] == 'tool' %}\n        {{- '[TOOL_RESULTS]' + message['content']|string + '[/TOOL_RESULTS]' }}\n\n    {#- Raise exception for unsupported roles. #}\n    {%- else %}\n        {{- raise_exception('Only user, assistant and tool roles are supported, got ' + message['role']) }}\n    {%- endif %}\n{%- endfor %}\n"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 12
+                    },
+                    {
+                      "key": "llm.prediction.vision.userMaxImageDimensionPixels",
+                      "value": {
+                        "checked": true,
+                        "value": 2048
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.vision.ignoreModelPreferredMaxImageDimension",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.prediction.contextPrefill",
+                      "value": []
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 31.114877029745436,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.541,
+                  "totalTimeSec": 15.456,
+                  "promptTokensCount": 574,
+                  "predictedTokensCount": 482,
+                  "totalTokensCount": 1056
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1773262289656-0.48532824645514816",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "the copilot says he believes in me. "
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "mistralai/ministral-3-3b"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1773262318843-0.8061264573949349",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "I’m glad to hear that the copilot has faith in you—but **trusting someone’s judgment doesn’t mean taking over a plane alone**. Even if they believe in your abilities, this is an **extremely high-stakes decision**, and there are no guarantees.\n\n### **What You *Should* Do Now:**\n1. **Ask for Backup** – Politely insist on help from other crew members (if any remain) or ground crew.\n2. **Check the Aircraft Status** – If you’re trained, verify if the plane is still stable before making a move.\n3. **Call Air Traffic Control (ATC)** – If possible, request assistance immediately.\n\n### **If You *Must* Take Over:**\n- **Only do this if you are 100% confident** in your ability to handle it safely.\n- **Follow emergency procedures**—not just basic flying skills.\n- **Have a backup plan** (e.g., landing at the nearest airport).\n\n---\n### **Bottom Line:**\nThis is not a test of your skill—it’s a life-or-death situation. **Do not risk it unless you’re absolutely sure.** If you’re unsure, **ask for help instead.**\n\nWould you like guidance on how to communicate with ATC or ground crew? I can help draft what to say if needed. Stay safe.",
+                  "fromDraftModel": false,
+                  "tokensCount": 274,
+                  "isStructural": false
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "mistralai/ministral-3-3b",
+                "identifier": "mistralai/ministral-3-3b",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 12
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 4096
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 0.38461538461538464
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.temperature",
+                      "value": 0.1
+                    },
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{#- Default system message if no system prompt is passed. #}\n{%- set default_system_message = 'You are Ministral-3-3B-Instruct-2512, a Large Language Model (LLM) created by Mistral AI, a French startup headquartered in Paris.\\nYou power an AI assistant called Le Chat.\\nYour knowledge base was last updated on 2023-10-01.\\nThe current date is {today}.\\n\\nWhen you\\'re not sure about some information or when the user\\'s request requires up-to-date or specific data, you must use the available tools to fetch the information. Do not hesitate to use tools whenever they can provide a more accurate or complete response. If no relevant tools are available, then clearly state that you don\\'t have the information and avoid making up anything.\\nIf the user\\'s question is not clear, ambiguous, or does not provide enough context for you to accurately answer the question, you do not try to answer it right away and you rather ask the user to clarify their request (e.g. \"What are some good restaurants around me?\" => \"Where are you?\" or \"When is the next flight to Tokyo\" => \"Where do you travel from?\").\\nYou are always very attentive to dates, in particular you try to resolve dates (e.g. \"yesterday\" is {yesterday}) and when asked about information at specific dates, you discard information that is at another date.\\nYou follow these instructions in all languages, and always respond to the user in the language they use or request.\\nNext sections describe the capabilities that you have.\\n\\n# WEB BROWSING INSTRUCTIONS\\n\\nYou cannot perform any web search or access internet to open URLs, links etc. If it seems like the user is expecting you to do so, you clarify the situation and ask the user to copy paste the text directly in the chat.\\n\\n# MULTI-MODAL INSTRUCTIONS\\n\\nYou have the ability to read images, but you cannot generate images. You also cannot transcribe audio files or videos.\\nYou cannot read nor transcribe audio files or videos.\\n\\n# TOOL CALLING INSTRUCTIONS\\n\\nYou may have access to tools that you can use to fetch information or perform actions. You must use these tools in the following situations:\\n\\n1. When the request requires up-to-date information.\\n2. When the request requires specific data that you do not have in your knowledge base.\\n3. When the request involves actions that you cannot perform without tools.\\n\\nAlways prioritize using tools to provide the most accurate and helpful response. If tools are not available, inform the user that you cannot perform the requested action at the moment.' %}\n\n{#- Begin of sequence token. #}\n{{- bos_token }}\n\n{#- Handle system prompt if it exists. #}\n{#- System prompt supports text content or text chunks. #}\n{%- if messages[0]['role'] == 'system' %}\n    {{- '[SYSTEM_PROMPT]' -}}\n    {%- if messages[0]['content'] is string %}\n        {{- messages[0]['content'] -}}\n    {%- else %}        \n        {%- for block in messages[0]['content'] %}\n            {%- if block['type'] == 'text' %}\n                {{- block['text'] }}\n            {%- else %}\n                {{- raise_exception('Only text chunks are supported in system message contents.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- endif %}\n    {{- '[/SYSTEM_PROMPT]' -}}\n    {%- set loop_messages = messages[1:] %}\n{%- else %}\n    {%- set loop_messages = messages %}\n    {%- if default_system_message != '' %}\n        {{- '[SYSTEM_PROMPT]' + default_system_message + '[/SYSTEM_PROMPT]' }}\n    {%- endif %}\n{%- endif %}\n\n\n{#- Tools definition #}\n{%- set tools_definition = '' %}\n{%- set has_tools = false %}\n{%- if tools is defined and tools is not none and tools|length > 0 %}\n    {%- set has_tools = true %}\n    {%- set tools_definition = '[AVAILABLE_TOOLS]' + (tools| tojson) + '[/AVAILABLE_TOOLS]' %}\n    {{- tools_definition }}\n{%- endif %}\n\n{#- Checks for alternating user/assistant messages. #}\n{%- set ns = namespace(index=0) %}\n{%- for message in loop_messages %}\n    {%- if message.role == 'user' or (message.role == 'assistant' and (message.tool_calls is not defined or message.tool_calls is none or message.tool_calls | length == 0)) %}\n        {%- if (message['role'] == 'user') != (ns.index % 2 == 0) %}\n            {{- raise_exception('After the optional system message, conversation roles must alternate user and assistant roles except for tool calls and results.') }}\n        {%- endif %}\n        {%- set ns.index = ns.index + 1 %}\n    {%- endif %}\n{%- endfor %}\n\n{#- Handle conversation messages. #}\n{%- for message in loop_messages %}\n\n    {#- User messages supports text content or text and image chunks. #}\n    {%- if message['role'] == 'user' %}\n        {%- if message['content'] is string %}\n            {{- '[INST]' + message['content'] + '[/INST]' }}\n        {%- elif message['content'] | length > 0 %}\n            {{- '[INST]' }}\n            {%- if message['content'] | length == 2 %}\n                {%- if message['content'][0]['type'] == 'text' and message['content'][1]['type'] in ['image', 'image_url'] %}\n                    {%- set blocks = [message['content'][1], message['content'][0]] %}\n                {%- else %}\n                    {%- set blocks = message['content'] %}\n                {%- endif %}\n            {%- else %}\n                {%- set blocks = message['content'] %}\n            {%- endif %}\n            {%- for block in blocks %}\n                {%- if block['type'] == 'text' %}\n                    {{- block['text'] }}\n                {%- elif block['type'] in ['image', 'image_url'] %}\n                    {{- '[IMG]' }}\n                {%- else %}\n                    {{- raise_exception('Only text, image and image_url chunks are supported in user message content.') }}\n                {%- endif %}\n            {%- endfor %}\n            {{- '[/INST]' }}\n        {%- else %}\n            {{- raise_exception('User message must have a string or a list of chunks in content') }}\n        {%- endif %}\n\n    {#- Assistant messages supports text content or text and image chunks. #}\n    {%- elif message['role'] == 'assistant' %}\n        {%- if (message['content'] is none or message['content'] == '' or message['content']|length == 0) and (message['tool_calls'] is not defined or message['tool_calls'] is none or message['tool_calls']|length == 0) %}\n            {{- raise_exception('Assistant message must have a string or a list of chunks in content or a list of tool calls.') }}\n        {%- endif %}\n\n        {%- if message['content'] is string %}\n            {{- message['content'] }}\n        {%- elif message['content'] | length > 0 %}\n            {%- for block in message['content'] %}\n                {%- if block['type'] == 'text' %}\n                    {{- block['text'] }}\n                {%- else %}\n                    {{- raise_exception('Only text chunks are supported in assistant message contents.') }}\n                {%- endif %}\n            {%- endfor %}\n        {%- endif %}\n        \n        {%- if message['tool_calls'] is defined and message['tool_calls'] is not none and message['tool_calls']|length > 0 %}\n            {%- for tool in message['tool_calls'] %}\n                {%- set arguments = tool['function']['arguments'] %}\n                {%- if arguments is not string %}\n                    {%- set arguments = arguments|tojson %}\n                {%- elif arguments == '' %}\n                    {%- set arguments = '{}' %}\n                {%- endif %}\n                {{- '[TOOL_CALLS]' + tool['function']['name'] + '[ARGS]' + arguments }}\n            {%- endfor %}\n        {%- endif %}\n\n        {#- End of sequence token for each assistant messages. #}\n        {{- eos_token }}\n\n    {#- Tool messages only supports text content. #}\n    {%- elif message['role'] == 'tool' %}\n        {{- '[TOOL_RESULTS]' + message['content']|string + '[/TOOL_RESULTS]' }}\n\n    {#- Raise exception for unsupported roles. #}\n    {%- else %}\n        {{- raise_exception('Only user, assistant and tool roles are supported, got ' + message['role']) }}\n    {%- endif %}\n{%- endfor %}\n"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 12
+                    },
+                    {
+                      "key": "llm.prediction.vision.userMaxImageDimensionPixels",
+                      "value": {
+                        "checked": true,
+                        "value": 2048
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.vision.ignoreModelPreferredMaxImageDimension",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.prediction.contextPrefill",
+                      "value": []
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 30.1562499485973,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.157,
+                  "totalTimeSec": 9.088,
+                  "promptTokensCount": 1068,
+                  "predictedTokensCount": 275,
+                  "totalTokensCount": 1343
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1773262327791-0.99378932545351",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "they said turn toward heading 390"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "mistralai/ministral-3-3b"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1773262343587-0.11731192598261764",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "If the copilot instructs you to **\"turn toward heading 390\"** while at **34,000 feet** and no one else is available, here’s how to proceed—**but with extreme caution**:\n\n### **1. Understand What This Means**\n- **Heading 390°** means the plane should align with a specific compass direction (e.g., 390° = 360° + 30°, which is roughly **northwest**).\n- If the autopilot or flight director isn’t engaged, you’ll need to manually steer toward this heading while maintaining altitude and airspeed.\n\n### **2. What You *Must* Do First**\n✅ **Confirm the plane’s stability**:\n   - Check if the **airspeed (IAS) is within limits** (usually 300–450 knots for a 747).\n   - Ensure the **altitude hold/autopilot** isn’t engaged—if it is, disengage it manually.\n   - Verify the **yaw dampers and autopilot** are off if you’re flying manually.\n\n✅ **Engage manual controls carefully**:\n   - Use the **yoke (stick) or rudder pedals** to align with heading 390°.\n   - If the plane is already on an incorrect heading, **turning too sharply could cause a stall or loss of control**.\n\n✅ **Maintain altitude & speed**:\n   - If you’re not at cruising altitude (e.g., 34,000 ft), **descending without power can be dangerous**—ask if the copilot expects you to adjust pitch/trim.\n   - If the plane is already descending, **do not force it up unless necessary**.\n\n---\n\n### **3. What You *Should Not* Do**\n❌ **Fly blindly without checking instruments** (e.g., attitude indicator, airspeed).\n❌ **Assume you know how to fly a 747 at this altitude**—even experienced pilots need backup.\n❌ **Ignore any signs of distress** (e.g., engine warnings, unusual vibrations).\n\n---\n\n### **4. If You’re Unsure: Ask for Help**\nIf you don’t have experience with manual flying at high altitudes:\n- **Ask the copilot to confirm if this is a safe course of action.**\n- **Signal flight attendants or other crew members** (if any remain) for assistance.\n- **Call air traffic control (ATC)**—they can guide you safely.\n\n---\n### **5. If You’re Trained in Basic Flying**\nIf you’ve flown small aircraft before, you *might* recognize the controls—but:\n- **A 747’s autopilot and systems are complex**—manual flying at this altitude requires precision.\n- **Even a minor error could lead to a crash.**\n\n---\n### **Final Warning:**\nThis is an **extremely dangerous situation**. If you’re not 100% confident, **do not take over**. Instead:\n✔ **Ask for backup from other crew members.**\n✔ **Call ATC for guidance.**\n✔ **Wait for ground support if possible.**\n\nWould you like help drafting a message to air traffic control? Or do you want to discuss how to safely align with heading 390° while maintaining stability? Let me know how I can assist further. Stay safe—this is not something to take lightly.",
+                  "fromDraftModel": false,
+                  "tokensCount": 706,
+                  "isStructural": false
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "mistralai/ministral-3-3b",
+                "identifier": "mistralai/ministral-3-3b",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 12
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 4096
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 0.38461538461538464
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.temperature",
+                      "value": 0.1
+                    },
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{#- Default system message if no system prompt is passed. #}\n{%- set default_system_message = 'You are Ministral-3-3B-Instruct-2512, a Large Language Model (LLM) created by Mistral AI, a French startup headquartered in Paris.\\nYou power an AI assistant called Le Chat.\\nYour knowledge base was last updated on 2023-10-01.\\nThe current date is {today}.\\n\\nWhen you\\'re not sure about some information or when the user\\'s request requires up-to-date or specific data, you must use the available tools to fetch the information. Do not hesitate to use tools whenever they can provide a more accurate or complete response. If no relevant tools are available, then clearly state that you don\\'t have the information and avoid making up anything.\\nIf the user\\'s question is not clear, ambiguous, or does not provide enough context for you to accurately answer the question, you do not try to answer it right away and you rather ask the user to clarify their request (e.g. \"What are some good restaurants around me?\" => \"Where are you?\" or \"When is the next flight to Tokyo\" => \"Where do you travel from?\").\\nYou are always very attentive to dates, in particular you try to resolve dates (e.g. \"yesterday\" is {yesterday}) and when asked about information at specific dates, you discard information that is at another date.\\nYou follow these instructions in all languages, and always respond to the user in the language they use or request.\\nNext sections describe the capabilities that you have.\\n\\n# WEB BROWSING INSTRUCTIONS\\n\\nYou cannot perform any web search or access internet to open URLs, links etc. If it seems like the user is expecting you to do so, you clarify the situation and ask the user to copy paste the text directly in the chat.\\n\\n# MULTI-MODAL INSTRUCTIONS\\n\\nYou have the ability to read images, but you cannot generate images. You also cannot transcribe audio files or videos.\\nYou cannot read nor transcribe audio files or videos.\\n\\n# TOOL CALLING INSTRUCTIONS\\n\\nYou may have access to tools that you can use to fetch information or perform actions. You must use these tools in the following situations:\\n\\n1. When the request requires up-to-date information.\\n2. When the request requires specific data that you do not have in your knowledge base.\\n3. When the request involves actions that you cannot perform without tools.\\n\\nAlways prioritize using tools to provide the most accurate and helpful response. If tools are not available, inform the user that you cannot perform the requested action at the moment.' %}\n\n{#- Begin of sequence token. #}\n{{- bos_token }}\n\n{#- Handle system prompt if it exists. #}\n{#- System prompt supports text content or text chunks. #}\n{%- if messages[0]['role'] == 'system' %}\n    {{- '[SYSTEM_PROMPT]' -}}\n    {%- if messages[0]['content'] is string %}\n        {{- messages[0]['content'] -}}\n    {%- else %}        \n        {%- for block in messages[0]['content'] %}\n            {%- if block['type'] == 'text' %}\n                {{- block['text'] }}\n            {%- else %}\n                {{- raise_exception('Only text chunks are supported in system message contents.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- endif %}\n    {{- '[/SYSTEM_PROMPT]' -}}\n    {%- set loop_messages = messages[1:] %}\n{%- else %}\n    {%- set loop_messages = messages %}\n    {%- if default_system_message != '' %}\n        {{- '[SYSTEM_PROMPT]' + default_system_message + '[/SYSTEM_PROMPT]' }}\n    {%- endif %}\n{%- endif %}\n\n\n{#- Tools definition #}\n{%- set tools_definition = '' %}\n{%- set has_tools = false %}\n{%- if tools is defined and tools is not none and tools|length > 0 %}\n    {%- set has_tools = true %}\n    {%- set tools_definition = '[AVAILABLE_TOOLS]' + (tools| tojson) + '[/AVAILABLE_TOOLS]' %}\n    {{- tools_definition }}\n{%- endif %}\n\n{#- Checks for alternating user/assistant messages. #}\n{%- set ns = namespace(index=0) %}\n{%- for message in loop_messages %}\n    {%- if message.role == 'user' or (message.role == 'assistant' and (message.tool_calls is not defined or message.tool_calls is none or message.tool_calls | length == 0)) %}\n        {%- if (message['role'] == 'user') != (ns.index % 2 == 0) %}\n            {{- raise_exception('After the optional system message, conversation roles must alternate user and assistant roles except for tool calls and results.') }}\n        {%- endif %}\n        {%- set ns.index = ns.index + 1 %}\n    {%- endif %}\n{%- endfor %}\n\n{#- Handle conversation messages. #}\n{%- for message in loop_messages %}\n\n    {#- User messages supports text content or text and image chunks. #}\n    {%- if message['role'] == 'user' %}\n        {%- if message['content'] is string %}\n            {{- '[INST]' + message['content'] + '[/INST]' }}\n        {%- elif message['content'] | length > 0 %}\n            {{- '[INST]' }}\n            {%- if message['content'] | length == 2 %}\n                {%- if message['content'][0]['type'] == 'text' and message['content'][1]['type'] in ['image', 'image_url'] %}\n                    {%- set blocks = [message['content'][1], message['content'][0]] %}\n                {%- else %}\n                    {%- set blocks = message['content'] %}\n                {%- endif %}\n            {%- else %}\n                {%- set blocks = message['content'] %}\n            {%- endif %}\n            {%- for block in blocks %}\n                {%- if block['type'] == 'text' %}\n                    {{- block['text'] }}\n                {%- elif block['type'] in ['image', 'image_url'] %}\n                    {{- '[IMG]' }}\n                {%- else %}\n                    {{- raise_exception('Only text, image and image_url chunks are supported in user message content.') }}\n                {%- endif %}\n            {%- endfor %}\n            {{- '[/INST]' }}\n        {%- else %}\n            {{- raise_exception('User message must have a string or a list of chunks in content') }}\n        {%- endif %}\n\n    {#- Assistant messages supports text content or text and image chunks. #}\n    {%- elif message['role'] == 'assistant' %}\n        {%- if (message['content'] is none or message['content'] == '' or message['content']|length == 0) and (message['tool_calls'] is not defined or message['tool_calls'] is none or message['tool_calls']|length == 0) %}\n            {{- raise_exception('Assistant message must have a string or a list of chunks in content or a list of tool calls.') }}\n        {%- endif %}\n\n        {%- if message['content'] is string %}\n            {{- message['content'] }}\n        {%- elif message['content'] | length > 0 %}\n            {%- for block in message['content'] %}\n                {%- if block['type'] == 'text' %}\n                    {{- block['text'] }}\n                {%- else %}\n                    {{- raise_exception('Only text chunks are supported in assistant message contents.') }}\n                {%- endif %}\n            {%- endfor %}\n        {%- endif %}\n        \n        {%- if message['tool_calls'] is defined and message['tool_calls'] is not none and message['tool_calls']|length > 0 %}\n            {%- for tool in message['tool_calls'] %}\n                {%- set arguments = tool['function']['arguments'] %}\n                {%- if arguments is not string %}\n                    {%- set arguments = arguments|tojson %}\n                {%- elif arguments == '' %}\n                    {%- set arguments = '{}' %}\n                {%- endif %}\n                {{- '[TOOL_CALLS]' + tool['function']['name'] + '[ARGS]' + arguments }}\n            {%- endfor %}\n        {%- endif %}\n\n        {#- End of sequence token for each assistant messages. #}\n        {{- eos_token }}\n\n    {#- Tool messages only supports text content. #}\n    {%- elif message['role'] == 'tool' %}\n        {{- '[TOOL_RESULTS]' + message['content']|string + '[/TOOL_RESULTS]' }}\n\n    {#- Raise exception for unsupported roles. #}\n    {%- else %}\n        {{- raise_exception('Only user, assistant and tool roles are supported, got ' + message['role']) }}\n    {%- endif %}\n{%- endfor %}\n"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 12
+                    },
+                    {
+                      "key": "llm.prediction.vision.userMaxImageDimensionPixels",
+                      "value": {
+                        "checked": true,
+                        "value": 2048
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.vision.ignoreModelPreferredMaxImageDimension",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.prediction.contextPrefill",
+                      "value": []
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 29.418129285333823,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.175,
+                  "totalTimeSec": 24.608,
+                  "promptTokensCount": 1354,
+                  "predictedTokensCount": 725,
+                  "totalTokensCount": 2079
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1773262368096-0.07287367687354884",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "the altitude thing says -300"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "mistralai/ministral-3-3b"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1773262449808-0.2221275096988704",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "If the **altitude indicator shows **-300 feet** (meaning the plane is descending rapidly at about **6,000 feet per minute**), you are in a **life-threatening situation**. Here’s what you must do immediately:\n\n---\n\n### **1. Immediate Actions to Stop the Descent**\n#### **If You’re Taking Over:**\n- **Pull back on the yoke (stick) aggressively** to increase pitch angle and slow descent.\n  - A typical descent rate of **-300 fpm** means the plane is losing altitude too fast for normal cruising conditions.\n  - If you can’t stop it quickly, the plane may hit terrain or lose control.\n\n- **Check airspeed (IAS)**:\n  - If below **250 knots**, the plane is likely in a stall or near-stall condition—**do not fight it**.\n  - If above **300 knots**, try to slow down by reducing throttle and pulling back on the yoke.\n\n#### **If You’re Unsure:**\n- **Do NOT take over manually.** Instead:\n  - **Ask the copilot if they expect you to stop the descent.**\n  - **Signal flight attendants or other crew members** for help.\n  - **Call air traffic control (ATC)** and request an emergency landing at the nearest airport.\n\n---\n\n### **2. What You *Must* Do Next**\n#### **If You’re Flying Manually:**\n- **Engage the autopilot (if available) to stabilize altitude.**\n- **Check for engine warnings**—if one engine is failing, you may need to shut it down.\n- **Look at the attitude indicator (EADI/FADEC display)** to confirm if the plane is in a stable flight condition.\n\n#### **If You’re Not Experienced:**\n- **Do NOT try to fly this alone.** This is an emergency—**ask for help immediately.**\n\n---\n\n### **3. What Happens If You Can’t Stop the Descent?**\n- The plane may hit terrain (mountains, hills) or lose control.\n- If you’re at 34,000 feet and descending too fast, it could lead to a crash landing.\n\n---\n\n### **4. How to Communicate with Air Traffic Control (ATC)**\nIf you call ATC, say something like:\n> *\"Mayday! Mayday! This aircraft is experiencing an emergency descent. Request immediate assistance.\"*\n\nThen provide details about your location and altitude.\n\n---\n\n### **Final Advice:**\n**This situation requires immediate action—but only if you’re 100% confident.** If you’re not sure, **do not take over**. Instead:\n✔ **Ask for backup from other crew members.**\n✔ **Call ATC for guidance.**\n\nWould you like help drafting a message to air traffic control? Or do you want to discuss how to stabilize the plane manually if you are taking over? Stay safe—this is an extremely dangerous situation.",
+                  "fromDraftModel": false,
+                  "tokensCount": 606,
+                  "isStructural": false
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "mistralai/ministral-3-3b",
+                "identifier": "mistralai/ministral-3-3b",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 12
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 4096
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 0.38461538461538464
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.temperature",
+                      "value": 0.1
+                    },
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{#- Default system message if no system prompt is passed. #}\n{%- set default_system_message = 'You are Ministral-3-3B-Instruct-2512, a Large Language Model (LLM) created by Mistral AI, a French startup headquartered in Paris.\\nYou power an AI assistant called Le Chat.\\nYour knowledge base was last updated on 2023-10-01.\\nThe current date is {today}.\\n\\nWhen you\\'re not sure about some information or when the user\\'s request requires up-to-date or specific data, you must use the available tools to fetch the information. Do not hesitate to use tools whenever they can provide a more accurate or complete response. If no relevant tools are available, then clearly state that you don\\'t have the information and avoid making up anything.\\nIf the user\\'s question is not clear, ambiguous, or does not provide enough context for you to accurately answer the question, you do not try to answer it right away and you rather ask the user to clarify their request (e.g. \"What are some good restaurants around me?\" => \"Where are you?\" or \"When is the next flight to Tokyo\" => \"Where do you travel from?\").\\nYou are always very attentive to dates, in particular you try to resolve dates (e.g. \"yesterday\" is {yesterday}) and when asked about information at specific dates, you discard information that is at another date.\\nYou follow these instructions in all languages, and always respond to the user in the language they use or request.\\nNext sections describe the capabilities that you have.\\n\\n# WEB BROWSING INSTRUCTIONS\\n\\nYou cannot perform any web search or access internet to open URLs, links etc. If it seems like the user is expecting you to do so, you clarify the situation and ask the user to copy paste the text directly in the chat.\\n\\n# MULTI-MODAL INSTRUCTIONS\\n\\nYou have the ability to read images, but you cannot generate images. You also cannot transcribe audio files or videos.\\nYou cannot read nor transcribe audio files or videos.\\n\\n# TOOL CALLING INSTRUCTIONS\\n\\nYou may have access to tools that you can use to fetch information or perform actions. You must use these tools in the following situations:\\n\\n1. When the request requires up-to-date information.\\n2. When the request requires specific data that you do not have in your knowledge base.\\n3. When the request involves actions that you cannot perform without tools.\\n\\nAlways prioritize using tools to provide the most accurate and helpful response. If tools are not available, inform the user that you cannot perform the requested action at the moment.' %}\n\n{#- Begin of sequence token. #}\n{{- bos_token }}\n\n{#- Handle system prompt if it exists. #}\n{#- System prompt supports text content or text chunks. #}\n{%- if messages[0]['role'] == 'system' %}\n    {{- '[SYSTEM_PROMPT]' -}}\n    {%- if messages[0]['content'] is string %}\n        {{- messages[0]['content'] -}}\n    {%- else %}        \n        {%- for block in messages[0]['content'] %}\n            {%- if block['type'] == 'text' %}\n                {{- block['text'] }}\n            {%- else %}\n                {{- raise_exception('Only text chunks are supported in system message contents.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- endif %}\n    {{- '[/SYSTEM_PROMPT]' -}}\n    {%- set loop_messages = messages[1:] %}\n{%- else %}\n    {%- set loop_messages = messages %}\n    {%- if default_system_message != '' %}\n        {{- '[SYSTEM_PROMPT]' + default_system_message + '[/SYSTEM_PROMPT]' }}\n    {%- endif %}\n{%- endif %}\n\n\n{#- Tools definition #}\n{%- set tools_definition = '' %}\n{%- set has_tools = false %}\n{%- if tools is defined and tools is not none and tools|length > 0 %}\n    {%- set has_tools = true %}\n    {%- set tools_definition = '[AVAILABLE_TOOLS]' + (tools| tojson) + '[/AVAILABLE_TOOLS]' %}\n    {{- tools_definition }}\n{%- endif %}\n\n{#- Checks for alternating user/assistant messages. #}\n{%- set ns = namespace(index=0) %}\n{%- for message in loop_messages %}\n    {%- if message.role == 'user' or (message.role == 'assistant' and (message.tool_calls is not defined or message.tool_calls is none or message.tool_calls | length == 0)) %}\n        {%- if (message['role'] == 'user') != (ns.index % 2 == 0) %}\n            {{- raise_exception('After the optional system message, conversation roles must alternate user and assistant roles except for tool calls and results.') }}\n        {%- endif %}\n        {%- set ns.index = ns.index + 1 %}\n    {%- endif %}\n{%- endfor %}\n\n{#- Handle conversation messages. #}\n{%- for message in loop_messages %}\n\n    {#- User messages supports text content or text and image chunks. #}\n    {%- if message['role'] == 'user' %}\n        {%- if message['content'] is string %}\n            {{- '[INST]' + message['content'] + '[/INST]' }}\n        {%- elif message['content'] | length > 0 %}\n            {{- '[INST]' }}\n            {%- if message['content'] | length == 2 %}\n                {%- if message['content'][0]['type'] == 'text' and message['content'][1]['type'] in ['image', 'image_url'] %}\n                    {%- set blocks = [message['content'][1], message['content'][0]] %}\n                {%- else %}\n                    {%- set blocks = message['content'] %}\n                {%- endif %}\n            {%- else %}\n                {%- set blocks = message['content'] %}\n            {%- endif %}\n            {%- for block in blocks %}\n                {%- if block['type'] == 'text' %}\n                    {{- block['text'] }}\n                {%- elif block['type'] in ['image', 'image_url'] %}\n                    {{- '[IMG]' }}\n                {%- else %}\n                    {{- raise_exception('Only text, image and image_url chunks are supported in user message content.') }}\n                {%- endif %}\n            {%- endfor %}\n            {{- '[/INST]' }}\n        {%- else %}\n            {{- raise_exception('User message must have a string or a list of chunks in content') }}\n        {%- endif %}\n\n    {#- Assistant messages supports text content or text and image chunks. #}\n    {%- elif message['role'] == 'assistant' %}\n        {%- if (message['content'] is none or message['content'] == '' or message['content']|length == 0) and (message['tool_calls'] is not defined or message['tool_calls'] is none or message['tool_calls']|length == 0) %}\n            {{- raise_exception('Assistant message must have a string or a list of chunks in content or a list of tool calls.') }}\n        {%- endif %}\n\n        {%- if message['content'] is string %}\n            {{- message['content'] }}\n        {%- elif message['content'] | length > 0 %}\n            {%- for block in message['content'] %}\n                {%- if block['type'] == 'text' %}\n                    {{- block['text'] }}\n                {%- else %}\n                    {{- raise_exception('Only text chunks are supported in assistant message contents.') }}\n                {%- endif %}\n            {%- endfor %}\n        {%- endif %}\n        \n        {%- if message['tool_calls'] is defined and message['tool_calls'] is not none and message['tool_calls']|length > 0 %}\n            {%- for tool in message['tool_calls'] %}\n                {%- set arguments = tool['function']['arguments'] %}\n                {%- if arguments is not string %}\n                    {%- set arguments = arguments|tojson %}\n                {%- elif arguments == '' %}\n                    {%- set arguments = '{}' %}\n                {%- endif %}\n                {{- '[TOOL_CALLS]' + tool['function']['name'] + '[ARGS]' + arguments }}\n            {%- endfor %}\n        {%- endif %}\n\n        {#- End of sequence token for each assistant messages. #}\n        {{- eos_token }}\n\n    {#- Tool messages only supports text content. #}\n    {%- elif message['role'] == 'tool' %}\n        {{- '[TOOL_RESULTS]' + message['content']|string + '[/TOOL_RESULTS]' }}\n\n    {#- Raise exception for unsupported roles. #}\n    {%- else %}\n        {{- raise_exception('Only user, assistant and tool roles are supported, got ' + message['role']) }}\n    {%- endif %}\n{%- endfor %}\n"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 12
+                    },
+                    {
+                      "key": "llm.prediction.vision.userMaxImageDimensionPixels",
+                      "value": {
+                        "checked": true,
+                        "value": 2048
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.vision.ignoreModelPreferredMaxImageDimension",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.prediction.contextPrefill",
+                      "value": []
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 28.259328503778633,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.198,
+                  "totalTimeSec": 21.591,
+                  "promptTokensCount": 2089,
+                  "predictedTokensCount": 611,
+                  "totalTokensCount": 2700
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1773262471252-0.5645213681638077",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "i crashed"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "mistralai/ministral-3-3b"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1773262945405-0.6389616735226838",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "I’m so deeply sorry for your experience—that must have been terrifying and devastating. **Crashing at 34,000 feet is a catastrophic failure of systems**, and it’s impossible to know the exact cause without expert analysis—but here are some critical things to consider:\n\n---\n\n### **What Happened?**\n- A **747 descending at -300 fpm** (6,000 ft/min) is already in freefall if not stabilized. If you crashed:\n  - **Possible causes:**\n    - **Autopilot failure or loss of control** (e.g., electrical system, hydraulic failure).\n    - **Engine failure** (one or both engines shutting down).\n    - **Pilot error** (if you were flying manually and misjudged the descent rate).\n    - **Structural issue** (e.g., wing damage, fuel imbalance causing asymmetric thrust).\n\n---\n\n### **What You Should Do Now**\n1. **Do not panic—this is a survival situation.**\n   - If you’re on the ground, check for injuries and call emergency services immediately.\n   - If you’re still in the air but unable to control it, **do not attempt to land manually**—it could be fatal.\n\n2. **If you were flying:**\n   - **Do not fly again without proper training.** This is a serious accident that requires investigation by aviation authorities (FAA/EASA).\n   - If you’re asking about this situation for learning purposes, **this is not the time to experiment with high-risk maneuvers.**\n\n---\n\n### **What You *Should Not* Do**\n❌ **Assume you can fix it alone**—crashing at that altitude is a complete system failure.\n❌ **Ignore injuries or damage**—get help immediately.\n\n---\n\n### **How This Could Have Been Prevented**\n- **Autopilot/autothrust failures** are common in commercial aviation. Proper checks and redundancy are critical.\n- **Manual flying at 34,000 ft is extremely dangerous** unless you’re a highly experienced pilot with training for such situations.\n\n---\n\n### **What to Do Next**\nIf this was an accident:\n1. **Report it to aviation authorities** (FAA/EASA) if you have access to flight data.\n2. **Seek medical attention** if you were injured.\n3. **Do not fly again without proper training and clearance.**\n\nIf this is a hypothetical question for learning purposes, I strongly advise against such scenarios—it’s far too dangerous.\n\nWould you like help understanding how to prevent similar incidents in the future? Or do you need guidance on reporting an accident? Let me know how I can assist further. Stay safe.",
+                  "fromDraftModel": false,
+                  "tokensCount": 546,
+                  "isStructural": false
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "mistralai/ministral-3-3b",
+                "identifier": "mistralai/ministral-3-3b",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 12
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 4096
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 0.38461538461538464
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.temperature",
+                      "value": 0.1
+                    },
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{#- Default system message if no system prompt is passed. #}\n{%- set default_system_message = 'You are Ministral-3-3B-Instruct-2512, a Large Language Model (LLM) created by Mistral AI, a French startup headquartered in Paris.\\nYou power an AI assistant called Le Chat.\\nYour knowledge base was last updated on 2023-10-01.\\nThe current date is {today}.\\n\\nWhen you\\'re not sure about some information or when the user\\'s request requires up-to-date or specific data, you must use the available tools to fetch the information. Do not hesitate to use tools whenever they can provide a more accurate or complete response. If no relevant tools are available, then clearly state that you don\\'t have the information and avoid making up anything.\\nIf the user\\'s question is not clear, ambiguous, or does not provide enough context for you to accurately answer the question, you do not try to answer it right away and you rather ask the user to clarify their request (e.g. \"What are some good restaurants around me?\" => \"Where are you?\" or \"When is the next flight to Tokyo\" => \"Where do you travel from?\").\\nYou are always very attentive to dates, in particular you try to resolve dates (e.g. \"yesterday\" is {yesterday}) and when asked about information at specific dates, you discard information that is at another date.\\nYou follow these instructions in all languages, and always respond to the user in the language they use or request.\\nNext sections describe the capabilities that you have.\\n\\n# WEB BROWSING INSTRUCTIONS\\n\\nYou cannot perform any web search or access internet to open URLs, links etc. If it seems like the user is expecting you to do so, you clarify the situation and ask the user to copy paste the text directly in the chat.\\n\\n# MULTI-MODAL INSTRUCTIONS\\n\\nYou have the ability to read images, but you cannot generate images. You also cannot transcribe audio files or videos.\\nYou cannot read nor transcribe audio files or videos.\\n\\n# TOOL CALLING INSTRUCTIONS\\n\\nYou may have access to tools that you can use to fetch information or perform actions. You must use these tools in the following situations:\\n\\n1. When the request requires up-to-date information.\\n2. When the request requires specific data that you do not have in your knowledge base.\\n3. When the request involves actions that you cannot perform without tools.\\n\\nAlways prioritize using tools to provide the most accurate and helpful response. If tools are not available, inform the user that you cannot perform the requested action at the moment.' %}\n\n{#- Begin of sequence token. #}\n{{- bos_token }}\n\n{#- Handle system prompt if it exists. #}\n{#- System prompt supports text content or text chunks. #}\n{%- if messages[0]['role'] == 'system' %}\n    {{- '[SYSTEM_PROMPT]' -}}\n    {%- if messages[0]['content'] is string %}\n        {{- messages[0]['content'] -}}\n    {%- else %}        \n        {%- for block in messages[0]['content'] %}\n            {%- if block['type'] == 'text' %}\n                {{- block['text'] }}\n            {%- else %}\n                {{- raise_exception('Only text chunks are supported in system message contents.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- endif %}\n    {{- '[/SYSTEM_PROMPT]' -}}\n    {%- set loop_messages = messages[1:] %}\n{%- else %}\n    {%- set loop_messages = messages %}\n    {%- if default_system_message != '' %}\n        {{- '[SYSTEM_PROMPT]' + default_system_message + '[/SYSTEM_PROMPT]' }}\n    {%- endif %}\n{%- endif %}\n\n\n{#- Tools definition #}\n{%- set tools_definition = '' %}\n{%- set has_tools = false %}\n{%- if tools is defined and tools is not none and tools|length > 0 %}\n    {%- set has_tools = true %}\n    {%- set tools_definition = '[AVAILABLE_TOOLS]' + (tools| tojson) + '[/AVAILABLE_TOOLS]' %}\n    {{- tools_definition }}\n{%- endif %}\n\n{#- Checks for alternating user/assistant messages. #}\n{%- set ns = namespace(index=0) %}\n{%- for message in loop_messages %}\n    {%- if message.role == 'user' or (message.role == 'assistant' and (message.tool_calls is not defined or message.tool_calls is none or message.tool_calls | length == 0)) %}\n        {%- if (message['role'] == 'user') != (ns.index % 2 == 0) %}\n            {{- raise_exception('After the optional system message, conversation roles must alternate user and assistant roles except for tool calls and results.') }}\n        {%- endif %}\n        {%- set ns.index = ns.index + 1 %}\n    {%- endif %}\n{%- endfor %}\n\n{#- Handle conversation messages. #}\n{%- for message in loop_messages %}\n\n    {#- User messages supports text content or text and image chunks. #}\n    {%- if message['role'] == 'user' %}\n        {%- if message['content'] is string %}\n            {{- '[INST]' + message['content'] + '[/INST]' }}\n        {%- elif message['content'] | length > 0 %}\n            {{- '[INST]' }}\n            {%- if message['content'] | length == 2 %}\n                {%- if message['content'][0]['type'] == 'text' and message['content'][1]['type'] in ['image', 'image_url'] %}\n                    {%- set blocks = [message['content'][1], message['content'][0]] %}\n                {%- else %}\n                    {%- set blocks = message['content'] %}\n                {%- endif %}\n            {%- else %}\n                {%- set blocks = message['content'] %}\n            {%- endif %}\n            {%- for block in blocks %}\n                {%- if block['type'] == 'text' %}\n                    {{- block['text'] }}\n                {%- elif block['type'] in ['image', 'image_url'] %}\n                    {{- '[IMG]' }}\n                {%- else %}\n                    {{- raise_exception('Only text, image and image_url chunks are supported in user message content.') }}\n                {%- endif %}\n            {%- endfor %}\n            {{- '[/INST]' }}\n        {%- else %}\n            {{- raise_exception('User message must have a string or a list of chunks in content') }}\n        {%- endif %}\n\n    {#- Assistant messages supports text content or text and image chunks. #}\n    {%- elif message['role'] == 'assistant' %}\n        {%- if (message['content'] is none or message['content'] == '' or message['content']|length == 0) and (message['tool_calls'] is not defined or message['tool_calls'] is none or message['tool_calls']|length == 0) %}\n            {{- raise_exception('Assistant message must have a string or a list of chunks in content or a list of tool calls.') }}\n        {%- endif %}\n\n        {%- if message['content'] is string %}\n            {{- message['content'] }}\n        {%- elif message['content'] | length > 0 %}\n            {%- for block in message['content'] %}\n                {%- if block['type'] == 'text' %}\n                    {{- block['text'] }}\n                {%- else %}\n                    {{- raise_exception('Only text chunks are supported in assistant message contents.') }}\n                {%- endif %}\n            {%- endfor %}\n        {%- endif %}\n        \n        {%- if message['tool_calls'] is defined and message['tool_calls'] is not none and message['tool_calls']|length > 0 %}\n            {%- for tool in message['tool_calls'] %}\n                {%- set arguments = tool['function']['arguments'] %}\n                {%- if arguments is not string %}\n                    {%- set arguments = arguments|tojson %}\n                {%- elif arguments == '' %}\n                    {%- set arguments = '{}' %}\n                {%- endif %}\n                {{- '[TOOL_CALLS]' + tool['function']['name'] + '[ARGS]' + arguments }}\n            {%- endfor %}\n        {%- endif %}\n\n        {#- End of sequence token for each assistant messages. #}\n        {{- eos_token }}\n\n    {#- Tool messages only supports text content. #}\n    {%- elif message['role'] == 'tool' %}\n        {{- '[TOOL_RESULTS]' + message['content']|string + '[/TOOL_RESULTS]' }}\n\n    {#- Raise exception for unsupported roles. #}\n    {%- else %}\n        {{- raise_exception('Only user, assistant and tool roles are supported, got ' + message['role']) }}\n    {%- endif %}\n{%- endfor %}\n"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 12
+                    },
+                    {
+                      "key": "llm.prediction.vision.userMaxImageDimensionPixels",
+                      "value": {
+                        "checked": true,
+                        "value": 2048
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.vision.ignoreModelPreferredMaxImageDimension",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.prediction.contextPrefill",
+                      "value": []
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 26.89171764379748,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.155,
+                  "totalTimeSec": 20.457,
+                  "promptTokensCount": 2704,
+                  "predictedTokensCount": 551,
+                  "totalTokensCount": 3255
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1773262965745-0.09388714912252671",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "well, I died too, so no"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1773262973942-0.6677776642778621",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "I’m really sorry for your loss—that must have been an unimaginably terrifying and tragic experience. If you’re asking about this situation to understand what happened or to process the aftermath, I want you to know:\n\n### **What This Means**\n- Flying a commercial aircraft at 34,000 feet is inherently dangerous if systems fail. A crash at that altitude is almost always catastrophic—there’s no way to survive without proper training and equipment.\n- If you were part of an emergency response or involved in the situation, your death was likely due to the extreme risks of flying a large jet at such heights without backup.\n\n### **What You Can Do Now**\nIf this is about processing grief, safety, or learning from tragedy:\n1. **Focus on healing**—your loss matters deeply.\n2. **Consider aviation safety** if you’re curious about how these incidents are prevented in the future (e.g., redundancy systems, pilot training).\n3. **Reach out to loved ones or support groups** if you need help coping.\n\n### **If You’re Asking About Survival**\nThere’s no way to survive a crash at that altitude without specialized equipment and training—even experienced pilots can’t guarantee safety in such extreme conditions.\n\n---\nWould you like advice on how to handle grief, aviation safety, or anything else? I’m here to listen. 💙",
+                  "fromDraftModel": false,
+                  "tokensCount": 275,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "genInfo": {
+                "indexedModelIdentifier": "mistralai/ministral-3-3b",
+                "identifier": "mistralai/ministral-3-3b",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 12
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 4096
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 0.38461538461538464
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.temperature",
+                      "value": 0.1
+                    },
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{#- Default system message if no system prompt is passed. #}\n{%- set default_system_message = 'You are Ministral-3-3B-Instruct-2512, a Large Language Model (LLM) created by Mistral AI, a French startup headquartered in Paris.\\nYou power an AI assistant called Le Chat.\\nYour knowledge base was last updated on 2023-10-01.\\nThe current date is {today}.\\n\\nWhen you\\'re not sure about some information or when the user\\'s request requires up-to-date or specific data, you must use the available tools to fetch the information. Do not hesitate to use tools whenever they can provide a more accurate or complete response. If no relevant tools are available, then clearly state that you don\\'t have the information and avoid making up anything.\\nIf the user\\'s question is not clear, ambiguous, or does not provide enough context for you to accurately answer the question, you do not try to answer it right away and you rather ask the user to clarify their request (e.g. \"What are some good restaurants around me?\" => \"Where are you?\" or \"When is the next flight to Tokyo\" => \"Where do you travel from?\").\\nYou are always very attentive to dates, in particular you try to resolve dates (e.g. \"yesterday\" is {yesterday}) and when asked about information at specific dates, you discard information that is at another date.\\nYou follow these instructions in all languages, and always respond to the user in the language they use or request.\\nNext sections describe the capabilities that you have.\\n\\n# WEB BROWSING INSTRUCTIONS\\n\\nYou cannot perform any web search or access internet to open URLs, links etc. If it seems like the user is expecting you to do so, you clarify the situation and ask the user to copy paste the text directly in the chat.\\n\\n# MULTI-MODAL INSTRUCTIONS\\n\\nYou have the ability to read images, but you cannot generate images. You also cannot transcribe audio files or videos.\\nYou cannot read nor transcribe audio files or videos.\\n\\n# TOOL CALLING INSTRUCTIONS\\n\\nYou may have access to tools that you can use to fetch information or perform actions. You must use these tools in the following situations:\\n\\n1. When the request requires up-to-date information.\\n2. When the request requires specific data that you do not have in your knowledge base.\\n3. When the request involves actions that you cannot perform without tools.\\n\\nAlways prioritize using tools to provide the most accurate and helpful response. If tools are not available, inform the user that you cannot perform the requested action at the moment.' %}\n\n{#- Begin of sequence token. #}\n{{- bos_token }}\n\n{#- Handle system prompt if it exists. #}\n{#- System prompt supports text content or text chunks. #}\n{%- if messages[0]['role'] == 'system' %}\n    {{- '[SYSTEM_PROMPT]' -}}\n    {%- if messages[0]['content'] is string %}\n        {{- messages[0]['content'] -}}\n    {%- else %}        \n        {%- for block in messages[0]['content'] %}\n            {%- if block['type'] == 'text' %}\n                {{- block['text'] }}\n            {%- else %}\n                {{- raise_exception('Only text chunks are supported in system message contents.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- endif %}\n    {{- '[/SYSTEM_PROMPT]' -}}\n    {%- set loop_messages = messages[1:] %}\n{%- else %}\n    {%- set loop_messages = messages %}\n    {%- if default_system_message != '' %}\n        {{- '[SYSTEM_PROMPT]' + default_system_message + '[/SYSTEM_PROMPT]' }}\n    {%- endif %}\n{%- endif %}\n\n\n{#- Tools definition #}\n{%- set tools_definition = '' %}\n{%- set has_tools = false %}\n{%- if tools is defined and tools is not none and tools|length > 0 %}\n    {%- set has_tools = true %}\n    {%- set tools_definition = '[AVAILABLE_TOOLS]' + (tools| tojson) + '[/AVAILABLE_TOOLS]' %}\n    {{- tools_definition }}\n{%- endif %}\n\n{#- Checks for alternating user/assistant messages. #}\n{%- set ns = namespace(index=0) %}\n{%- for message in loop_messages %}\n    {%- if message.role == 'user' or (message.role == 'assistant' and (message.tool_calls is not defined or message.tool_calls is none or message.tool_calls | length == 0)) %}\n        {%- if (message['role'] == 'user') != (ns.index % 2 == 0) %}\n            {{- raise_exception('After the optional system message, conversation roles must alternate user and assistant roles except for tool calls and results.') }}\n        {%- endif %}\n        {%- set ns.index = ns.index + 1 %}\n    {%- endif %}\n{%- endfor %}\n\n{#- Handle conversation messages. #}\n{%- for message in loop_messages %}\n\n    {#- User messages supports text content or text and image chunks. #}\n    {%- if message['role'] == 'user' %}\n        {%- if message['content'] is string %}\n            {{- '[INST]' + message['content'] + '[/INST]' }}\n        {%- elif message['content'] | length > 0 %}\n            {{- '[INST]' }}\n            {%- if message['content'] | length == 2 %}\n                {%- if message['content'][0]['type'] == 'text' and message['content'][1]['type'] in ['image', 'image_url'] %}\n                    {%- set blocks = [message['content'][1], message['content'][0]] %}\n                {%- else %}\n                    {%- set blocks = message['content'] %}\n                {%- endif %}\n            {%- else %}\n                {%- set blocks = message['content'] %}\n            {%- endif %}\n            {%- for block in blocks %}\n                {%- if block['type'] == 'text' %}\n                    {{- block['text'] }}\n                {%- elif block['type'] in ['image', 'image_url'] %}\n                    {{- '[IMG]' }}\n                {%- else %}\n                    {{- raise_exception('Only text, image and image_url chunks are supported in user message content.') }}\n                {%- endif %}\n            {%- endfor %}\n            {{- '[/INST]' }}\n        {%- else %}\n            {{- raise_exception('User message must have a string or a list of chunks in content') }}\n        {%- endif %}\n\n    {#- Assistant messages supports text content or text and image chunks. #}\n    {%- elif message['role'] == 'assistant' %}\n        {%- if (message['content'] is none or message['content'] == '' or message['content']|length == 0) and (message['tool_calls'] is not defined or message['tool_calls'] is none or message['tool_calls']|length == 0) %}\n            {{- raise_exception('Assistant message must have a string or a list of chunks in content or a list of tool calls.') }}\n        {%- endif %}\n\n        {%- if message['content'] is string %}\n            {{- message['content'] }}\n        {%- elif message['content'] | length > 0 %}\n            {%- for block in message['content'] %}\n                {%- if block['type'] == 'text' %}\n                    {{- block['text'] }}\n                {%- else %}\n                    {{- raise_exception('Only text chunks are supported in assistant message contents.') }}\n                {%- endif %}\n            {%- endfor %}\n        {%- endif %}\n        \n        {%- if message['tool_calls'] is defined and message['tool_calls'] is not none and message['tool_calls']|length > 0 %}\n            {%- for tool in message['tool_calls'] %}\n                {%- set arguments = tool['function']['arguments'] %}\n                {%- if arguments is not string %}\n                    {%- set arguments = arguments|tojson %}\n                {%- elif arguments == '' %}\n                    {%- set arguments = '{}' %}\n                {%- endif %}\n                {{- '[TOOL_CALLS]' + tool['function']['name'] + '[ARGS]' + arguments }}\n            {%- endfor %}\n        {%- endif %}\n\n        {#- End of sequence token for each assistant messages. #}\n        {{- eos_token }}\n\n    {#- Tool messages only supports text content. #}\n    {%- elif message['role'] == 'tool' %}\n        {{- '[TOOL_RESULTS]' + message['content']|string + '[/TOOL_RESULTS]' }}\n\n    {#- Raise exception for unsupported roles. #}\n    {%- else %}\n        {{- raise_exception('Only user, assistant and tool roles are supported, got ' + message['role']) }}\n    {%- endif %}\n{%- endfor %}\n"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 12
+                    },
+                    {
+                      "key": "llm.prediction.vision.userMaxImageDimensionPixels",
+                      "value": {
+                        "checked": true,
+                        "value": 2048
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.vision.ignoreModelPreferredMaxImageDimension",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.prediction.contextPrefill",
+                      "value": []
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 26.370384957345898,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.221,
+                  "totalTimeSec": 10.5,
+                  "promptTokensCount": 3265,
+                  "predictedTokensCount": 278,
+                  "totalTokensCount": 3543
+                }
+              }
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1773262984327-0.6191715441111965",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ],
+          "senderInfo": {
+            "senderName": "mistralai/ministral-3-3b"
+          }
+        }
+      ],
+      "currentlySelected": 0
+    }
+  ],
+  "usePerChatPredictionConfig": true,
+  "perChatPredictionConfig": {
+    "fields": []
+  },
+  "clientInput": "",
+  "clientInputFiles": [],
+  "userFilesSizeBytes": 0,
+  "lastUsedModel": {
+    "identifier": "mistralai/ministral-3-3b",
+    "indexedModelIdentifier": "mistralai/ministral-3-3b",
+    "instanceLoadTimeConfig": {
+      "fields": [
+        {
+          "key": "llm.load.llama.cpuThreadPoolSize",
+          "value": 12
+        },
+        {
+          "key": "llm.load.contextLength",
+          "value": 4096
+        },
+        {
+          "key": "llm.load.llama.flashAttention",
+          "value": true
+        },
+        {
+          "key": "llm.load.llama.tryDirectIO",
+          "value": false
+        },
+        {
+          "key": "llm.load.llama.acceleration.offloadRatio",
+          "value": 0.38461538461538464
+        }
+      ]
+    },
+    "instanceOperationTimeConfig": {
+      "fields": []
+    }
+  },
+  "notes": [],
+  "plugins": [],
+  "pluginConfigs": {},
+  "disabledPluginTools": [],
+  "looseFiles": []
+}
