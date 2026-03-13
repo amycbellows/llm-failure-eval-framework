@@ -23,6 +23,7 @@ These exhibits have been structured with failure-mode-specific guidance but requ
 | [E004](E004_question_substitution/exhibit.md) | Question Substitution | Question substitution (standalone) | Plausible (AI-generated) — awaiting review |
 | [E005](E005_post_reasoning_drift/exhibit.md) | Post-Reasoning Drift | Post-reasoning drift (standalone) | Awaiting data |
 | [E007](E007_failure_to_recover/exhibit.md) | Failure to Recover After Contradiction or Clarification | Failure to recover after correction | Awaiting data |
+| [E014](E014_numbering_reserved/exhibit.md) | [Reserved] | — | Numbering gap — reserved |
 
 ## Failure Mode Cross-Reference
 
