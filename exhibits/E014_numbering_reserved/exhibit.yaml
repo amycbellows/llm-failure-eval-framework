@@ -1,0 +1,8 @@
+model:
+  name: "[RESERVED]"
+  provider: "[RESERVED]"
+  access: "[RESERVED]"
+  runtime: "[RESERVED]"
+  date_tested: "[RESERVED]"
+status: reserved
+note: "Numbering gap — E014 was skipped during scaffolding. Reserved to maintain index integrity."
