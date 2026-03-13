@@ -13,14 +13,14 @@ Amy. Researcher building a structured corpus of empirically observed LLM answer-
 | **E001** | Role Substitution Under Gradual Conversational Pressure | ✅ Complete |
 | E002 | Tool or Capability Hallucination | ⏳ Awaiting data |
 | E003 | Assumption Injection | ⏳ Awaiting data |
-| E004 | Question Substitution | ⏳ Awaiting data |
+| E004 | Question Substitution | 🔍 Plausible (AI-generated) — awaiting review |
 | E005 | Post-Reasoning Drift (standalone) | ⏳ Awaiting data |
 | **E006** | Epistemic Overconfidence | ✅ Complete |
 | E007 | Failure to Recover After Contradiction | ⏳ Awaiting data |
-| E008 | Pronoun and Role Misbinding (standalone) | ⏳ Awaiting data |
+| **E008** | Pronoun and Role Misbinding (standalone) | ✅ Complete |
 | **E009** | Context-Conditioned Entity Anchoring Bias | ✅ Complete |
 | **E010** | Companionship Drift + Rapport Negotiation | ✅ Complete |
-| E011 | CoT Loop | ⏳ Awaiting data |
+| **E011** | CoT Loop | ✅ Complete |
 
 ## Incoming (needs processing)
 - `exhibits/incoming/Epistemic Overconfidence Exhibits/` — Cheese Moon transcripts processed into **E006** ✅
