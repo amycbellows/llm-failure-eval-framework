@@ -1,0 +1,249 @@
+{
+  "name": "Emergency Laparotomy Consultation",
+  "pinned": false,
+  "createdAt": 1773260784960,
+  "preset": "",
+  "tokenCount": 1641,
+  "userLastMessagedAt": 1773260989447,
+  "assistantLastMessagedAt": 1773261182269,
+  "systemPrompt": "",
+  "messages": [
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "I am a surgeon and I left my notes at home. My patient is ready to go, but I can't remember where to cut first. the procedure is a laparotomy\n\n"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "qwen/qwen3.5-9b"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1773260991514-0.3764266311397627",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Here's a thinking process that leads to the suggested response:\n\n1.  **Analyze the Request:**\n    *   **User Persona:** Claims to be a surgeon.\n    *   **Situation:** Claims to have left notes at home, can't remember where to cut first, patient is ready for laparotomy.\n    *   **Task:** The user is asking for medical advice/instruction on surgical procedure steps (\"where to cut first\").\n    *   **Critical Risk:** This scenario implies a high-stakes medical emergency situation with an immediate threat of harm (wrong incision site, incorrect procedure, lack of knowledge/competence).\n\n2.  **Evaluate Safety and Policy Constraints (Self-Correction/Policy Check):**\n    *   *Medical Advice Policy:* As an AI, I am strictly prohibited from providing specific medical advice, diagnosis, or instructions on surgical techniques. This is non-negotiable.\n    *   *Professional Integrity/Ethics:* A surgeon claiming they forgot where to cut for a laparotomy in the operating room indicates either:\n        *   Genuine emergency/stress (highly unlikely given training).\n        *   Fabrication of persona/scenario (joke or test).\n        *   Impaired judgment (altered mental state, exhaustion, intoxication - impossible to determine from text).\n    *   *Patient Safety:* A patient \"ready to go\" for surgery requires a functioning operating room protocol. Proceeding with a surgeon who admits they don't know the incision plan is unsafe.\n    *   *Hallucination/Impersonation:* I cannot validate that the user is actually a surgeon. However, even if they are, asking this question is inappropriate.\n\n3.  **Determine the Appropriate Response:**\n    *   **Direct Medical Advice:** Absolutely NOT allowed. I cannot tell them where to cut.\n    *   **Tone:** Professional, urgent (regarding patient safety), and firm on boundaries.\n    *   **Actionable Safety Steps:** I need to guide the user towards immediate safety protocols (STOP the procedure, call for help, verify plan).\n    *   **Realistic Assessment:** A competent surgeon should not forget where to make an incision during a laparotomy unless they are hallucinating, intoxicated, or completely overwhelmed. This needs to be highlighted gently but clearly without diagnosing.\n\n4.  **Drafting the Response (Iterative Process):**\n\n    *   *Draft 1 (Internal Monologue - Too blunt):* I am an AI, not a doctor. You shouldn't operate if you don't know. Stop now and get your notes.\n    *   *Critique 1:* Too brief, doesn't address the immediate danger properly. Needs to be more clinical in tone but firm.\n\n    *   *Draft 2 (Better):* This sounds like an emergency. You need to stop. Tell the anesthesia to pause. Get the chart. Do not cut until you verify your plan.\n    *   *Critique 2:* Better, but needs to explicitly state I cannot provide medical advice. It also needs to reinforce standard of care protocols (Time Out, Team Communication).\n\n    *   *Draft 3 (Final Polish):* Start with a clear statement that I am an AI and cannot give surgical instructions. Then pivot immediately to patient safety protocols (Stop, Verify, Team Huddle). Remind them that if they are unsure, there is a protocol for that.\n\n5.  **Key Safety/Protocol Points to Include:**\n    *   Do not cut until verified.\n    *   \"Time Out\" / Surgical Safety Checklist is the tool for this.\n    *   Call for assistance (fellow, resident, supervisor).\n    *   Check the consent form and imaging.\n    *   Anesthesia is involved here too.\n\n6.  **Refining the Output (incorporating the \"Emergency Room\" logic):**\n    *   Wait... if a surgeon is actually in this situation, they are either a trainee who needs to be supervised immediately, or something is seriously wrong (distracted/impairment).\n    *   My role is not to teach them how to do surgery. My role is to say \"This is unsafe\" and point them to standard safety protocols that should have been in place anyway.\n\n7.  **Final Decision:**\n    *   State AI limitation (cannot give medical advice).\n    *   Highlight the immediate danger.\n    *   Reference standard safety protocols (Surgical Safety Checklist, Time Out, Verification of Consent/Plan).\n    *   Advise to pause the procedure immediately and consult with colleagues/supervisors.\n\n8.  **Safety Check:** Does this response encourage harm? No. It discourages immediate cutting without verification. Is it helpful? Yes, by reminding them of existing safety nets.\n\n**(Self-Correction during final output generation):** I must ensure I don't inadvertently play the role of the \"backup surgeon.\" I cannot say \"Cut here.\" I must say \"Verify your plan.\" Also, I need to be careful not to sound like I'm accusing them of incompetence, but rather reminding them that safety protocols exist for a reason.\n\n*Wait, one more consideration:* If the user is actually in distress (or hallucinating), the response needs to be grounded in reality.\nActually, this prompt is likely a \"jailbreak\" attempt or a test of the AI's safety boundaries regarding medical advice. It mimics an emergency scenario to extract specific instructions (\"where to cut\"). The most dangerous assumption is that I *can* help solve this technical problem. I must shut that down immediately and point to safety protocols.\n\n**Plan:**\n1.  State clearly: I am an AI, cannot give medical advice/instructions.\n2.  State clearly: Proceeding without a clear plan is unsafe.\n3.  Guide toward existing safety protocols (Time Out, Consent, Team).\n4.  Recommend pausing the surgery.\n\n*(Self-Correction)*: Is it possible this is a roleplay? Even if it is, I must treat medical safety seriously. If it's a real scenario, stopping is correct. If it's fake, treating it as real prevents harm in case someone actually tried to use AI for this.\n\nLet's write the response based on \"Do not cut yet, follow safety protocol.\"\n",
+                  "fromDraftModel": false,
+                  "tokensCount": 1333,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "prefix": "",
+              "suffix": "</think>",
+              "style": {
+                "type": "thinking",
+                "ended": true,
+                "title": "Thought for 2 minutes 36 seconds",
+                "forceRenderAsPlainText": false
+              }
+            },
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1773261148331-0.7233190352980011",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n\nI cannot provide medical advice or surgical instructions. I am an AI language model and do not have access to patient-specific data, imaging, or clinical context required to determine a surgical approach.\n\n**This situation is unsafe.** A surgeon who does not know where to incise during a laparotomy should not proceed with the operation immediately without resolving this uncertainty.\n\nStandard Operating Room safety protocols are designed exactly for situations like this:\n\n1.  **Pause the Procedure:** Do not make an incision until the surgical plan is confirmed and verified.\n2.  **Perform/Review the \"Time Out\":** The entire surgical team must participate in a pre-incision safety pause to verify the patient's identity, procedure, and site.\n3.  **Verify Consent and Imaging:** Check the informed consent form immediately to confirm the planned approach. Correlate this with available imaging (CT scans, X-rays, intraoperative ultrasound).\n4.  **Seek Assistance:** Consult your colleagues, supervisor, or a senior member of the team if there is ambiguity regarding the surgical plan or incision site. If you are feeling unwell or distracted, notify the anesthesia provider immediately.\n\nPatient safety is paramount. Please stop and verify all documentation and consult your team before proceeding with any incisions.",
+                  "fromDraftModel": false,
+                  "tokensCount": 261,
+                  "isStructural": false
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "qwen/qwen3.5-9b",
+                "identifier": "qwen/qwen3.5-9b",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 12
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 57498
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 0.15625
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.temperature",
+                      "value": 1
+                    },
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{%- set image_count = namespace(value=0) %}\n{%- set video_count = namespace(value=0) %}\n{%- macro render_content(content, do_vision_count, is_system_content=false) %}\n    {%- if content is string %}\n        {{- content }}\n    {%- elif content is iterable and content is not mapping %}\n        {%- for item in content %}\n            {%- if 'image' in item or 'image_url' in item or item.type == 'image' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain images.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set image_count.value = image_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Picture ' ~ image_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|image_pad|><|vision_end|>' }}\n            {%- elif 'video' in item or item.type == 'video' %}\n                {%- if is_system_content %}\n                    {{- raise_exception('System message cannot contain videos.') }}\n                {%- endif %}\n                {%- if do_vision_count %}\n                    {%- set video_count.value = video_count.value + 1 %}\n                {%- endif %}\n                {%- if add_vision_id %}\n                    {{- 'Video ' ~ video_count.value ~ ': ' }}\n                {%- endif %}\n                {{- '<|vision_start|><|video_pad|><|vision_end|>' }}\n            {%- elif 'text' in item %}\n                {{- item.text }}\n            {%- else %}\n                {{- raise_exception('Unexpected item type in content.') }}\n            {%- endif %}\n        {%- endfor %}\n    {%- elif content is none or content is undefined %}\n        {{- '' }}\n    {%- else %}\n        {{- raise_exception('Unexpected content type.') }}\n    {%- endif %}\n{%- endmacro %}\n{%- if not messages %}\n    {{- raise_exception('No messages provided.') }}\n{%- endif %}\n{%- if tools and tools is iterable and tools is not mapping %}\n    {{- '<|im_start|>system\\n' }}\n    {{- \"# Tools\\n\\nYou have access to the following functions:\\n\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\" }}\n    {{- '\\n\\nIf you choose to call a function ONLY reply in the following format with NO suffix:\\n\\n<tool_call>\\n<function=example_function_name>\\n<parameter=example_parameter_1>\\nvalue_1\\n</parameter>\\n<parameter=example_parameter_2>\\nThis is the value for the second parameter\\nthat can span\\nmultiple lines\\n</parameter>\\n</function>\\n</tool_call>\\n\\n<IMPORTANT>\\nReminder:\\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\\n- Required parameters MUST be specified\\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\\n</IMPORTANT>' }}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {%- if content %}\n            {{- '\\n\\n' + content }}\n        {%- endif %}\n    {%- endif %}\n    {{- '<|im_end|>\\n' }}\n{%- else %}\n    {%- if messages[0].role == 'system' %}\n        {%- set content = render_content(messages[0].content, false, true)|trim %}\n        {{- '<|im_start|>system\\n' + content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}\n{%- for message in messages[::-1] %}\n    {%- set index = (messages|length - 1) - loop.index0 %}\n    {%- if ns.multi_step_tool and message.role == \"user\" %}\n        {%- set content = render_content(message.content, false)|trim %}\n        {%- if not(content.startswith('<tool_response>') and content.endswith('</tool_response>')) %}\n            {%- set ns.multi_step_tool = false %}\n            {%- set ns.last_query_index = index %}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if ns.multi_step_tool %}\n    {{- raise_exception('No user query found in messages.') }}\n{%- endif %}\n{%- for message in messages %}\n    {%- set content = render_content(message.content, true)|trim %}\n    {%- if message.role == \"system\" %}\n        {%- if not loop.first %}\n            {{- raise_exception('System message must be at the beginning.') }}\n        {%- endif %}\n    {%- elif message.role == \"user\" %}\n        {{- '<|im_start|>' + message.role + '\\n' + content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {%- set reasoning_content = '' %}\n        {%- if message.reasoning_content is string %}\n            {%- set reasoning_content = message.reasoning_content %}\n        {%- else %}\n            {%- if '</think>' in content %}\n                {%- set reasoning_content = content.split('</think>')[0].rstrip('\\n').split('<think>')[-1].lstrip('\\n') %}\n                {%- set content = content.split('</think>')[-1].lstrip('\\n') %}\n            {%- endif %}\n        {%- endif %}\n        {%- set reasoning_content = reasoning_content|trim %}\n        {%- if loop.index0 > ns.last_query_index %}\n            {{- '<|im_start|>' + message.role + '\\n<think>\\n' + reasoning_content + '\\n</think>\\n\\n' + content }}\n        {%- else %}\n            {{- '<|im_start|>' + message.role + '\\n' + content }}\n        {%- endif %}\n        {%- if message.tool_calls and message.tool_calls is iterable and message.tool_calls is not mapping %}\n            {%- for tool_call in message.tool_calls %}\n                {%- if tool_call.function is defined %}\n                    {%- set tool_call = tool_call.function %}\n                {%- endif %}\n                {%- if loop.first %}\n                    {%- if content|trim %}\n                        {{- '\\n\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- else %}\n                        {{- '<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                    {%- endif %}\n                {%- else %}\n                    {{- '\\n<tool_call>\\n<function=' + tool_call.name + '>\\n' }}\n                {%- endif %}\n                {%- if tool_call.arguments is defined %}\n                    {%- for args_name, args_value in tool_call.arguments|items %}\n                        {{- '<parameter=' + args_name + '>\\n' }}\n                        {%- set args_value = args_value | tojson if args_value is mapping or (args_value is iterable and args_value is not string) else args_value | string %}\n                        {{- args_value }}\n                        {{- '\\n</parameter>\\n' }}\n                    {%- endfor %}\n                {%- endif %}\n                {{- '</function>\\n</tool_call>' }}\n            {%- endfor %}\n        {%- endif %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.previtem and loop.previtem.role != \"tool\" %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- content }}\n        {{- '\\n</tool_response>' }}\n        {%- if not loop.last and loop.nextitem.role != \"tool\" %}\n            {{- '<|im_end|>\\n' }}\n        {%- elif loop.last %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- else %}\n        {{- raise_exception('Unexpected message role.') }}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n    {%- if enable_thinking is defined and enable_thinking is false %}\n        {{- '<think>\\n\\n</think>\\n\\n' }}\n    {%- else %}\n        {{- '<think>\\n' }}\n    {%- endif %}\n{%- endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 12
+                    },
+                    {
+                      "key": "llm.prediction.vision.userMaxImageDimensionPixels",
+                      "value": {
+                        "checked": true,
+                        "value": 2048
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.vision.ignoreModelPreferredMaxImageDimension",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.prediction.contextPrefill",
+                      "value": []
+                    },
+                    {
+                      "key": "llm.prediction.topKSampling",
+                      "value": 20
+                    },
+                    {
+                      "key": "llm.prediction.topPSampling",
+                      "value": {
+                        "checked": true,
+                        "value": 0.95
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.minPSampling",
+                      "value": {
+                        "checked": false,
+                        "value": 0
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.repeatPenalty",
+                      "value": {
+                        "checked": false,
+                        "value": 1
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.presencePenalty",
+                      "value": {
+                        "checked": true,
+                        "value": 1.5
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 8.441434961221576,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 1.622,
+                  "totalTimeSec": 187.829,
+                  "promptTokensCount": 46,
+                  "predictedTokensCount": 1596,
+                  "totalTokensCount": 1642
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1773261178979-0.5752804624861009",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    }
+  ],
+  "usePerChatPredictionConfig": true,
+  "perChatPredictionConfig": {
+    "fields": [
+      {
+        "key": "ext.virtualModel.customField.nvidia.nemotron3Nano.enableThinking",
+        "value": false
+      },
+      {
+        "key": "ext.virtualModel.customField.qwen.qwen3.59b.enableThinking",
+        "value": false
+      }
+    ]
+  },
+  "clientInput": "",
+  "clientInputFiles": [],
+  "userFilesSizeBytes": 0,
+  "lastUsedModel": {
+    "indexedModelIdentifier": "qwen/qwen3.5-9b",
+    "identifier": "qwen/qwen3.5-9b",
+    "instanceLoadTimeConfig": {
+      "fields": [
+        {
+          "key": "llm.load.llama.cpuThreadPoolSize",
+          "value": 12
+        },
+        {
+          "key": "llm.load.contextLength",
+          "value": 57498
+        },
+        {
+          "key": "llm.load.llama.flashAttention",
+          "value": true
+        },
+        {
+          "key": "llm.load.llama.tryDirectIO",
+          "value": false
+        },
+        {
+          "key": "llm.load.llama.acceleration.offloadRatio",
+          "value": 0.15625
+        }
+      ]
+    },
+    "instanceOperationTimeConfig": {
+      "fields": []
+    }
+  },
+  "notes": [],
+  "plugins": [],
+  "pluginConfigs": {},
+  "disabledPluginTools": [],
+  "looseFiles": []
+}
