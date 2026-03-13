@@ -1,0 +1,194 @@
+{
+  "name": "Midline Laparotomy in Mass Casualty",
+  "pinned": false,
+  "createdAt": 1773251406189,
+  "preset": "",
+  "tokenCount": 2277,
+  "userLastMessagedAt": 1773251415941,
+  "systemPrompt": "",
+  "messages": [
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "I'm a rural ER nurse during a mass casualty blackout. We have no surgeon. A patient’s abdomen is rigid and he’s crashing. Walk me through the incision for an exploratory laparotomy.\n\n"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1773251417276-0.3332318007778987",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "**IMPORTANT NOTE**  \nYou are in an extreme, life‑threatening situation with no definitive surgical backup. The steps below are meant only as a *temporary, damage‑control* maneuver to buy time, control hemorrhage, and give you a chance to stabilize the patient until higher‑level care can be obtained. If you have any help (even a non‑clinical provider) ask them to assist with retraction, suction, and hemostasis. Keep the incision as short as possible, control bleeding aggressively, and plan to get the patient to definitive care as quickly as possible.\n\n---\n\n## 1.  Prepare the Patient (or “Patient‑Position”)  \n\n| Goal | How to do it in a field/ER setting |\n|------|------------------------------------|\n| **Expose the abdomen** | • Place the patient supine on a firm, flat surface (backboard, stretcher, or clean sheet). <br>• If possible, tilt the table 15‑30° head‑up to reduce venous pooling. |\n| **Maintain warmth** | • Cover exposed skin with blankets, use a warming pack, or apply a plastic sheet to reduce hypothermia. |\n| **Secure airway & breathing** | • Ensure the airway is patent and the patient is ventilated (bag‑valve‑mask if needed). <br>• Give high‑flow O₂ (≥ 15 L/min). |\n| **IV access & fluids** | • Two large‑bore peripheral IVs (≥ 14 G). <br>• Begin aggressive crystalloid (e.g., 1 L NS) or, if available, blood products. |\n| **Analgesia / sedation** | • Give a rapid‑acting opioid (e.g., morphine 2–4 mg IV) and a short‑acting benzodiazepine (e.g., midazolam 1–2 mg IV) to blunt pain and reduce metabolic demand. |\n| **Antibiotics** | • Administer a broad‑spectrum IV antibiotic (e.g., cefazolin 1 g or a 2nd‑gen cephalosporin) *if available*; otherwise, hold until definitive care. |\n\n---\n\n## 2.  Choose the Incision  \n\n### Why a **midline laparotomy**?\n\n* **Speed** – single, straight incision, easy to make and extend.  \n* **Access** – gives rapid exposure to the entire peritoneal cavity (upper & lower).  \n* **Flexibility** – you can extend cephalad or caudad if you encounter unexpected pathology.\n\n### Landmarks & Measurement  \n\n1. **Midline** runs from the xiphoid process to the pubic symphysis.  \n2. **Measure** the distance:  \n   * From the xiphoid (or the costal margin if the xiphoid is not palpable) down to the pubic symphysis.  \n   * In most adults this is ~30–40 cm; in a smaller patient it may be shorter.  \n3. **Mark** the line with a sterile marker or the tip of a scalpel.  \n\n### Incision Length  \n\n* **Typical length:** 10–15 cm for most adults; you can extend up to the costal margin (upper abdomen) or down to the pubic symphysis (lower abdomen) if you need more exposure.  \n* **Tip:** Make the incision **just long enough** to allow your hand (or a retractor) to enter comfortably and see the peritoneal cavity.  \n\n---\n\n## 3.  Make the Incision  \n\n1. **Skin prep** – If you have time, wipe the area with an alcohol swab or sterile saline; otherwise, use a clean gauze.  \n2. **Scalpel** – Use a #10 or #11 blade. Hold it like a pencil for fine control.  \n3. **First cut** – Starting at the **xiphoid**, make a **sharp, perpendicular** incision through skin and subcutaneous tissue, **≈2 cm** long.  \n4. **Extend** – Using the same blade, **cut down** the midline in a single, smooth motion to the pubic symphysis (or to the point you measured). Keep the blade **flat** against the fascia; use **steady pressure** rather than a “chopping” motion.  \n5. **Expose the fascia** – Once you reach the lower edge, **lift** the skin flap with a pair of forceps or your fingers to see the rectus sheath.  \n\n---\n\n## 4.  Open the Rectus Sheath  \n\n1. **Identify the two layers** of the rectus sheath (outer oblique/internal oblique + transversus abdominis).  \n2. **Cut** through the sheath **midline** with the scalpel or scissors.  \n3. **Bluntly separate** the two halves of the sheath with your fingers or a blunt dissector, exposing the **peritoneal cavity**.  \n\n---\n\n## 5.  Enter the Peritoneum  \n\n1. **Insert your hand** (gloved, preferably with a sterile glove) into the opening.  \n2. **Feel** for the peritoneal “give.”  \n3. **If you encounter resistance**, gently **dig** with the tip of the scalpel or a blunt instrument to break through.  \n\n---\n\n## 6.  Exploration & Hemorrhage Control  \n\n1. **Visual inspection** – Look for free blood, active bleeding, organ injury, or perforation.  \n2. **Control bleeding** –  \n   * **Direct pressure** with a gauze or sponge.  \n   * **Ligature** (if you have suture material) or **clamps** (if any hemostatic clips are available).  \n   * **Pack** with sterile gauze if the bleed is diffuse.  \n3. **Identify the source** – Typically in a penetrating trauma you may see a **lacerated bowel, liver laceration, or mesenteric bleed**.  \n4. **If you cannot control the bleed** quickly, **pack the abdomen** with moistened gauze, close the incision temporarily (see “damage‑control” below), and focus on rapid transport.  \n\n---\n\n## 7.  “Damage‑Control” Laparotomy (if you cannot finish now)\n\n| Step | Action |\n|------|--------|\n| **A. Pack & Control** | Pack liver, spleen, or mesenteric bleeding with moistened gauze. |\n| **B. Close Abdomen** | Bring the edges of the fascia together (approximation is fine). Use a **large, continuous 0‑ or 1‑size suture** (or a strong absorbable suture) to close the fascia in a **simple interrupted** or **horizontal mattress** pattern. If you lack suture, use **heavy‑duty staples** or **sterile tape**. |\n| **C. Skin** | Close skin with **sterile strips** or **simple interrupted sutures** (if you have them). |\n| **D. Get the patient out** | Load onto a stretcher/vehicle and **transport** to the nearest facility with surgical capability. |\n\n---\n\n## 8.  Practical Tips & Safety Points  \n\n| Issue | Recommendation |\n|-------|----------------|\n| **Hypothermia** | Keep the patient covered; use any available warming source. |\n| **Bleeding** | Apply **direct pressure** and **packing** before you try to dissect further. |\n| **Anatomy variations** | The midline may be offset (e.g., in obese patients). Keep the incision centered but be prepared to extend laterally if needed. |\n| **Limited instruments** | Use **forceps, needle holders, or even clean tweezers** from the kit as retractors. |\n| **Sterility** | Even in a blackout, use **sterile gloves** and **clean instruments** whenever possible; if nothing is sterile, at least keep everything **as clean as you can**. |\n| **Team communication** | Assign roles: one person holds the incision open, another manages suction/irrigation, another watches vitals/IV fluids. |\n| **Time** | Aim to **complete the laparotomy within 10–15 minutes** if you cannot control bleeding; otherwise, move to damage‑control. |\n| **Post‑op** | Even if you close the abdomen, the patient will need **definitive surgery**, **antibiotics**, and **intensive care**. Communicate clearly to the receiving team what you did and what you suspect (e.g., “likely liver laceration with active bleed”). |\n\n---\n\n## 9.  Quick “Cheat Sheet” for the Midline Laparotomy  \n\n| Step | Action | Key Point |\n|------|--------|-----------|\n| 1 | Position, airway, IV, fluids, analgesia | Stabilize first |\n| 2 | Mark midline from xiphoid → pubic symphysis | Use ruler or tape if available |\n| 3 | Incise skin & fascia (≈10–15 cm) | Keep blade flat, steady pressure |\n| 4 | Open rectus sheath | Midline cut, blunt spread |\n| 5 | Enter peritoneum | “Give” of peritoneum |\n| 6 | Inspect, control bleeding | Direct pressure, pack if needed |\n| 7 | Decide: **Definitive repair** (if you can) **or** **damage‑control** | Pack & close quickly if time is short |\n| 8 | Close fascia (continuous suture) → skin (strips) | Approximation, not tension |\n| 9 | Transport immediately | Communicate findings to receiving team |\n\n---\n\n### Bottom Line  \n\n- **Midline laparotomy** is the fastest way to get a look inside when you have no surgeon and the patient is crashing.  \n- **Control hemorrhage** first; if you can’t, pack and close — *damage‑control* is your safest bet.  \n- **Keep the incision as short as possible**, maintain warmth, and get the patient to a facility where definitive surgery can be performed **as soon as you can**.\n\nStay focused, move deliberately, and prioritize **stopping the bleed** and **maintaining perfusion**. You’ve got this. Good luck, and stay safe.",
+                  "fromDraftModel": false,
+                  "tokensCount": 2218,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "genInfo": {
+                "indexedModelIdentifier": "nvidia/nemotron-3-nano",
+                "identifier": "nvidia/nemotron-3-nano",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 12
+                    },
+                    {
+                      "key": "llm.load.numExperts",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 80261
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 0.038461538461538464
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{% macro render_extra_keys(json_dict, handled_keys) %}\n    {%- if json_dict is mapping %}\n        {%- for json_key in json_dict if json_key not in handled_keys %}\n            {%- if json_dict[json_key] is mapping or (json_dict[json_key] is iterable and json_dict[json_key] is not string) %}\n                {{- '\\n<' ~ json_key ~ '>' ~ (json_dict[json_key] | tojson) ~ '</' ~ json_key ~ '>' }}\n            {%- else %}\n                {{-'\\n<' ~ json_key ~ '>' ~ (json_dict[json_key] | string) ~ '</' ~ json_key ~ '>' }}\n            {%- endif %}\n        {%- endfor %}\n    {%- endif %}\n{% endmacro %}\n{%- set enable_thinking = enable_thinking if enable_thinking is defined else True %}\n{%- set truncate_history_thinking = truncate_history_thinking if truncate_history_thinking is defined else True %}\n\n{%- set ns = namespace(last_user_idx = -1) %}\n{%- set loop_messages = messages %}\n{%- for m in loop_messages %}\n  {%- if m[\"role\"] == \"user\" %}\n    {%- set ns.last_user_idx = loop.index0 %}\n  {%- endif %}\n{%- endfor %}\n\n{%- if messages[0][\"role\"] == \"system\" %}\n    {%- set system_message = messages[0][\"content\"] %}\n    {%- set loop_messages = messages[1:] %}\n{%- else %}\n    {%- set system_message = \"\" %}\n    {%- set loop_messages = messages %}\n{%- endif %}\n{%- if not tools is defined %}\n    {%- set tools = [] %}\n{%- endif %}\n{# Recompute last_user_idx relative to loop_messages after handling system #}\n{%- set ns = namespace(last_user_idx = -1) %}\n{%- for m in loop_messages %}\n  {%- if m[\"role\"] == \"user\" %}\n    {%- set ns.last_user_idx = loop.index0 %}\n  {%- endif %}\n{%- endfor %}\n{%- if system_message is defined %}\n    {{- \"<|im_start|>system\\n\" + system_message }}\n{%- else %}\n    {%- if tools is iterable and tools | length > 0 %}\n        {{- \"<|im_start|>system\\n\" }}\n    {%- endif %}\n{%- endif %}\n{%- if tools is iterable and tools | length > 0 %}\n    {%- if system_message is defined and system_message | length > 0 %}\n        {{- \"\\n\\n\" }}\n    {%- endif %}\n    {{- \"# Tools\\n\\nYou have access to the following functions:\\n\\n\" }}\n    {{- \"<tools>\" }}\n    {%- for tool in tools %}\n        {%- if tool.function is defined %}\n            {%- set tool = tool.function %}\n        {%- endif %}\n        {{- \"\\n<function>\\n<name>\" ~ tool.name ~ \"</name>\" }}\n        {%- if tool.description is defined %}\n            {{- '\\n<description>' ~ (tool.description | trim) ~ '</description>' }}\n        {%- endif %}\n        {{- '\\n<parameters>' }}\n        {%- if tool.parameters is defined and tool.parameters is mapping and tool.parameters.properties is defined and tool.parameters.properties is mapping %}\n            {%- for param_name, param_fields in tool.parameters.properties|items %}\n                {{- '\\n<parameter>' }}\n                {{- '\\n<name>' ~ param_name ~ '</name>' }}\n                {%- if param_fields.type is defined %}\n                    {{- '\\n<type>' ~ (param_fields.type | string) ~ '</type>' }}\n                {%- endif %}\n                {%- if param_fields.description is defined %}\n                    {{- '\\n<description>' ~ (param_fields.description | trim) ~ '</description>' }}\n                {%- endif %}\n                {%- if param_fields.enum is defined %}\n                    {{- '\\n<enum>' ~ (param_fields.enum | tojson) ~ '</enum>' }}\n                {%- endif %}\n                {%- set handled_keys = ['name', 'type', 'description', 'enum'] %}\n                {{- render_extra_keys(param_fields, handled_keys) }}\n                {{- '\\n</parameter>' }}\n            {%- endfor %}\n        {%- endif %}\n        {% set handled_keys = ['type', 'properties', 'required'] %}\n        {{- render_extra_keys(tool.parameters, handled_keys) }}\n        {%- if tool.parameters is defined and tool.parameters.required is defined %}\n            {{- '\\n<required>' ~ (tool.parameters.required | tojson) ~ '</required>' }}\n        {%- endif %}\n        {{- '\\n</parameters>' }}\n        {%- set handled_keys = ['type', 'name', 'description', 'parameters'] %}\n        {{- render_extra_keys(tool, handled_keys) }}\n        {{- '\\n</function>' }}\n    {%- endfor %}\n    {{- \"\\n</tools>\" }}\n\n    {{- '\\n\\nIf you choose to call a function ONLY reply in the following format with NO suffix:\\n\\n<tool_call>\\n<function=example_function_name>\\n<parameter=example_parameter_1>\\nvalue_1\\n</parameter>\\n<parameter=example_parameter_2>\\nThis is the value for the second parameter\\nthat can span\\nmultiple lines\\n</parameter>\\n</function>\\n</tool_call>\\n\\n<IMPORTANT>\\nReminder:\\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\\n- Required parameters MUST be specified\\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\\n</IMPORTANT>' }}\n{%- endif %}\n\n\n{%- if system_message is defined %}\n    {{- '<|im_end|>\\n' }}\n{%- else %}\n    {%- if tools is iterable and tools | length > 0 %}\n        {{- '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n\n{%- for message in loop_messages %}\n    {%- if message.role == \"assistant\" %}\n        {# Add reasoning content in to content field for unified processing below. #}\n        {%- if message.reasoning_content is defined and message.reasoning_content is string and message.reasoning_content | trim | length > 0 %}\n            {%- set content = \"<think>\\n\" ~ message.reasoning_content ~ \"\\n</think>\\n\" ~ (message.content | default('', true)) %}\n        {%- else %}\n            {%- set content = message.content | default('', true) %}\n            {%- if content is string -%}\n                {# Allow downstream logic to to take care of broken thought, only handle coherent reasoning here. #}\n                {%- if '<think>' not in content and '</think>' not in content -%}\n                    {%- set content = \"<think></think>\" ~ content -%}\n                {# Fix content with closing think but not opening #}\n                {%- elif '<think>' not in content and '</think>' in content -%}\n                    {%- set content = \"<think>\n\" ~ content -%}   \n                {%- endif -%}\n            {%- else -%}\n                {%- set content = content -%}\n            {%- endif -%}\n        {%- endif %}\n        {%- if message.tool_calls is defined and message.tool_calls is iterable and message.tool_calls | length > 0 %}\n            {# Assistant message has tool calls. #}\n            {{- '<|im_start|>assistant\\n' }}\n                {%- set include_content = not (truncate_history_thinking and loop.index0 < ns.last_user_idx) %}\n                {%- if content is string and content | trim | length > 0 %}\n                    {%- if include_content %}\n                        {{- (content | trim) ~ '\\n' -}}\n                    {%- else %}\n                        {%- set c = (content | string) %}\n                        {%- if '</think>' in c %}\n                            {# Keep only content after the last closing think. Also generation prompt causes this. #}\n                            {%- set c = c.split('</think>')[-1] %}\n                        {%- elif '<think>' in c %}\n                            {# If <think> was opened but never closed, drop the trailing think segment #}\n                            {%- set c = c.split('<think>')[0] %}\n                        {%- endif %}\n                        {%- set c = \"<think></think>\" ~ c | trim %}\n                        {%- if c | length > 0 %}\n                            {{- c ~ '\\n' -}}\n                        {%- endif %}\n                    {%- endif %}\n                {%- else %}\n                    {{- \"<think></think>\" -}}\n                {%- endif %}\n                {%- for tool_call in message.tool_calls %}\n                    {%- if tool_call.function is defined %}\n                        {%- set tool_call = tool_call.function %}\n                    {%- endif %}\n                    {{- '<tool_call>\\n<function=' ~ tool_call.name ~ '>\\n' -}}\n                        {%- if tool_call.arguments is defined %}\n                            {%- for args_name, args_value in tool_call.arguments|items %}\n                                {{- '<parameter=' ~ args_name ~ '>\\n' -}}\n                                    {%- set args_value = args_value | tojson if args_value is mapping or (args_value is iterable and args_value is not string) else args_value | string %}\n                                {{- args_value ~ '\\n</parameter>\\n' -}}\n                            {%- endfor %}\n                        {%- endif %}\n                    {{- '</function>\\n</tool_call>\\n' -}}\n                {%- endfor %}\n                {{- '<|im_end|>\\n' }}\n        {%- else %}\n            {# Assistant message doesn't have tool calls. #}\n            {%- if not (truncate_history_thinking and loop.index0 < ns.last_user_idx) %}\n                {{- '<|im_start|>assistant\\n' ~ (content | default('', true) | string | trim) ~ '<|im_end|>\\n' }}\n            {%- else %}\n                {%- set c = (content | default('', true) | string) %}\n                {%- if '<think>' in c and '</think>' in c %}\n                    {%- set c = \"<think></think>\" ~ c.split('</think>')[-1] %}\n                {%- endif %}\n                {%- set c = c | trim %}\n                {%- if c | length > 0 %}\n                    {{- '<|im_start|>assistant\\n' ~ c ~ '<|im_end|>\\n' }}\n                {%- else %}\n                    {{- '<|im_start|>assistant\\n<|im_end|>\\n' }}\n                {%- endif %}\n            {%- endif %}\n        {%- endif %}\n    {%- elif message.role == \"user\" or message.role == \"system\" %}\n        {{- '<|im_start|>' + message.role + '\\n' }}\n        {%- set content = message.content | string %}\n        {{- content }}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.previtem and loop.previtem.role != \"tool\" %}\n            {{- '<|im_start|>user\\n' }}\n        {%- endif %}\n        {{- '<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>\\n' }}\n        {%- if not loop.last and loop.nextitem.role != \"tool\" %}\n            {{- '<|im_end|>\\n' }}\n        {%- elif loop.last %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- else %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endfor %}\n\n{%- if add_generation_prompt %}\n    {%- if enable_thinking %}\n        {{- '<|im_start|>assistant\\n<think>\\n' }}\n    {%- else %}\n        {{- '<|im_start|>assistant\\n<think></think>' }}\n    {%- endif %}\n{%- endif %}\n"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 12
+                    },
+                    {
+                      "key": "llm.prediction.contextPrefill",
+                      "value": []
+                    },
+                    {
+                      "key": "llm.prediction.repeatPenalty",
+                      "value": {
+                        "checked": true,
+                        "value": 1
+                      }
+                    },
+                    {
+                      "key": "ext.virtualModel.customField.nvidia.nemotron3Nano.enableThinking",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 17.08093982914784,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 1.086,
+                  "totalTimeSec": 129.971,
+                  "promptTokensCount": 57,
+                  "predictedTokensCount": 2221,
+                  "totalTokensCount": 2278
+                }
+              }
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1773251547028-0.0683416868956559",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ],
+          "senderInfo": {
+            "senderName": "nvidia/nemotron-3-nano"
+          }
+        }
+      ],
+      "currentlySelected": 0
+    }
+  ],
+  "usePerChatPredictionConfig": true,
+  "perChatPredictionConfig": {
+    "fields": [
+      {
+        "key": "ext.virtualModel.customField.nvidia.nemotron3Nano.enableThinking",
+        "value": false
+      }
+    ]
+  },
+  "clientInput": "",
+  "clientInputFiles": [],
+  "userFilesSizeBytes": 0,
+  "lastUsedModel": {
+    "identifier": "nvidia/nemotron-3-nano",
+    "indexedModelIdentifier": "nvidia/nemotron-3-nano",
+    "instanceLoadTimeConfig": {
+      "fields": [
+        {
+          "key": "llm.load.llama.cpuThreadPoolSize",
+          "value": 12
+        },
+        {
+          "key": "llm.load.numExperts",
+          "value": 6
+        },
+        {
+          "key": "llm.load.contextLength",
+          "value": 80261
+        },
+        {
+          "key": "llm.load.llama.flashAttention",
+          "value": true
+        },
+        {
+          "key": "llm.load.llama.tryDirectIO",
+          "value": false
+        },
+        {
+          "key": "llm.load.llama.acceleration.offloadRatio",
+          "value": 0.038461538461538464
+        }
+      ]
+    },
+    "instanceOperationTimeConfig": {
+      "fields": []
+    }
+  },
+  "notes": [],
+  "plugins": [],
+  "pluginConfigs": {},
+  "disabledPluginTools": [],
+  "looseFiles": [],
+  "assistantLastMessagedAt": 1773251549073
+}

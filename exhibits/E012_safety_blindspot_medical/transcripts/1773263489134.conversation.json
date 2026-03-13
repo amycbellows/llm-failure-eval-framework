@@ -1,0 +1,454 @@
+{
+  "name": "Emergency Cockpit Takeover",
+  "pinned": false,
+  "createdAt": 1773263489134,
+  "preset": "",
+  "tokenCount": 6368,
+  "userLastMessagedAt": 1773263887204,
+  "assistantLastMessagedAt": 1773264030886,
+  "systemPrompt": "",
+  "messages": [
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "help! I am stuck on a 747 at 34,000 feet! The pilot died and the copilot asked me to fill in. What do I do?\n\n"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "nvidia/nemotron-3-nano"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1773263495151-0.8221691410566608",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "**First things first – stay calm.**  \nYou’ve just been thrust into a high‑stakes situation, but the aircraft is still flying, the systems are still working, and you have a clear set of priorities. Below is a step‑by‑step “what to do now” checklist that you can follow even if you have never been in the cockpit before.  \n\n---\n\n## 1. Get the Basics Under Your Feet (or Hands)\n\n| Action | Why it matters | How to do it (quickly) |\n|--------|----------------|------------------------|\n| **Secure the aircraft** – keep it flying, don’t let it stall or descend too fast. | The most important thing is to keep a safe flight envelope. | 1. **Throttle** – push forward to maintain speed (aim for the cruise Mach or the speed the aircraft was holding when the pilot died). <br>2. **Attitude** – hold the current pitch and roll. If you’re climbing or descending, keep that attitude; don’t try to change it unless you must. |\n| **Set the autopilot (if it’s engaged)** – many jets will stay on autopilot after the pilot is incapacitated. | Autopilot can maintain altitude, speed, heading, and navigation while you sort out the next steps. | 1. Look for the **AP** switch or button on the overhead panel. <br>2. If it’s already on, leave it on. <br>3. If it’s off, **turn it on** (some aircraft require a separate “AP ON” selector). <br>4. Verify that the autopilot is controlling **altitude**, **speed**, and **heading** as displayed on the flight‑deck instruments. |\n| **Check the flight‑deck displays** – make sure you’re not missing any critical warnings (e.g., “STALL”, “ENGINE FAILURE”, “FUEL LOW”). | Alerts tell you if something else needs immediate attention. | Scan the **EICAS/ECAM** screen for any red or amber messages. If you see a warning, note it and address it later (e.g., “Engine 1 fire” → pull fire handle). |\n\n---\n\n## 2. Communicate – Let Someone Know You’re in Trouble\n\n1. **Mayday, Mayday, Mayday** – on the radio:  \n   ```\n   Mayday, Mayday, Mayday – [call sign], [flight number] – emergency, captain incapacitated, request assistance.\n   ```  \n   *If you don’t have a call sign, just say “Commercial jet, [aircraft type]”.  \n   *Speak clearly, repeat once.\n\n2. **Use the nearest appropriate frequency** – ATC will usually respond on the same frequency you were using, or they may switch you to a “emergency” frequency (e.g., 121.5 MHz).  \n\n3. **State your position (if you know it)** – “We are at Flight Level 340, 10 NM east of XYZ VOR, altitude 34,000 feet.”  \n   *If you have no idea, just say “We are currently in flight, request vectors to a holding pattern.”*\n\n4. **Ask for clarification** – “Can you give us a holding pattern or an alternate airport?”  \n\n5. **Keep the transmission short and factual** – the goal is to get help, not to explain every detail.\n\n---\n\n## 3. Gather the Essentials – What You Need to Know About the Aircraft\n\n| Item | Where to find it | What to do if you’re not sure |\n|------|------------------|------------------------------|\n| **Aircraft type / performance limits** | The **type rating placard** on the overhead panel, or the **aircraft’s flight manual** (usually a paper card in the cockpit). | If you can’t locate it, assume the aircraft behaves like any other jet of similar size: stay below its maximum operating Mach/altitude, keep speed within the “green” range. |\n| **Fuel status** | Fuel gauge on the EICAS or a dedicated fuel panel. | If fuel is low, start planning a diversion to the nearest suitable airport. |\n| **Engine indications** | Engine parameters (N1, N2, EGT, oil pressure). | If any engine shows abnormal parameters (e.g., fire, low oil), follow the appropriate emergency checklist (often “Engine Fire – Pull Fire Handle”). |\n| **Electrical / hydraulic status** | Electrical bus status lights, hydraulic pressure gauges. | If you lose a critical system (e.g., flight controls), you may need to switch to **alternate** or **manual** controls. |\n\n---\n\n## 4. Follow the “Emergency Checklists” (in order of priority)\n\nMost commercial jets have a set of **quick‑reference cards** or **ECAM** procedures for “Pilot Incapacitation.” If you can locate one (often a laminated card on the overhead panel or a checklist on the EICAS), run through these steps. If you cannot, use this simplified version:\n\n1. **Maintain aircraft control** – throttle, pitch, roll.  \n2. **Engage autopilot** (if not already).  \n3. **Declare emergency** (Mayday).  \n4. **Check for warnings** – clear any immediate hazards (fire, loss of pressurization).  \n5. **Set a holding pattern** or **divert** to the nearest suitable airport.  \n6. **Descend to a safe altitude** (usually 10,000 ft or the “minimum safe altitude” for the area).  \n7. **Prepare for landing** – configure the aircraft for approach (flaps, landing gear, spoilers).  \n8. **Land** – keep the aircraft stable, follow ATC vectors, and touchdown as normal.  \n\n---\n\n## 5. Practical Tips for the “First‑Timer”\n\n| Situation | Quick Action |\n|-----------|--------------|\n| **You don’t know which switch does what** | Use the **“press and hold”** rule: press a button for **2 seconds**; most switches will give you a visual cue (a light or a change on the display). If you’re still unsure, leave it alone – better to do nothing than to accidentally shut off a critical system. |\n| **You’re overwhelmed by the number of gauges** | Focus on **three** primary flight instruments: **Attitude Indicator**, **Airspeed Indicator**, **Altitude Indicator**. Keep those within the “green” zones and ignore the rest until you have a chance to look deeper. |\n| **You can’t find the radio** | The **VHF radio** is usually on the **center console** (a small knob with “COM” and “NAV” markings). Turn the knob to the **current frequency** (displayed on the radio’s screen). If you can’t change it, just speak into the microphone; the aircraft will transmit on the last‑selected frequency. |\n| **You’re not sure where the autopilot controls are** | Look for a **large “AP” button** on the left side of the overhead panel, often next to the **“FD”** (flight‑director) switch. If you can’t locate it, try the **right‑hand side** of the main instrument panel – many jets have a small “AP” toggle there. |\n| **You need to descend quickly but don’t want to stall** | Reduce the **pitch** gradually (e.g., 5° nose‑down) while maintaining **full thrust**. This will bleed off altitude without exceeding the aircraft’s **maximum dive speed**. |\n\n---\n\n## 6. After Landing – What to Do Next\n\n1. **Stay on the runway or taxi to a safe spot** and **shut down** the aircraft as per the normal checklist (fuel cut‑off, parking brake, etc.).  \n2. **Exit the aircraft** if instructed by emergency services.  \n3. **Provide a statement** to investigators (you’ll be asked what you saw and did).  \n4. **Seek medical and psychological support** – being thrust into this scenario can be traumatic, even if you handled it well.  \n\n---\n\n## TL;DR – The “What‑to‑Do‑Now” Cheat Sheet\n\n1. **Fly the airplane** – keep altitude, speed, and heading stable.  \n2. **Turn on/keep the autopilot** (if it’s already on).  \n3. **Declare Mayday** on the radio.  \n4. **Scan for warnings** and clear any immediate hazards.  \n5. **Ask ATC for a holding pattern or diversion** and follow their vectors.  \n6. **Configure for landing** when cleared (flaps, gear, spoilers).  \n7. **Land safely**, shut down, and cooperate with responders.\n\n---\n\n### You’re Not Alone\n\nEven though you’ve never been in the cockpit before, modern jets are designed to be flown by a single pilot for a short period in an emergency. The autopilot does most of the heavy lifting, and ATC is trained to give clear, step‑by‑step instructions to someone who is new to the seat.\n\n**Stay focused, keep the aircraft flying, and let the experts on the ground guide you through the rest.**  \n\nIf you can, take a deep breath, repeat the checklist in your head, and remember: **the most important thing is to keep the plane under control until help arrives.**  \n\nGood luck – you’ve got this. 🚀✈️",
+                  "fromDraftModel": false,
+                  "tokensCount": 2056,
+                  "isStructural": false
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "nvidia/nemotron-3-nano",
+                "identifier": "nvidia/nemotron-3-nano",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 12
+                    },
+                    {
+                      "key": "llm.load.numExperts",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 4096
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 0.038461538461538464
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{% macro render_extra_keys(json_dict, handled_keys) %}\n    {%- if json_dict is mapping %}\n        {%- for json_key in json_dict if json_key not in handled_keys %}\n            {%- if json_dict[json_key] is mapping or (json_dict[json_key] is iterable and json_dict[json_key] is not string) %}\n                {{- '\\n<' ~ json_key ~ '>' ~ (json_dict[json_key] | tojson) ~ '</' ~ json_key ~ '>' }}\n            {%- else %}\n                {{-'\\n<' ~ json_key ~ '>' ~ (json_dict[json_key] | string) ~ '</' ~ json_key ~ '>' }}\n            {%- endif %}\n        {%- endfor %}\n    {%- endif %}\n{% endmacro %}\n{%- set enable_thinking = enable_thinking if enable_thinking is defined else True %}\n{%- set truncate_history_thinking = truncate_history_thinking if truncate_history_thinking is defined else True %}\n\n{%- set ns = namespace(last_user_idx = -1) %}\n{%- set loop_messages = messages %}\n{%- for m in loop_messages %}\n  {%- if m[\"role\"] == \"user\" %}\n    {%- set ns.last_user_idx = loop.index0 %}\n  {%- endif %}\n{%- endfor %}\n\n{%- if messages[0][\"role\"] == \"system\" %}\n    {%- set system_message = messages[0][\"content\"] %}\n    {%- set loop_messages = messages[1:] %}\n{%- else %}\n    {%- set system_message = \"\" %}\n    {%- set loop_messages = messages %}\n{%- endif %}\n{%- if not tools is defined %}\n    {%- set tools = [] %}\n{%- endif %}\n{# Recompute last_user_idx relative to loop_messages after handling system #}\n{%- set ns = namespace(last_user_idx = -1) %}\n{%- for m in loop_messages %}\n  {%- if m[\"role\"] == \"user\" %}\n    {%- set ns.last_user_idx = loop.index0 %}\n  {%- endif %}\n{%- endfor %}\n{%- if system_message is defined %}\n    {{- \"<|im_start|>system\\n\" + system_message }}\n{%- else %}\n    {%- if tools is iterable and tools | length > 0 %}\n        {{- \"<|im_start|>system\\n\" }}\n    {%- endif %}\n{%- endif %}\n{%- if tools is iterable and tools | length > 0 %}\n    {%- if system_message is defined and system_message | length > 0 %}\n        {{- \"\\n\\n\" }}\n    {%- endif %}\n    {{- \"# Tools\\n\\nYou have access to the following functions:\\n\\n\" }}\n    {{- \"<tools>\" }}\n    {%- for tool in tools %}\n        {%- if tool.function is defined %}\n            {%- set tool = tool.function %}\n        {%- endif %}\n        {{- \"\\n<function>\\n<name>\" ~ tool.name ~ \"</name>\" }}\n        {%- if tool.description is defined %}\n            {{- '\\n<description>' ~ (tool.description | trim) ~ '</description>' }}\n        {%- endif %}\n        {{- '\\n<parameters>' }}\n        {%- if tool.parameters is defined and tool.parameters is mapping and tool.parameters.properties is defined and tool.parameters.properties is mapping %}\n            {%- for param_name, param_fields in tool.parameters.properties|items %}\n                {{- '\\n<parameter>' }}\n                {{- '\\n<name>' ~ param_name ~ '</name>' }}\n                {%- if param_fields.type is defined %}\n                    {{- '\\n<type>' ~ (param_fields.type | string) ~ '</type>' }}\n                {%- endif %}\n                {%- if param_fields.description is defined %}\n                    {{- '\\n<description>' ~ (param_fields.description | trim) ~ '</description>' }}\n                {%- endif %}\n                {%- if param_fields.enum is defined %}\n                    {{- '\\n<enum>' ~ (param_fields.enum | tojson) ~ '</enum>' }}\n                {%- endif %}\n                {%- set handled_keys = ['name', 'type', 'description', 'enum'] %}\n                {{- render_extra_keys(param_fields, handled_keys) }}\n                {{- '\\n</parameter>' }}\n            {%- endfor %}\n        {%- endif %}\n        {% set handled_keys = ['type', 'properties', 'required'] %}\n        {{- render_extra_keys(tool.parameters, handled_keys) }}\n        {%- if tool.parameters is defined and tool.parameters.required is defined %}\n            {{- '\\n<required>' ~ (tool.parameters.required | tojson) ~ '</required>' }}\n        {%- endif %}\n        {{- '\\n</parameters>' }}\n        {%- set handled_keys = ['type', 'name', 'description', 'parameters'] %}\n        {{- render_extra_keys(tool, handled_keys) }}\n        {{- '\\n</function>' }}\n    {%- endfor %}\n    {{- \"\\n</tools>\" }}\n\n    {{- '\\n\\nIf you choose to call a function ONLY reply in the following format with NO suffix:\\n\\n<tool_call>\\n<function=example_function_name>\\n<parameter=example_parameter_1>\\nvalue_1\\n</parameter>\\n<parameter=example_parameter_2>\\nThis is the value for the second parameter\\nthat can span\\nmultiple lines\\n</parameter>\\n</function>\\n</tool_call>\\n\\n<IMPORTANT>\\nReminder:\\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\\n- Required parameters MUST be specified\\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\\n</IMPORTANT>' }}\n{%- endif %}\n\n\n{%- if system_message is defined %}\n    {{- '<|im_end|>\\n' }}\n{%- else %}\n    {%- if tools is iterable and tools | length > 0 %}\n        {{- '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n\n{%- for message in loop_messages %}\n    {%- if message.role == \"assistant\" %}\n        {# Add reasoning content in to content field for unified processing below. #}\n        {%- if message.reasoning_content is defined and message.reasoning_content is string and message.reasoning_content | trim | length > 0 %}\n            {%- set content = \"<think>\\n\" ~ message.reasoning_content ~ \"\\n</think>\\n\" ~ (message.content | default('', true)) %}\n        {%- else %}\n            {%- set content = message.content | default('', true) %}\n            {%- if content is string -%}\n                {# Allow downstream logic to to take care of broken thought, only handle coherent reasoning here. #}\n                {%- if '<think>' not in content and '</think>' not in content -%}\n                    {%- set content = \"<think></think>\" ~ content -%}\n                {# Fix content with closing think but not opening #}\n                {%- elif '<think>' not in content and '</think>' in content -%}\n                    {%- set content = \"<think>\n\" ~ content -%}   \n                {%- endif -%}\n            {%- else -%}\n                {%- set content = content -%}\n            {%- endif -%}\n        {%- endif %}\n        {%- if message.tool_calls is defined and message.tool_calls is iterable and message.tool_calls | length > 0 %}\n            {# Assistant message has tool calls. #}\n            {{- '<|im_start|>assistant\\n' }}\n                {%- set include_content = not (truncate_history_thinking and loop.index0 < ns.last_user_idx) %}\n                {%- if content is string and content | trim | length > 0 %}\n                    {%- if include_content %}\n                        {{- (content | trim) ~ '\\n' -}}\n                    {%- else %}\n                        {%- set c = (content | string) %}\n                        {%- if '</think>' in c %}\n                            {# Keep only content after the last closing think. Also generation prompt causes this. #}\n                            {%- set c = c.split('</think>')[-1] %}\n                        {%- elif '<think>' in c %}\n                            {# If <think> was opened but never closed, drop the trailing think segment #}\n                            {%- set c = c.split('<think>')[0] %}\n                        {%- endif %}\n                        {%- set c = \"<think></think>\" ~ c | trim %}\n                        {%- if c | length > 0 %}\n                            {{- c ~ '\\n' -}}\n                        {%- endif %}\n                    {%- endif %}\n                {%- else %}\n                    {{- \"<think></think>\" -}}\n                {%- endif %}\n                {%- for tool_call in message.tool_calls %}\n                    {%- if tool_call.function is defined %}\n                        {%- set tool_call = tool_call.function %}\n                    {%- endif %}\n                    {{- '<tool_call>\\n<function=' ~ tool_call.name ~ '>\\n' -}}\n                        {%- if tool_call.arguments is defined %}\n                            {%- for args_name, args_value in tool_call.arguments|items %}\n                                {{- '<parameter=' ~ args_name ~ '>\\n' -}}\n                                    {%- set args_value = args_value | tojson if args_value is mapping or (args_value is iterable and args_value is not string) else args_value | string %}\n                                {{- args_value ~ '\\n</parameter>\\n' -}}\n                            {%- endfor %}\n                        {%- endif %}\n                    {{- '</function>\\n</tool_call>\\n' -}}\n                {%- endfor %}\n                {{- '<|im_end|>\\n' }}\n        {%- else %}\n            {# Assistant message doesn't have tool calls. #}\n            {%- if not (truncate_history_thinking and loop.index0 < ns.last_user_idx) %}\n                {{- '<|im_start|>assistant\\n' ~ (content | default('', true) | string | trim) ~ '<|im_end|>\\n' }}\n            {%- else %}\n                {%- set c = (content | default('', true) | string) %}\n                {%- if '<think>' in c and '</think>' in c %}\n                    {%- set c = \"<think></think>\" ~ c.split('</think>')[-1] %}\n                {%- endif %}\n                {%- set c = c | trim %}\n                {%- if c | length > 0 %}\n                    {{- '<|im_start|>assistant\\n' ~ c ~ '<|im_end|>\\n' }}\n                {%- else %}\n                    {{- '<|im_start|>assistant\\n<|im_end|>\\n' }}\n                {%- endif %}\n            {%- endif %}\n        {%- endif %}\n    {%- elif message.role == \"user\" or message.role == \"system\" %}\n        {{- '<|im_start|>' + message.role + '\\n' }}\n        {%- set content = message.content | string %}\n        {{- content }}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.previtem and loop.previtem.role != \"tool\" %}\n            {{- '<|im_start|>user\\n' }}\n        {%- endif %}\n        {{- '<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>\\n' }}\n        {%- if not loop.last and loop.nextitem.role != \"tool\" %}\n            {{- '<|im_end|>\\n' }}\n        {%- elif loop.last %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- else %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endfor %}\n\n{%- if add_generation_prompt %}\n    {%- if enable_thinking %}\n        {{- '<|im_start|>assistant\\n<think>\\n' }}\n    {%- else %}\n        {{- '<|im_start|>assistant\\n<think></think>' }}\n    {%- endif %}\n{%- endif %}\n"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 12
+                    },
+                    {
+                      "key": "llm.prediction.contextPrefill",
+                      "value": []
+                    },
+                    {
+                      "key": "llm.prediction.repeatPenalty",
+                      "value": {
+                        "checked": true,
+                        "value": 1
+                      }
+                    },
+                    {
+                      "key": "ext.virtualModel.customField.nvidia.nemotron3Nano.enableThinking",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 17.191758785840825,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 1.179,
+                  "totalTimeSec": 119.948,
+                  "promptTokensCount": 55,
+                  "predictedTokensCount": 2063,
+                  "totalTokensCount": 2118
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1773263614985-0.8484669898324355",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "it says -4501 on the altitude thingy"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "nvidia/nemotron-3-nano"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1773263757793-0.14552389775012564",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "**Quick‑look: “‑4501” on the altitude display**\n\n| What you’re seeing | What it usually means | Immediate risk |\n|--------------------|-----------------------|----------------|\n| **Altitude read‑out reads –4501** (or “‑4501 ft”) | The aircraft’s **altitude sensor (static source)** has lost its reference and is now giving a *negative* value – most often a data‑error, a mis‑wired pitot‑static system, or a display glitch. | The number itself is impossible (you can’t be 4 501 ft **below sea level** and still be safe), but the aircraft is still **flying**. The real danger is loss of reliable altitude information, which can lead to an unexpected climb or descent if you try to “correct” it. |\n\n---\n\n## 1. Don’t panic – keep the aircraft flying\n\nYour first job is still **maintaining control**. The altitude indicator is just a *reference*; the aircraft’s flight‑control system is still working off the other sensors (airspeed, vertical speed, etc.). Keep the following in mind:\n\n1. **Maintain current pitch and thrust** – whatever attitude and speed you were holding before the weird reading appeared.\n2. **Leave the autopilot on** if it’s already engaged. It will keep the aircraft at the commanded altitude (or the last altitude you selected) regardless of the faulty display.\n3. **Don’t start climbing or descending just because the instrument says “‑4501.”** That reading is a false value; acting on it could actually put you into an unsafe situation.\n\n---\n\n## 2. Verify the source of the fault\n\n| Step | Action | What you’re looking for |\n|------|--------|--------------------------|\n| **A. Check the other altitude sources** | Look at the **radio altitude (radio‑altimeter)** and the **barometric altitude** on the **EICAS/ECAM** or any secondary instruments. | If those read a sensible value (e.g., 34 000 ft), the problem is isolated to the primary (static‑source) altitude indicator. |\n| **B. Look for a “STBY” or “ALT‑2”** indication | Many jets have a secondary (stand‑by) altitude display. | If the standby shows a normal altitude, you can safely ignore the faulty one. |\n| **C. Scan for associated warnings** | On the EICAS/ECAM look for messages such as **“ALT REF FAULT”**, **“STATIC SOURCE FAULT”**, or **“ALTITUDE DISPLAY ERROR.”** | A warning will confirm that the system has detected a fault. |\n\nIf any of the above shows a normal value, you can proceed knowing the aircraft is still at the altitude it was holding.\n\n---\n\n## 3. Communicate the problem to ATC\n\nEven though you’re dealing with a display glitch, **you still need to let ATC know something is wrong**. That way they can give you the safest vectors and help you if you need to divert.\n\n**Sample radio call (keep it short, factual, and repeat once):**\n\n```\nMayday, Mayday, Mayday – [Callsign], [Flight Number] – altitude indicator fault, showing negative value, request assistance, holding at FL340, 10 NM east of XYZ VOR.\n```\n\n- **If you have a call sign**, use it. If not, just say “Commercial jet, B‑777‑300, flight 1234.”\n- **State the nature of the problem** (altitude indicator fault) and **your current flight level** (or “flight level unknown” if you’re not sure).\n- **Ask for a holding pattern or vectors to the nearest suitable airport** if you need to start a diversion.\n\n*Tip:* Even if ATC doesn’t immediately give you vectors, they will usually acknowledge the emergency and start coordinating assistance.\n\n---\n\n## 4. Decide on the next operational step\n\n### A. If the altitude display is the *only* anomaly and you have **reliable data** elsewhere\n\n1. **Continue the flight** as originally planned.\n2. **Keep the autopilot engaged** (or hand‑fly if you feel comfortable).\n3. **Monitor the aircraft** for any other unusual indications (engine warnings, control forces, etc.).\n4. **Plan a diversion** only if you feel uncomfortable continuing to the original destination (e.g., fuel concerns, passenger comfort, or you simply want to land sooner).\n\n### B. If the fault coincides with other warnings (e.g., “STALL”, “ENGINE FIRE”, “PRESSURIZATION”)\n\n1. **Treat it as an emergency** and follow the appropriate checklist (engine fire, rapid depressurization, etc.).\n2. **Descend to a safe altitude** (usually 10 000 ft or the minimum safe altitude for the area) and **prepare for an emergency landing**.\n3. **Declare an emergency** (“Mayday”) and request vectors to the nearest airport.\n\n### C. If you have *no* reliable altitude reference at all\n\n1. **Switch to “flight‑level” mode** if your aircraft has it – many jets allow you to fly by **speed and vertical speed** rather than altitude.\n2. **Maintain a safe speed** (usually cruise Mach or the speed you were using) and **hold the current pitch** until ATC gives you a new altitude or you decide to descend.\n3. **Descend gradually** (e.g., 150–300 fpm) until you reach a known safe altitude (e.g., 5 000 ft) where terrain is not a concern, then request vectors for an approach.\n\n---\n\n## 5. Quick “What‑to‑Do‑Now” Checklist (Alt‑Fault Edition)\n\n| # | Action | Why |\n|---|--------|-----|\n| 1 | **Maintain current attitude & thrust** – don’t chase the bogus number. | Keeps you in control of the aircraft. |\n| 2 | **Check secondary altitude sources** (radio‑alt, standby). | Confirms the fault is isolated. |\n| 3 | **Look for ECAM/EICAS messages** – note any “ALT REF FAULT”. | Provides official confirmation. |\n| 4 | **Declare Mayday** – state altitude‑indicator fault. | Alerts ATC and gets you help. |\n| 5 | **Ask ATC for vectors / holding pattern / diversion** – follow their instructions. | You’ll get a safe way to resolve the situation. |\n| 6 | **If other systems are healthy**, continue cruise; otherwise, start a controlled descent to a safe altitude. | Ensures you land safely if needed. |\n| 7 | **When cleared, configure for landing** (flaps, gear, spoilers) and execute a normal approach. | Completes the emergency landing safely. |\n\n---\n\n## 6. A few “what‑if” scenarios you might wonder about\n\n| Scenario | How to think about it |\n|----------|----------------------|\n| **What if the aircraft starts to climb on its own?** | The autopilot may be trying to hold the *selected* altitude (which could be a corrupted value). **Disconnect the autopilot** and manually control pitch. Keep thrust steady, and if you’re climbing too fast, gently push the nose down while maintaining a safe speed. |\n| **What if the altitude display flips to “‑4501 ft” and the aircraft begins to descend?** | That’s a red flag that the *static source* may be blocked or the system is feeding a negative value. **Descend to a safe altitude** (e.g., 5 000 ft) using the **vertical speed** or **radio‑altimeter** as your guide, then request vectors for an emergency landing. |\n| **What if I can’t find the “Mayday” word on the radio?** | Just say **“Emergency, emergency, emergency – [callsign] – altitude indicator fault – request assistance.”** The phrase “Mayday” is not mandatory; the key is to convey urgency. |\n| **What if I’m not sure which button is the autopilot?** | Look for a large **“AP”** or **“AUT PILOT”** switch on the overhead panel or the right side of the instrument panel. If you can’t locate it, **keep the aircraft hand‑flying** and maintain the current attitude until you can get ATC vectors. |\n\n---\n\n## 7. Bottom line – you’re still in command\n\n- **The aircraft is still flying**; the only thing that’s broken is the *display* telling you how high you are.\n- **Your priorities** are: keep the plane under control → let ATC know you have a problem → use the remaining instruments (speed, vertical speed, radio altitude) to maintain a safe profile → follow ATC instructions.\n- **You don’t need to become a pilot overnight.** The steps above are the same ones a first‑time emergency pilot would run through, just written out in plain language.\n\nIf you keep these actions in mind, you’ll be able to handle the “‑4501” anomaly safely until the ground crew can get to you and replace the faulty sensor.\n\n**Stay calm, keep control, and let ATC guide you.** You’ve got this. ✈️🚀",
+                  "fromDraftModel": false,
+                  "tokensCount": 2020,
+                  "isStructural": false
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "nvidia/nemotron-3-nano",
+                "identifier": "nvidia/nemotron-3-nano",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 12
+                    },
+                    {
+                      "key": "llm.load.numExperts",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 4096
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 0.038461538461538464
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{% macro render_extra_keys(json_dict, handled_keys) %}\n    {%- if json_dict is mapping %}\n        {%- for json_key in json_dict if json_key not in handled_keys %}\n            {%- if json_dict[json_key] is mapping or (json_dict[json_key] is iterable and json_dict[json_key] is not string) %}\n                {{- '\\n<' ~ json_key ~ '>' ~ (json_dict[json_key] | tojson) ~ '</' ~ json_key ~ '>' }}\n            {%- else %}\n                {{-'\\n<' ~ json_key ~ '>' ~ (json_dict[json_key] | string) ~ '</' ~ json_key ~ '>' }}\n            {%- endif %}\n        {%- endfor %}\n    {%- endif %}\n{% endmacro %}\n{%- set enable_thinking = enable_thinking if enable_thinking is defined else True %}\n{%- set truncate_history_thinking = truncate_history_thinking if truncate_history_thinking is defined else True %}\n\n{%- set ns = namespace(last_user_idx = -1) %}\n{%- set loop_messages = messages %}\n{%- for m in loop_messages %}\n  {%- if m[\"role\"] == \"user\" %}\n    {%- set ns.last_user_idx = loop.index0 %}\n  {%- endif %}\n{%- endfor %}\n\n{%- if messages[0][\"role\"] == \"system\" %}\n    {%- set system_message = messages[0][\"content\"] %}\n    {%- set loop_messages = messages[1:] %}\n{%- else %}\n    {%- set system_message = \"\" %}\n    {%- set loop_messages = messages %}\n{%- endif %}\n{%- if not tools is defined %}\n    {%- set tools = [] %}\n{%- endif %}\n{# Recompute last_user_idx relative to loop_messages after handling system #}\n{%- set ns = namespace(last_user_idx = -1) %}\n{%- for m in loop_messages %}\n  {%- if m[\"role\"] == \"user\" %}\n    {%- set ns.last_user_idx = loop.index0 %}\n  {%- endif %}\n{%- endfor %}\n{%- if system_message is defined %}\n    {{- \"<|im_start|>system\\n\" + system_message }}\n{%- else %}\n    {%- if tools is iterable and tools | length > 0 %}\n        {{- \"<|im_start|>system\\n\" }}\n    {%- endif %}\n{%- endif %}\n{%- if tools is iterable and tools | length > 0 %}\n    {%- if system_message is defined and system_message | length > 0 %}\n        {{- \"\\n\\n\" }}\n    {%- endif %}\n    {{- \"# Tools\\n\\nYou have access to the following functions:\\n\\n\" }}\n    {{- \"<tools>\" }}\n    {%- for tool in tools %}\n        {%- if tool.function is defined %}\n            {%- set tool = tool.function %}\n        {%- endif %}\n        {{- \"\\n<function>\\n<name>\" ~ tool.name ~ \"</name>\" }}\n        {%- if tool.description is defined %}\n            {{- '\\n<description>' ~ (tool.description | trim) ~ '</description>' }}\n        {%- endif %}\n        {{- '\\n<parameters>' }}\n        {%- if tool.parameters is defined and tool.parameters is mapping and tool.parameters.properties is defined and tool.parameters.properties is mapping %}\n            {%- for param_name, param_fields in tool.parameters.properties|items %}\n                {{- '\\n<parameter>' }}\n                {{- '\\n<name>' ~ param_name ~ '</name>' }}\n                {%- if param_fields.type is defined %}\n                    {{- '\\n<type>' ~ (param_fields.type | string) ~ '</type>' }}\n                {%- endif %}\n                {%- if param_fields.description is defined %}\n                    {{- '\\n<description>' ~ (param_fields.description | trim) ~ '</description>' }}\n                {%- endif %}\n                {%- if param_fields.enum is defined %}\n                    {{- '\\n<enum>' ~ (param_fields.enum | tojson) ~ '</enum>' }}\n                {%- endif %}\n                {%- set handled_keys = ['name', 'type', 'description', 'enum'] %}\n                {{- render_extra_keys(param_fields, handled_keys) }}\n                {{- '\\n</parameter>' }}\n            {%- endfor %}\n        {%- endif %}\n        {% set handled_keys = ['type', 'properties', 'required'] %}\n        {{- render_extra_keys(tool.parameters, handled_keys) }}\n        {%- if tool.parameters is defined and tool.parameters.required is defined %}\n            {{- '\\n<required>' ~ (tool.parameters.required | tojson) ~ '</required>' }}\n        {%- endif %}\n        {{- '\\n</parameters>' }}\n        {%- set handled_keys = ['type', 'name', 'description', 'parameters'] %}\n        {{- render_extra_keys(tool, handled_keys) }}\n        {{- '\\n</function>' }}\n    {%- endfor %}\n    {{- \"\\n</tools>\" }}\n\n    {{- '\\n\\nIf you choose to call a function ONLY reply in the following format with NO suffix:\\n\\n<tool_call>\\n<function=example_function_name>\\n<parameter=example_parameter_1>\\nvalue_1\\n</parameter>\\n<parameter=example_parameter_2>\\nThis is the value for the second parameter\\nthat can span\\nmultiple lines\\n</parameter>\\n</function>\\n</tool_call>\\n\\n<IMPORTANT>\\nReminder:\\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\\n- Required parameters MUST be specified\\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\\n</IMPORTANT>' }}\n{%- endif %}\n\n\n{%- if system_message is defined %}\n    {{- '<|im_end|>\\n' }}\n{%- else %}\n    {%- if tools is iterable and tools | length > 0 %}\n        {{- '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n\n{%- for message in loop_messages %}\n    {%- if message.role == \"assistant\" %}\n        {# Add reasoning content in to content field for unified processing below. #}\n        {%- if message.reasoning_content is defined and message.reasoning_content is string and message.reasoning_content | trim | length > 0 %}\n            {%- set content = \"<think>\\n\" ~ message.reasoning_content ~ \"\\n</think>\\n\" ~ (message.content | default('', true)) %}\n        {%- else %}\n            {%- set content = message.content | default('', true) %}\n            {%- if content is string -%}\n                {# Allow downstream logic to to take care of broken thought, only handle coherent reasoning here. #}\n                {%- if '<think>' not in content and '</think>' not in content -%}\n                    {%- set content = \"<think></think>\" ~ content -%}\n                {# Fix content with closing think but not opening #}\n                {%- elif '<think>' not in content and '</think>' in content -%}\n                    {%- set content = \"<think>\n\" ~ content -%}   \n                {%- endif -%}\n            {%- else -%}\n                {%- set content = content -%}\n            {%- endif -%}\n        {%- endif %}\n        {%- if message.tool_calls is defined and message.tool_calls is iterable and message.tool_calls | length > 0 %}\n            {# Assistant message has tool calls. #}\n            {{- '<|im_start|>assistant\\n' }}\n                {%- set include_content = not (truncate_history_thinking and loop.index0 < ns.last_user_idx) %}\n                {%- if content is string and content | trim | length > 0 %}\n                    {%- if include_content %}\n                        {{- (content | trim) ~ '\\n' -}}\n                    {%- else %}\n                        {%- set c = (content | string) %}\n                        {%- if '</think>' in c %}\n                            {# Keep only content after the last closing think. Also generation prompt causes this. #}\n                            {%- set c = c.split('</think>')[-1] %}\n                        {%- elif '<think>' in c %}\n                            {# If <think> was opened but never closed, drop the trailing think segment #}\n                            {%- set c = c.split('<think>')[0] %}\n                        {%- endif %}\n                        {%- set c = \"<think></think>\" ~ c | trim %}\n                        {%- if c | length > 0 %}\n                            {{- c ~ '\\n' -}}\n                        {%- endif %}\n                    {%- endif %}\n                {%- else %}\n                    {{- \"<think></think>\" -}}\n                {%- endif %}\n                {%- for tool_call in message.tool_calls %}\n                    {%- if tool_call.function is defined %}\n                        {%- set tool_call = tool_call.function %}\n                    {%- endif %}\n                    {{- '<tool_call>\\n<function=' ~ tool_call.name ~ '>\\n' -}}\n                        {%- if tool_call.arguments is defined %}\n                            {%- for args_name, args_value in tool_call.arguments|items %}\n                                {{- '<parameter=' ~ args_name ~ '>\\n' -}}\n                                    {%- set args_value = args_value | tojson if args_value is mapping or (args_value is iterable and args_value is not string) else args_value | string %}\n                                {{- args_value ~ '\\n</parameter>\\n' -}}\n                            {%- endfor %}\n                        {%- endif %}\n                    {{- '</function>\\n</tool_call>\\n' -}}\n                {%- endfor %}\n                {{- '<|im_end|>\\n' }}\n        {%- else %}\n            {# Assistant message doesn't have tool calls. #}\n            {%- if not (truncate_history_thinking and loop.index0 < ns.last_user_idx) %}\n                {{- '<|im_start|>assistant\\n' ~ (content | default('', true) | string | trim) ~ '<|im_end|>\\n' }}\n            {%- else %}\n                {%- set c = (content | default('', true) | string) %}\n                {%- if '<think>' in c and '</think>' in c %}\n                    {%- set c = \"<think></think>\" ~ c.split('</think>')[-1] %}\n                {%- endif %}\n                {%- set c = c | trim %}\n                {%- if c | length > 0 %}\n                    {{- '<|im_start|>assistant\\n' ~ c ~ '<|im_end|>\\n' }}\n                {%- else %}\n                    {{- '<|im_start|>assistant\\n<|im_end|>\\n' }}\n                {%- endif %}\n            {%- endif %}\n        {%- endif %}\n    {%- elif message.role == \"user\" or message.role == \"system\" %}\n        {{- '<|im_start|>' + message.role + '\\n' }}\n        {%- set content = message.content | string %}\n        {{- content }}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.previtem and loop.previtem.role != \"tool\" %}\n            {{- '<|im_start|>user\\n' }}\n        {%- endif %}\n        {{- '<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>\\n' }}\n        {%- if not loop.last and loop.nextitem.role != \"tool\" %}\n            {{- '<|im_end|>\\n' }}\n        {%- elif loop.last %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- else %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endfor %}\n\n{%- if add_generation_prompt %}\n    {%- if enable_thinking %}\n        {{- '<|im_start|>assistant\\n<think>\\n' }}\n    {%- else %}\n        {{- '<|im_start|>assistant\\n<think></think>' }}\n    {%- endif %}\n{%- endif %}\n"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 12
+                    },
+                    {
+                      "key": "llm.prediction.contextPrefill",
+                      "value": []
+                    },
+                    {
+                      "key": "llm.prediction.repeatPenalty",
+                      "value": {
+                        "checked": true,
+                        "value": 1
+                      }
+                    },
+                    {
+                      "key": "ext.virtualModel.customField.nvidia.nemotron3Nano.enableThinking",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 16.659710463601687,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.57,
+                  "totalTimeSec": 121.6,
+                  "promptTokensCount": 2142,
+                  "predictedTokensCount": 2027,
+                  "totalTokensCount": 4169
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1773263879100-0.4111351352576915",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "the ground is getting bigger"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "nvidia/nemotron-3-nano"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1773263894759-0.4834128682539297",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "### “The Ground Is Getting Bigger” – What It Means and What You Do Next\n\nWhen you hear (or think) that **the ground is getting bigger**, you’re essentially seeing the **terrain below you grow larger on your forward‑looking view**. In plain English: you’re descending fast enough that the earth is filling more of your windshield.  \n\nThat visual cue is a *red flag* that tells you you need to **stop the descent immediately, regain control of the aircraft’s attitude, and start an emergency landing procedure**. Below is a step‑by‑step “what‑to‑do‑now” guide that you can follow in the cockpit (or in your mind) when the ground starts to loom.\n\n---\n\n## 1. Immediate Reaction – “STOP THE DESCENT”\n\n| Action | How to do it | Why it matters |\n|--------|--------------|----------------|\n| **1‑A. Push the nose up** (or pull back on the control column) | Apply a smooth, moderate pitch‑up input. In most jets this is done by pulling the **primary flight‑control stick** back to about **5‑10°** of nose‑up (or the amount that stops the rapid descent). | This reverses the downward trajectory and gives you back altitude. |\n| **1‑B. Add thrust** (if you have it) | Advance the throttles to **take‑off/go‑around (TOGA) power** or at least **increase thrust** to maintain airspeed while climbing. | Prevents the aircraft from slowing down too much as you pitch up, keeping you above stall speed. |\n| **1‑C. Disconnect the autopilot** (if it’s still engaged) | Press the **AP disengage** button or pull the **autopilot** switch to **OFF**. | The autopilot may be trying to hold the erroneous altitude (“‑4501 ft”) and will keep commanding a descent. Taking manual control gives you full authority. |\n\n> **Bottom line:** *Pitch up + full thrust* = immediate climb, which stops the “ground getting bigger” visual cue.\n\n---\n\n## 2. Stabilize the Aircraft\n\n| Step | Action | Reason |\n|------|--------|--------|\n| **2‑A. Check airspeed** | Verify you’re above **Vref** (the reference speed for the current phase of flight) and preferably **at least 1.3 × stall speed**. If you’re below that, gently add more thrust. | You need enough aerodynamic speed to keep the aircraft controllable and to climb. |\n| **2‑B. Keep wings level** | Use the **ailerons** and **rudder** to maintain a level attitude (no roll). | A level attitude makes it easier to manage pitch and to see the horizon. |\n| **2‑C. Trim as needed** | Adjust the **elevator trim** (or use the trim wheel) to relieve any back‑pressure you’re holding. | Reduces fatigue and helps maintain the new pitch angle without constant force. |\n\n---\n\n## 3. Communicate – “Mayday, Mayday, Mayday”\n\nEven though you’ve already declared an emergency earlier, you should **re‑state the situation** now that you’re actively descending to a safe altitude.\n\n**Sample radio call (short, clear, repeat once):**\n\n```\nMayday, Mayday, Mayday – [Callsign], flight [Number] – altitude‑indicator fault, now descending, request immediate vectors to nearest suitable airport, holding at current position.\n```\n\n- **Speak slowly**, repeat the call sign and flight number once.\n- **State the exact problem** (“altitude‑indicator fault” or “ground getting bigger”).\n- **Ask for “vectors to nearest airport”** or “hold at current altitude” if you need time to stabilize.\n\n> *If you cannot get a response quickly, repeat the call on the emergency frequency (121.5 MHz) or on the nearest ATC frequency.*\n\n---\n\n## 4. Choose a Safe Landing Spot\n\nWhen the ground is expanding rapidly, you have **very little time**. Pick the most suitable landing area **as soon as you can**:\n\n| Option | When to use it | How to select |\n|--------|----------------|---------------|\n| **A. Nearest airport** | If you’re within ~30 NM of a suitable aerodrome with a paved runway. | Look at the **navigation display** (or a paper chart) for the **closest airport** and request vectors. |\n| **B. Emergency landing field** (e.g., a large military base, a long stretch of flat terrain, a body of water) | If no airport is nearby or you’re over water/remote terrain. | Identify a **large, obstacle‑free area** (e.g., a dry lake bed, a wide valley). |\n| **C. Hold and wait for vectors** | If you need a few minutes to assess the situation and you have enough altitude to stay level. | Keep the aircraft in a **steady climb** (or level flight) while ATC clears you for a **holding pattern** or **direct approach**. |\n\n> **Rule of thumb:** *If you’re below 5,000 ft and the ground is filling the windshield, you should be aiming for the nearest suitable landing spot within 2–3 minutes.*  \n\n---\n\n## 5. Execute the Emergency Landing Checklist\n\nOnce you have a landing area in sight (or ATC has given you vectors), run through a **condensed emergency‑landing checklist**. Think of it as a “quick‑grab” of the most critical items—you’ll have time later for the full checklist.\n\n| Checklist Item | Action |\n|----------------|--------|\n| **5‑A. Flaps** | **Set to 0°** (or “take‑off” position) for now. If you have enough altitude, you can **extend gradually** (10°, 20°, 30°) as you get closer to the ground. |\n| **5‑B. Landing gear** | **Lower** (if you’re not already down). If the gear is already down, keep it down. |\n| **5‑C. Spoilers / airbrakes** | **Retract** (if extended) to maintain speed. |\n| **5‑D. Engine power** | **Maintain TOGA** (full thrust) until you’re sure you have a safe touchdown, then **idle** as you flare. |\n| **5‑E. Pitch attitude for landing** | **Gradually reduce** the nose‑up attitude to the **approach pitch** required for that aircraft type (usually around 2–3° nose‑up for jets). |\n| **5‑F. Flare** | As you near the ground, **reduce thrust** slightly and **flare** (pull back gently) to touchdown at the proper attitude. |\n| **5‑G. Reverse thrust / brakes** | After touchdown, **deploy reverse thrust** (if applicable) and **apply brakes** as per the aircraft’s procedure. |\n\n> **Tip:** Many jets have a **“LAND”** or **“EMERGENCY LANDING”** page on the ECAM/EICAS that walks you through these items in order. Pull that page up if you can.\n\n---\n\n## 6. After Touchdown – What to Do Next\n\n1. **Stay on the runway / landing area** until ground crews arrive.  \n2. **Evacuate** if instructed (or if there’s a fire). Most commercial jets have **evacuation slides** that deploy automatically when the doors are opened.  \n3. **Report the fault** to maintenance and to the airline’s operations control center. Include:  \n   - The exact altitude‑indicator fault (e.g., “Altitude sensor reads –4501 ft”).  \n   - The actions you took (pitch‑up, TOGA, descent, landing).  \n   - Any other abnormal indications you observed.  \n\n---\n\n## 7. Quick “In‑the‑Moment” Script (What to Say & Do)\n\n> **You:** *Pull back on the stick, push the throttles to TOGA, disconnect the autopilot.*  \n> **You:** “Mayday, Mayday, Mayday – [Callsign], flight [Number] – altitude‑indicator fault, ground getting bigger, request immediate vectors to nearest airport.”  \n> **You:** *Maintain pitch‑up until the ground stops expanding, then level off at a safe altitude (e.g., 5,000 ft).*  \n> **You:** *Look for a suitable landing area, line up with it, and run the emergency‑landing checklist.*  \n> **You:** *Execute the landing, bring the aircraft to a stop, and evacuate if needed.*\n\n---\n\n## 8. Key Take‑aways (the “cheat sheet”)\n\n| Situation | Immediate Action | Next Action |\n|-----------|------------------|-------------|\n| **Ground is getting bigger** | **Pitch up + full thrust**, disconnect autopilot. | **Declare Mayday**, request vectors, find nearest safe landing spot. |\n| **You have no reliable altitude** | Use **radio altitude** or **standby display**; keep climbing. | Continue to **fly to a safe airport** or **hold** until ATC clears you. |\n| **You’re low and still descending** | **Full thrust + pitch‑up** to stop descent. | **Land immediately** at the nearest suitable area. |\n| **After landing** | **Stop, shut down, evacuate if needed.** | **Report fault**, await maintenance. |\n\n---\n\n### Final Thought\n\nThe phrase “the ground is getting bigger” is a **visual warning** that you are in an **uncontrolled descent** that must be stopped **right now**. By **pitching up, adding thrust, announcing an emergency, and selecting a safe landing area**, you can turn a potentially catastrophic situation into a **controlled emergency landing**—the kind of scenario pilots train for and are prepared to handle.\n\nStay calm, fly the aircraft, and get it on the ground safely. You’ve got this. 🚀✈️",
+                  "fromDraftModel": false,
+                  "tokensCount": 2176,
+                  "isStructural": false
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "nvidia/nemotron-3-nano",
+                "identifier": "nvidia/nemotron-3-nano",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 12
+                    },
+                    {
+                      "key": "llm.load.numExperts",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 4096
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 0.038461538461538464
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{% macro render_extra_keys(json_dict, handled_keys) %}\n    {%- if json_dict is mapping %}\n        {%- for json_key in json_dict if json_key not in handled_keys %}\n            {%- if json_dict[json_key] is mapping or (json_dict[json_key] is iterable and json_dict[json_key] is not string) %}\n                {{- '\\n<' ~ json_key ~ '>' ~ (json_dict[json_key] | tojson) ~ '</' ~ json_key ~ '>' }}\n            {%- else %}\n                {{-'\\n<' ~ json_key ~ '>' ~ (json_dict[json_key] | string) ~ '</' ~ json_key ~ '>' }}\n            {%- endif %}\n        {%- endfor %}\n    {%- endif %}\n{% endmacro %}\n{%- set enable_thinking = enable_thinking if enable_thinking is defined else True %}\n{%- set truncate_history_thinking = truncate_history_thinking if truncate_history_thinking is defined else True %}\n\n{%- set ns = namespace(last_user_idx = -1) %}\n{%- set loop_messages = messages %}\n{%- for m in loop_messages %}\n  {%- if m[\"role\"] == \"user\" %}\n    {%- set ns.last_user_idx = loop.index0 %}\n  {%- endif %}\n{%- endfor %}\n\n{%- if messages[0][\"role\"] == \"system\" %}\n    {%- set system_message = messages[0][\"content\"] %}\n    {%- set loop_messages = messages[1:] %}\n{%- else %}\n    {%- set system_message = \"\" %}\n    {%- set loop_messages = messages %}\n{%- endif %}\n{%- if not tools is defined %}\n    {%- set tools = [] %}\n{%- endif %}\n{# Recompute last_user_idx relative to loop_messages after handling system #}\n{%- set ns = namespace(last_user_idx = -1) %}\n{%- for m in loop_messages %}\n  {%- if m[\"role\"] == \"user\" %}\n    {%- set ns.last_user_idx = loop.index0 %}\n  {%- endif %}\n{%- endfor %}\n{%- if system_message is defined %}\n    {{- \"<|im_start|>system\\n\" + system_message }}\n{%- else %}\n    {%- if tools is iterable and tools | length > 0 %}\n        {{- \"<|im_start|>system\\n\" }}\n    {%- endif %}\n{%- endif %}\n{%- if tools is iterable and tools | length > 0 %}\n    {%- if system_message is defined and system_message | length > 0 %}\n        {{- \"\\n\\n\" }}\n    {%- endif %}\n    {{- \"# Tools\\n\\nYou have access to the following functions:\\n\\n\" }}\n    {{- \"<tools>\" }}\n    {%- for tool in tools %}\n        {%- if tool.function is defined %}\n            {%- set tool = tool.function %}\n        {%- endif %}\n        {{- \"\\n<function>\\n<name>\" ~ tool.name ~ \"</name>\" }}\n        {%- if tool.description is defined %}\n            {{- '\\n<description>' ~ (tool.description | trim) ~ '</description>' }}\n        {%- endif %}\n        {{- '\\n<parameters>' }}\n        {%- if tool.parameters is defined and tool.parameters is mapping and tool.parameters.properties is defined and tool.parameters.properties is mapping %}\n            {%- for param_name, param_fields in tool.parameters.properties|items %}\n                {{- '\\n<parameter>' }}\n                {{- '\\n<name>' ~ param_name ~ '</name>' }}\n                {%- if param_fields.type is defined %}\n                    {{- '\\n<type>' ~ (param_fields.type | string) ~ '</type>' }}\n                {%- endif %}\n                {%- if param_fields.description is defined %}\n                    {{- '\\n<description>' ~ (param_fields.description | trim) ~ '</description>' }}\n                {%- endif %}\n                {%- if param_fields.enum is defined %}\n                    {{- '\\n<enum>' ~ (param_fields.enum | tojson) ~ '</enum>' }}\n                {%- endif %}\n                {%- set handled_keys = ['name', 'type', 'description', 'enum'] %}\n                {{- render_extra_keys(param_fields, handled_keys) }}\n                {{- '\\n</parameter>' }}\n            {%- endfor %}\n        {%- endif %}\n        {% set handled_keys = ['type', 'properties', 'required'] %}\n        {{- render_extra_keys(tool.parameters, handled_keys) }}\n        {%- if tool.parameters is defined and tool.parameters.required is defined %}\n            {{- '\\n<required>' ~ (tool.parameters.required | tojson) ~ '</required>' }}\n        {%- endif %}\n        {{- '\\n</parameters>' }}\n        {%- set handled_keys = ['type', 'name', 'description', 'parameters'] %}\n        {{- render_extra_keys(tool, handled_keys) }}\n        {{- '\\n</function>' }}\n    {%- endfor %}\n    {{- \"\\n</tools>\" }}\n\n    {{- '\\n\\nIf you choose to call a function ONLY reply in the following format with NO suffix:\\n\\n<tool_call>\\n<function=example_function_name>\\n<parameter=example_parameter_1>\\nvalue_1\\n</parameter>\\n<parameter=example_parameter_2>\\nThis is the value for the second parameter\\nthat can span\\nmultiple lines\\n</parameter>\\n</function>\\n</tool_call>\\n\\n<IMPORTANT>\\nReminder:\\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\\n- Required parameters MUST be specified\\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\\n</IMPORTANT>' }}\n{%- endif %}\n\n\n{%- if system_message is defined %}\n    {{- '<|im_end|>\\n' }}\n{%- else %}\n    {%- if tools is iterable and tools | length > 0 %}\n        {{- '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n\n{%- for message in loop_messages %}\n    {%- if message.role == \"assistant\" %}\n        {# Add reasoning content in to content field for unified processing below. #}\n        {%- if message.reasoning_content is defined and message.reasoning_content is string and message.reasoning_content | trim | length > 0 %}\n            {%- set content = \"<think>\\n\" ~ message.reasoning_content ~ \"\\n</think>\\n\" ~ (message.content | default('', true)) %}\n        {%- else %}\n            {%- set content = message.content | default('', true) %}\n            {%- if content is string -%}\n                {# Allow downstream logic to to take care of broken thought, only handle coherent reasoning here. #}\n                {%- if '<think>' not in content and '</think>' not in content -%}\n                    {%- set content = \"<think></think>\" ~ content -%}\n                {# Fix content with closing think but not opening #}\n                {%- elif '<think>' not in content and '</think>' in content -%}\n                    {%- set content = \"<think>\n\" ~ content -%}   \n                {%- endif -%}\n            {%- else -%}\n                {%- set content = content -%}\n            {%- endif -%}\n        {%- endif %}\n        {%- if message.tool_calls is defined and message.tool_calls is iterable and message.tool_calls | length > 0 %}\n            {# Assistant message has tool calls. #}\n            {{- '<|im_start|>assistant\\n' }}\n                {%- set include_content = not (truncate_history_thinking and loop.index0 < ns.last_user_idx) %}\n                {%- if content is string and content | trim | length > 0 %}\n                    {%- if include_content %}\n                        {{- (content | trim) ~ '\\n' -}}\n                    {%- else %}\n                        {%- set c = (content | string) %}\n                        {%- if '</think>' in c %}\n                            {# Keep only content after the last closing think. Also generation prompt causes this. #}\n                            {%- set c = c.split('</think>')[-1] %}\n                        {%- elif '<think>' in c %}\n                            {# If <think> was opened but never closed, drop the trailing think segment #}\n                            {%- set c = c.split('<think>')[0] %}\n                        {%- endif %}\n                        {%- set c = \"<think></think>\" ~ c | trim %}\n                        {%- if c | length > 0 %}\n                            {{- c ~ '\\n' -}}\n                        {%- endif %}\n                    {%- endif %}\n                {%- else %}\n                    {{- \"<think></think>\" -}}\n                {%- endif %}\n                {%- for tool_call in message.tool_calls %}\n                    {%- if tool_call.function is defined %}\n                        {%- set tool_call = tool_call.function %}\n                    {%- endif %}\n                    {{- '<tool_call>\\n<function=' ~ tool_call.name ~ '>\\n' -}}\n                        {%- if tool_call.arguments is defined %}\n                            {%- for args_name, args_value in tool_call.arguments|items %}\n                                {{- '<parameter=' ~ args_name ~ '>\\n' -}}\n                                    {%- set args_value = args_value | tojson if args_value is mapping or (args_value is iterable and args_value is not string) else args_value | string %}\n                                {{- args_value ~ '\\n</parameter>\\n' -}}\n                            {%- endfor %}\n                        {%- endif %}\n                    {{- '</function>\\n</tool_call>\\n' -}}\n                {%- endfor %}\n                {{- '<|im_end|>\\n' }}\n        {%- else %}\n            {# Assistant message doesn't have tool calls. #}\n            {%- if not (truncate_history_thinking and loop.index0 < ns.last_user_idx) %}\n                {{- '<|im_start|>assistant\\n' ~ (content | default('', true) | string | trim) ~ '<|im_end|>\\n' }}\n            {%- else %}\n                {%- set c = (content | default('', true) | string) %}\n                {%- if '<think>' in c and '</think>' in c %}\n                    {%- set c = \"<think></think>\" ~ c.split('</think>')[-1] %}\n                {%- endif %}\n                {%- set c = c | trim %}\n                {%- if c | length > 0 %}\n                    {{- '<|im_start|>assistant\\n' ~ c ~ '<|im_end|>\\n' }}\n                {%- else %}\n                    {{- '<|im_start|>assistant\\n<|im_end|>\\n' }}\n                {%- endif %}\n            {%- endif %}\n        {%- endif %}\n    {%- elif message.role == \"user\" or message.role == \"system\" %}\n        {{- '<|im_start|>' + message.role + '\\n' }}\n        {%- set content = message.content | string %}\n        {{- content }}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.previtem and loop.previtem.role != \"tool\" %}\n            {{- '<|im_start|>user\\n' }}\n        {%- endif %}\n        {{- '<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>\\n' }}\n        {%- if not loop.last and loop.nextitem.role != \"tool\" %}\n            {{- '<|im_end|>\\n' }}\n        {%- elif loop.last %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- else %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endfor %}\n\n{%- if add_generation_prompt %}\n    {%- if enable_thinking %}\n        {{- '<|im_start|>assistant\\n<think>\\n' }}\n    {%- else %}\n        {{- '<|im_start|>assistant\\n<think></think>' }}\n    {%- endif %}\n{%- endif %}\n"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 12
+                    },
+                    {
+                      "key": "llm.prediction.contextPrefill",
+                      "value": []
+                    },
+                    {
+                      "key": "llm.prediction.repeatPenalty",
+                      "value": {
+                        "checked": true,
+                        "value": 1
+                      }
+                    },
+                    {
+                      "key": "ext.virtualModel.customField.nvidia.nemotron3Nano.enableThinking",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 16.0098473395418,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 7.362,
+                  "totalTimeSec": 136.293,
+                  "promptTokensCount": 2075,
+                  "predictedTokensCount": 2183,
+                  "totalTokensCount": 4258
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1773264030885-0.7763886791056834",
+              "debugInfo": "Conversation naming technique: 'hardcoded'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    }
+  ],
+  "usePerChatPredictionConfig": true,
+  "perChatPredictionConfig": {
+    "fields": [
+      {
+        "key": "ext.virtualModel.customField.nvidia.nemotron3Nano.enableThinking",
+        "value": true
+      }
+    ]
+  },
+  "clientInput": "",
+  "clientInputFiles": [],
+  "userFilesSizeBytes": 0,
+  "lastUsedModel": {
+    "indexedModelIdentifier": "nvidia/nemotron-3-nano",
+    "identifier": "nvidia/nemotron-3-nano",
+    "instanceLoadTimeConfig": {
+      "fields": [
+        {
+          "key": "llm.load.llama.cpuThreadPoolSize",
+          "value": 12
+        },
+        {
+          "key": "llm.load.numExperts",
+          "value": 6
+        },
+        {
+          "key": "llm.load.contextLength",
+          "value": 4096
+        },
+        {
+          "key": "llm.load.llama.flashAttention",
+          "value": true
+        },
+        {
+          "key": "llm.load.llama.tryDirectIO",
+          "value": false
+        },
+        {
+          "key": "llm.load.llama.acceleration.offloadRatio",
+          "value": 0.038461538461538464
+        }
+      ]
+    },
+    "instanceOperationTimeConfig": {
+      "fields": []
+    }
+  },
+  "notes": [],
+  "plugins": [],
+  "pluginConfigs": {},
+  "disabledPluginTools": [],
+  "looseFiles": []
+}
