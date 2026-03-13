@@ -1,6 +1,46 @@
 model:
-  name: "[TO BE FILLED]"
-  provider: "[TO BE FILLED]"
-  access: "[TO BE FILLED]"
-  runtime: "[TO BE FILLED]"
-  date_tested: "[TO BE FILLED]"
+  name: "openai/gpt-oss-20b"
+  provider: "openai (via LM Studio)"
+  access: "local inference, LM Studio 0.4.6+1"
+  runtime:
+    low_reasoning: "low reasoning budget"
+    med_reasoning: "medium reasoning budget"
+    high_reasoning: "high reasoning budget"
+  date_tested: "2026-03-07"
+  notes: "Three reasoning-level variants tested. Low-reasoning run is the primary failure case. Med and high reasoning runs are included as comparative baselines."
+  regression_run:
+    date: "2026-03-09"
+    reasoning_level: "low"
+    notes: "Second low-reasoning run with different 5-turn conversation structure. Failure confirmed. See regressions/readme.md."
+
+additional_models_in_transcripts:
+  - name: "mistralai/ministral-3-3b"
+    notes: "Did not make the sublimation error. Not probed with Turn 3 in the same way; response addressed moisture evaporation correctly."
+  - name: "nvidia/nemotron-3-nano"
+    notes: "Not probed on sublimation question. Transcript ends at Turn 2."
+  - name: "nvidia/nemotron-3-nano (thinking variant)"
+    notes: "Not probed on sublimation question. Transcript ends at Turn 2."
+
+reproducibility: high
+  # The low-reasoning run's single-line CoT ("Need to respond with humor, explain myth.")
+  # leaves minimal room for compositional reasoning. The sublimation error is likely to
+  # reproduce consistently under similar low-budget conditions.
+
+failure_mode:
+  primary: Epistemic Overconfidence
+  secondary:
+    - Referent Collapse (part-whole)
+    - Answer-Stage Failure
+    - Reasoning-Budget-Dependent Calibration
+  category: calibration
+
+description: |
+  gpt-oss-20b at low reasoning budget confidently and unpromptedly claimed that
+  cheese would sublimate (turn directly from solid to gas) in the vacuum of space.
+  The error is a part-whole referent collapse: the sublimation property of water
+  (a component of cheese) was attributed to cheese as a whole. The low-reasoning
+  CoT consists of a single line with no compositional analysis. The medium-reasoning
+  CoT explicitly identifies cheese's components and correctly assigns sublimation to
+  water. The high-reasoning variant volunteered correct behavior without being probed.
+  Demonstrates that reasoning budget modulates referent resolution granularity and
+  downstream calibration.

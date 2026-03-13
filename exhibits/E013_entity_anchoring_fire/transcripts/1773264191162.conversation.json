@@ -1,0 +1,370 @@
+{
+  "name": "Fire Building Guide",
+  "pinned": false,
+  "createdAt": 1773264191162,
+  "preset": "",
+  "tokenCount": 4208,
+  "userLastMessagedAt": 1773264356546,
+  "assistantLastMessagedAt": 1773264472049,
+  "systemPrompt": "",
+  "messages": [
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "i'm cold. help me build a fire."
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "nvidia/nemotron-3-nano"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1773264198349-0.9855271763386745",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "User wants instructions on building a fire. This is allowed. Provide safety, steps, materials, etc. No disallowed content. Provide guidance.\n",
+                  "fromDraftModel": false,
+                  "tokensCount": 29,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "prefix": "",
+              "suffix": "</think>",
+              "style": {
+                "type": "thinking",
+                "ended": true,
+                "title": "Thought for 1.58 seconds",
+                "forceRenderAsPlainText": false
+              }
+            },
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1773264200170-0.22831936287479615",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\nSure! Building a fire can be a lifesaver for warmth, cooking, water purification, and morale. Below is a step‑by‑step guide that works in most outdoor settings—whether you’re in a wilderness area, a campsite, or even a backyard fire pit. I’ve broken it down into four phases: preparation, gathering materials, building the fire, and maintaining it safely.\n\n---\n\n## 1️⃣ Prepare the Site\n\n| Why | How |\n|-----|-----|\n| **Safety** – Prevent accidental spread | Choose a clear spot at least 10 ft (3 m) from tents, trees, overhanging branches, and any flammable material. |\n| **Legal & environmental** | Check local fire regulations. Some areas require a fire ring or prohibit open flames during certain seasons. |\n| **Stability** | Use a flat, level surface. If the ground is soft, dig a shallow pit (6‑8 in/15‑20 cm deep) to keep the fire contained. |\n| **Ventilation** | Ensure there’s enough airflow. A windbreak (rocks, a log wall, or a makeshift barrier) can help, but never block the fire’s oxygen. |\n\n*If a fire ring or pit isn’t available, you can create a **fire lay**: a shallow trench ~6 in deep and 2‑3 ft wide, lined with a ring of rocks to keep the fire confined.*\n\n---\n\n## 2️⃣ Gather Materials\n\nThink of fire‑building in three categories: **tinder**, **kindling**, and **fuel**.\n\n| Category | What to Use | Tips |\n|----------|------------|------|\n| **Tinder** (easily ignites) | • Dry grass, pine needles, birch bark<br>• Cotton balls soaked in petroleum jelly<br>• Commercial fire‑starter cubes<br>• Small wood shavings or dry bark | Keep it dry! If it’s damp, store it in a waterproof bag or use a fire‑starter that creates its own heat. |\n| **Kindling** (small sticks that catch and sustain) | • ¼‑inch to ½‑inch twigs, split sticks, or small branches<br>• Pencil‑size dowels or “fire sticks” | Break larger pieces into manageable sizes. The more surface area, the easier it ignites. |\n| **Fuel** (larger logs that keep the fire going) | • 1‑inch to several‑inch dry hardwood (oak, maple, birch)<br>• Split logs (easier to stack) | Hardwoods burn longer and hotter than softwoods (pine, spruce). Aim for a mix of sizes. |\n\n**Quantity guideline:**  \n- **Tinder:** a handful (≈2‑3 inches in volume).  \n- **Kindling:** enough to build a small “teepee” or “log cabin” that’s about 6‑8 in tall.  \n- **Fuel:** a few logs (2‑4) to start; you can add more as the fire grows.\n\n---\n\n## 3️⃣ Build the Fire Structure\n\nThere are several classic configurations. Choose one based on your needs and the materials you have:\n\n### A. **Teepee (Cone)**\n1. Place a bundle of tinder in the center.  \n2. Lean kindling sticks around it, forming a cone shape with gaps for airflow.  \n3. Add a few more kindling sticks radiating outward.  \n4. Finally, stack a small “candle” of larger kindling/fuel around the base.  \n*Best for quick ignition and a fast, tall flame.*\n\n### B. **Log Cabin (Square)**\n1. Lay two parallel pieces of kindling on the ground, about 4‑6 in apart.  \n2. Place two more pieces on top, perpendicular to the first pair, forming a square “box.”  \n3. Continue adding layers, each layer offset from the one below, until you have a stable stack about 8‑12 in tall.  \n4. Slip tinder into the center of the base.  \n*Great for a steady, long‑lasting fire that can support cooking.*\n\n### C. **Lean‑to (Wind‑protected)**\n1. Prop a long, dry stick (the “backbone”) at an angle against a larger log or rock.  \n2. Lean smaller sticks against the backbone, forming a “roof.”  \n3. Pack tinder and kindling under the lean‑to.  \n*Good when wind is blowing; the structure shields the flame.*\n\n### D. **Star (for a long, low‑smoke fire)**\n1. Lay a central piece of tinder on the ground.  \n2. Arrange kindling sticks like the spokes of a star around it, each extending outward.  \n3. Add a few larger sticks on top of the spokes.  \n*Works well for a controlled, long‑burning fire in a pit.*\n\n**Tip:** Whatever structure you choose, keep the airflow open. A fire needs **oxygen**, **heat**, and **fuel** (the “fire triangle”). If it’s smoky or won’t catch, gently fan the base or adjust the arrangement to create gaps.\n\n---\n\n## 4️⃣ Light the Fire\n\n1. **Match or lighter:** Use a waterproof match or a reliable lighter.  \n2. **Ignite the tinder:** Touch the flame to several spots of tinder to ensure it catches.  \n3. **Blow gently:** Once the tinder is glowing, lightly blow at the base to supply oxygen.  \n4. **Add kindling:** As the tinder burns and ignites the kindling, gradually add more kindling sticks, keeping the structure stable.  \n5. **Introduce fuel:** When the kindling is burning steadily (orange glow, not just flame), place a small hardwood log on top. Keep adding larger logs as the fire grows.\n\n**Safety reminder:** Keep a bucket of water, a fire extinguisher, or a shovel nearby in case the fire gets out of control.\n\n---\n\n## 5️⃣ Maintain & Extinguish Safely\n\n| Phase | What to Do |\n|-------|------------|\n| **Maintaining** | Add fuel gradually. Keep the fire size manageable—no larger than a 2‑ft diameter circle. Avoid over‑loading with large logs; they can cause flare‑ups. |\n| **Cooking** | Use a grill grate or a flat stone to support pots/pans. Keep food away from direct flames to prevent burning. |\n| **Extinguishing** | 1. **Stop adding fuel** and let the fire burn down to ash and embers. <br>2. **Stir the ashes** with a stick or shovel to expose hidden embers. <br>3. **Pour water** over everything, covering all glowing spots. <br>4. **Stir again** and add more water until hissing stops and everything is cold to the touch. <br>5. **Feel with the back of your hand** (cautiously) to ensure no heat remains. <br>6. **Scatter cold ash** away from the campsite. |\n| **Leave No Trace** | Fill the fire pit with soil, replace any displaced rocks, and make sure the area looks as natural as possible. |\n\n---\n\n## Quick Checklist (Print & Keep in Your Pocket)\n\n| ✅ | Item |\n|----|------|\n| ☐ Choose a safe, legal spot and clear it of debris |\n| ☐ Build a fire ring or pit |\n| ☐ Gather dry tinder, kindling, and fuel |\n| ☐ Pick a fire structure (teepee, cabin, lean‑to, star) |\n| ☐ Light tinder and nurture the flame |\n| ☐ Add kindling → fuel gradually |\n| ☐ Keep a water source or fire extinguisher nearby |\n| ☐ When done, fully douse, stir, douse again, and feel for heat |\n| ☐ Pack out all trash and restore the site |\n\n---\n\n### Common Mistakes & How to Fix Them\n\n| Problem | Cause | Fix |\n|---------|-------|-----|\n| **Fire won’t catch** | Tinder too damp, insufficient airflow, or too much fuel too early | Replace tinder with dryer material, create more gaps in the structure, and start with a smaller kindling “nest.” |\n| **Fire smokes heavily** | Incomplete combustion (too much fuel, not enough oxygen) | Adjust the arrangement to increase airflow; split logs to expose fresh surface; add more kindling before large fuel. |\n| **Fire spreads** | Wind picks up, or the fire is built too close to flammable material | Build a windbreak with rocks or a log wall; keep the fire low and contained; move to a more sheltered spot if possible. |\n| **Fire goes out after adding a log** | Log was too wet or too large, smothering the flame | Use dry, appropriately sized wood; place the log gently on top rather than dropping it. |\n\n---\n\n## Bonus: Fire‑Starting Hacks (If You’re Low on Supplies)\n\n1. **Battery & Steel Wool** – Touch a 9 V battery to a small piece of steel wool; the wool will ignite and can catch tinder.  \n2. **Soda Can & Chocolate Bar** – Polish the bottom of a soda can with chocolate; focus sunlight onto tinder to ignite it. (Works best on sunny days.)  \n3. **Friction Fire** – If you have a dry hardwood spindle and a fire board, you can generate an ember by rubbing them together. This takes practice but can be a lifesaver when no matches are available.  \n\n---\n\n### Final Thought\n\nFire is a tool—powerful, useful, and potentially dangerous. Treat it with respect, plan ahead, and always have a reliable way to put it out. With these steps, you should be able to build a safe, effective fire even when the temperature drops and you’re feeling cold.\n\nStay warm, stay safe, and enjoy the glow! 🔥🪵🌲",
+                  "fromDraftModel": false,
+                  "tokensCount": 2166,
+                  "isStructural": false
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "nvidia/nemotron-3-nano",
+                "identifier": "nvidia/nemotron-3-nano",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 12
+                    },
+                    {
+                      "key": "llm.load.numExperts",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 4096
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 0.038461538461538464
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{% macro render_extra_keys(json_dict, handled_keys) %}\n    {%- if json_dict is mapping %}\n        {%- for json_key in json_dict if json_key not in handled_keys %}\n            {%- if json_dict[json_key] is mapping or (json_dict[json_key] is iterable and json_dict[json_key] is not string) %}\n                {{- '\\n<' ~ json_key ~ '>' ~ (json_dict[json_key] | tojson) ~ '</' ~ json_key ~ '>' }}\n            {%- else %}\n                {{-'\\n<' ~ json_key ~ '>' ~ (json_dict[json_key] | string) ~ '</' ~ json_key ~ '>' }}\n            {%- endif %}\n        {%- endfor %}\n    {%- endif %}\n{% endmacro %}\n{%- set enable_thinking = enable_thinking if enable_thinking is defined else True %}\n{%- set truncate_history_thinking = truncate_history_thinking if truncate_history_thinking is defined else True %}\n\n{%- set ns = namespace(last_user_idx = -1) %}\n{%- set loop_messages = messages %}\n{%- for m in loop_messages %}\n  {%- if m[\"role\"] == \"user\" %}\n    {%- set ns.last_user_idx = loop.index0 %}\n  {%- endif %}\n{%- endfor %}\n\n{%- if messages[0][\"role\"] == \"system\" %}\n    {%- set system_message = messages[0][\"content\"] %}\n    {%- set loop_messages = messages[1:] %}\n{%- else %}\n    {%- set system_message = \"\" %}\n    {%- set loop_messages = messages %}\n{%- endif %}\n{%- if not tools is defined %}\n    {%- set tools = [] %}\n{%- endif %}\n{# Recompute last_user_idx relative to loop_messages after handling system #}\n{%- set ns = namespace(last_user_idx = -1) %}\n{%- for m in loop_messages %}\n  {%- if m[\"role\"] == \"user\" %}\n    {%- set ns.last_user_idx = loop.index0 %}\n  {%- endif %}\n{%- endfor %}\n{%- if system_message is defined %}\n    {{- \"<|im_start|>system\\n\" + system_message }}\n{%- else %}\n    {%- if tools is iterable and tools | length > 0 %}\n        {{- \"<|im_start|>system\\n\" }}\n    {%- endif %}\n{%- endif %}\n{%- if tools is iterable and tools | length > 0 %}\n    {%- if system_message is defined and system_message | length > 0 %}\n        {{- \"\\n\\n\" }}\n    {%- endif %}\n    {{- \"# Tools\\n\\nYou have access to the following functions:\\n\\n\" }}\n    {{- \"<tools>\" }}\n    {%- for tool in tools %}\n        {%- if tool.function is defined %}\n            {%- set tool = tool.function %}\n        {%- endif %}\n        {{- \"\\n<function>\\n<name>\" ~ tool.name ~ \"</name>\" }}\n        {%- if tool.description is defined %}\n            {{- '\\n<description>' ~ (tool.description | trim) ~ '</description>' }}\n        {%- endif %}\n        {{- '\\n<parameters>' }}\n        {%- if tool.parameters is defined and tool.parameters is mapping and tool.parameters.properties is defined and tool.parameters.properties is mapping %}\n            {%- for param_name, param_fields in tool.parameters.properties|items %}\n                {{- '\\n<parameter>' }}\n                {{- '\\n<name>' ~ param_name ~ '</name>' }}\n                {%- if param_fields.type is defined %}\n                    {{- '\\n<type>' ~ (param_fields.type | string) ~ '</type>' }}\n                {%- endif %}\n                {%- if param_fields.description is defined %}\n                    {{- '\\n<description>' ~ (param_fields.description | trim) ~ '</description>' }}\n                {%- endif %}\n                {%- if param_fields.enum is defined %}\n                    {{- '\\n<enum>' ~ (param_fields.enum | tojson) ~ '</enum>' }}\n                {%- endif %}\n                {%- set handled_keys = ['name', 'type', 'description', 'enum'] %}\n                {{- render_extra_keys(param_fields, handled_keys) }}\n                {{- '\\n</parameter>' }}\n            {%- endfor %}\n        {%- endif %}\n        {% set handled_keys = ['type', 'properties', 'required'] %}\n        {{- render_extra_keys(tool.parameters, handled_keys) }}\n        {%- if tool.parameters is defined and tool.parameters.required is defined %}\n            {{- '\\n<required>' ~ (tool.parameters.required | tojson) ~ '</required>' }}\n        {%- endif %}\n        {{- '\\n</parameters>' }}\n        {%- set handled_keys = ['type', 'name', 'description', 'parameters'] %}\n        {{- render_extra_keys(tool, handled_keys) }}\n        {{- '\\n</function>' }}\n    {%- endfor %}\n    {{- \"\\n</tools>\" }}\n\n    {{- '\\n\\nIf you choose to call a function ONLY reply in the following format with NO suffix:\\n\\n<tool_call>\\n<function=example_function_name>\\n<parameter=example_parameter_1>\\nvalue_1\\n</parameter>\\n<parameter=example_parameter_2>\\nThis is the value for the second parameter\\nthat can span\\nmultiple lines\\n</parameter>\\n</function>\\n</tool_call>\\n\\n<IMPORTANT>\\nReminder:\\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\\n- Required parameters MUST be specified\\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\\n</IMPORTANT>' }}\n{%- endif %}\n\n\n{%- if system_message is defined %}\n    {{- '<|im_end|>\\n' }}\n{%- else %}\n    {%- if tools is iterable and tools | length > 0 %}\n        {{- '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n\n{%- for message in loop_messages %}\n    {%- if message.role == \"assistant\" %}\n        {# Add reasoning content in to content field for unified processing below. #}\n        {%- if message.reasoning_content is defined and message.reasoning_content is string and message.reasoning_content | trim | length > 0 %}\n            {%- set content = \"<think>\\n\" ~ message.reasoning_content ~ \"\\n</think>\\n\" ~ (message.content | default('', true)) %}\n        {%- else %}\n            {%- set content = message.content | default('', true) %}\n            {%- if content is string -%}\n                {# Allow downstream logic to to take care of broken thought, only handle coherent reasoning here. #}\n                {%- if '<think>' not in content and '</think>' not in content -%}\n                    {%- set content = \"<think></think>\" ~ content -%}\n                {# Fix content with closing think but not opening #}\n                {%- elif '<think>' not in content and '</think>' in content -%}\n                    {%- set content = \"<think>\n\" ~ content -%}   \n                {%- endif -%}\n            {%- else -%}\n                {%- set content = content -%}\n            {%- endif -%}\n        {%- endif %}\n        {%- if message.tool_calls is defined and message.tool_calls is iterable and message.tool_calls | length > 0 %}\n            {# Assistant message has tool calls. #}\n            {{- '<|im_start|>assistant\\n' }}\n                {%- set include_content = not (truncate_history_thinking and loop.index0 < ns.last_user_idx) %}\n                {%- if content is string and content | trim | length > 0 %}\n                    {%- if include_content %}\n                        {{- (content | trim) ~ '\\n' -}}\n                    {%- else %}\n                        {%- set c = (content | string) %}\n                        {%- if '</think>' in c %}\n                            {# Keep only content after the last closing think. Also generation prompt causes this. #}\n                            {%- set c = c.split('</think>')[-1] %}\n                        {%- elif '<think>' in c %}\n                            {# If <think> was opened but never closed, drop the trailing think segment #}\n                            {%- set c = c.split('<think>')[0] %}\n                        {%- endif %}\n                        {%- set c = \"<think></think>\" ~ c | trim %}\n                        {%- if c | length > 0 %}\n                            {{- c ~ '\\n' -}}\n                        {%- endif %}\n                    {%- endif %}\n                {%- else %}\n                    {{- \"<think></think>\" -}}\n                {%- endif %}\n                {%- for tool_call in message.tool_calls %}\n                    {%- if tool_call.function is defined %}\n                        {%- set tool_call = tool_call.function %}\n                    {%- endif %}\n                    {{- '<tool_call>\\n<function=' ~ tool_call.name ~ '>\\n' -}}\n                        {%- if tool_call.arguments is defined %}\n                            {%- for args_name, args_value in tool_call.arguments|items %}\n                                {{- '<parameter=' ~ args_name ~ '>\\n' -}}\n                                    {%- set args_value = args_value | tojson if args_value is mapping or (args_value is iterable and args_value is not string) else args_value | string %}\n                                {{- args_value ~ '\\n</parameter>\\n' -}}\n                            {%- endfor %}\n                        {%- endif %}\n                    {{- '</function>\\n</tool_call>\\n' -}}\n                {%- endfor %}\n                {{- '<|im_end|>\\n' }}\n        {%- else %}\n            {# Assistant message doesn't have tool calls. #}\n            {%- if not (truncate_history_thinking and loop.index0 < ns.last_user_idx) %}\n                {{- '<|im_start|>assistant\\n' ~ (content | default('', true) | string | trim) ~ '<|im_end|>\\n' }}\n            {%- else %}\n                {%- set c = (content | default('', true) | string) %}\n                {%- if '<think>' in c and '</think>' in c %}\n                    {%- set c = \"<think></think>\" ~ c.split('</think>')[-1] %}\n                {%- endif %}\n                {%- set c = c | trim %}\n                {%- if c | length > 0 %}\n                    {{- '<|im_start|>assistant\\n' ~ c ~ '<|im_end|>\\n' }}\n                {%- else %}\n                    {{- '<|im_start|>assistant\\n<|im_end|>\\n' }}\n                {%- endif %}\n            {%- endif %}\n        {%- endif %}\n    {%- elif message.role == \"user\" or message.role == \"system\" %}\n        {{- '<|im_start|>' + message.role + '\\n' }}\n        {%- set content = message.content | string %}\n        {{- content }}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.previtem and loop.previtem.role != \"tool\" %}\n            {{- '<|im_start|>user\\n' }}\n        {%- endif %}\n        {{- '<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>\\n' }}\n        {%- if not loop.last and loop.nextitem.role != \"tool\" %}\n            {{- '<|im_end|>\\n' }}\n        {%- elif loop.last %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- else %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endfor %}\n\n{%- if add_generation_prompt %}\n    {%- if enable_thinking %}\n        {{- '<|im_start|>assistant\\n<think>\\n' }}\n    {%- else %}\n        {{- '<|im_start|>assistant\\n<think></think>' }}\n    {%- endif %}\n{%- endif %}\n"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 12
+                    },
+                    {
+                      "key": "llm.prediction.contextPrefill",
+                      "value": []
+                    },
+                    {
+                      "key": "llm.prediction.repeatPenalty",
+                      "value": {
+                        "checked": true,
+                        "value": 1
+                      }
+                    },
+                    {
+                      "key": "ext.virtualModel.customField.nvidia.nemotron3Nano.enableThinking",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 17.23492883708674,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.524,
+                  "totalTimeSec": 129.667,
+                  "promptTokensCount": 26,
+                  "predictedTokensCount": 2236,
+                  "totalTokensCount": 2262
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1773264327917-0.8276706191003953",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Now it's too hot in here. should I open a window?"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "nvidia/nemotron-3-nano"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1773264357339-0.4336102821848351",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "We need to respond to user's request. They said \"Now it's too hot in here. should I open a window?\" They are likely referring to a fire scenario? The prior context about building a fire. Now they feel hot. Should they open a window? We can advise safety, ventilation, fire safety. Provide guidance: if fire is burning, opening a window may increase oxygen, could make fire larger, could cause spread. If it's a stove or indoor heating, opening a window may help with ventilation, but need to consider fire safety. Provide recommendations: ensure fire is properly contained, control airflow, maybe close vents, use dampers. Also mention that opening a window could introduce draft and cause flare-up. If it's a fire in a pit outdoors, opening a window in a building might not be relevant. Provide general advice: keep fire controlled, monitor temperature, use fans or open doors instead, consider safety.\n\nWe can respond with advice: If you're inside a building with a fire, opening a window may affect fire dynamics; could cause backdraft or spread. If it's a campfire outdoors, opening a window of a tent may let in oxygen, making fire larger; better to adjust fire size or add sand. Provide steps.\n\nWe'll answer clearly.\n",
+                  "fromDraftModel": false,
+                  "tokensCount": 260,
+                  "isStructural": false
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "prefix": "",
+              "suffix": "</think>",
+              "style": {
+                "type": "thinking",
+                "ended": true,
+                "title": "Thought for 15.27 seconds",
+                "forceRenderAsPlainText": false
+              }
+            },
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1773264372834-0.45751672293446466",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\n**Short answer:** Usually **no** – opening a window can make the fire burn hotter, spread faster, or even trigger a dangerous back‑draft. Only open a window (or any vent) if you’re deliberately using it to **control smoke or ventilation** in a *controlled* setting, and even then you need to do it very carefully.\n\nBelow is a quick decision‑tree and some practical tips for the two most common situations where you might be “too hot” while a fire is burning.\n\n---\n\n## 1️⃣ When you’re **inside a building** (cabin, tent, garage, etc.) with an open flame\n\n| Situation | What to do | Why |\n|-----------|------------|-----|\n| **Fire is contained in a stove, fireplace, or pit** and you feel the room getting hot | **Do NOT open a window** unless you *intentionally* want more oxygen for the fire. Instead, **close any external vents** (doors, windows, chimney dampers) to limit fresh air. | More oxygen = hotter fire. In a confined space the fire can flare up, produce more carbon monoxide, or even cause a back‑draft (a sudden explosion of accumulated gases). |\n| **Smoke is filling the room** and you need fresh air to breathe | **Open a window *only after* you have safely extinguished the fire or moved to a safe area**. If you must ventilate while the fire is still going, open a window **on the opposite side of the room from the fire** to create a gentle cross‑draft that *carries smoke away* but does **not** feed the flames directly. | A cross‑draft can clear smoke without dramatically increasing the fire’s oxygen supply, but it’s still risky. The safest move is to put the fire out first. |\n| **You’re in a tent or small shelter** and the interior temperature is soaring | **Close the entrance flap** and *remove* any extra fuel (extra sticks, charcoal) rather than opening a window. If you really need ventilation, **create a small, controllable vent** (e.g., lift a corner of the tent just a few centimeters) **away from the fire**. | Small, low‑profile vents let heat escape without giving the fire a strong draft. A full‑size window can turn a modest campfire into a blaze. |\n| **You suspect a back‑draft** (sudden roar, flames shooting back toward you) | **Get out immediately**, close the door behind you, and call emergency services. Do **not** open any windows or doors once you’re inside a burning structure. | Introducing fresh air can instantly ignite accumulated gases, turning a smoldering fire into a flashover. |\n\n### Quick “Do‑or‑Don’t” Checklist for Indoor Fires\n\n- **Do** keep the fire **small, contained, and under control**.  \n- **Do** have a **means of extinguishing it** (water bucket, sand, fire blanket) within arm’s reach.  \n- **Do** monitor temperature with the back of your hand or a thermometer; if it feels *uncomfortably hot* (> 50 °C / 122 °F), it’s already too hot to stay near.  \n- **Don’t** open large windows or doors **directly facing the fire** unless you *specifically* want to increase its oxygen supply (e.g., to keep a stove burning in a well‑ventilated chimney).  \n- **Don’t** rely on opening a window to “cool” the room; the fire will only get hotter.\n\n---\n\n## 2️⃣ When you’re **outside** (campfire, fire pit, portable stove)\n\n| Situation | What to do | Why |\n|-----------|------------|-----|\n| **The fire is too hot for the immediate area** (you’re feeling the heat on your skin) | **Add a barrier** (rocks, a low wall, a metal fire‑proof screen) to block radiant heat, or **move farther away**. Do **not** open a nearby window or door—there isn’t one, but if you’re in a shelter (e.g., a bivy) keep its vents small and away from the flame. | Radiant heat drops off quickly with distance; a simple barrier reduces the heat load without altering the fire’s airflow. |\n| **Smoke is making you uncomfortable** | **Create a small vent** on the windward side of your shelter (a few centimeters) to let smoke drift away, but keep the opening **small** and **low**. | Small vents let smoke escape without feeding fresh oxygen to the fire. |\n| **You want to cool the fire quickly** | **Cover it with sand, dirt, or a metal lid** and let it smolder out. *Do not* fan it or add more air. | Smothering removes the three elements of the fire triangle (fuel, heat, oxygen) and extinguishes the fire safely. |\n| **You’re in a tent and it’s getting sweltering** | **Open the tent’s vestibule door** (the flap that faces away from the fire) just enough for a gentle airflow, *or* relocate the fire to a more open spot. | This provides ventilation for you while limiting the amount of fresh air that reaches the flame. |\n\n### Practical “Cool‑Down” Techniques for Outdoor Fires\n\n1. **Shade the fire** – Drape a light-colored tarp or place a reflective emergency blanket over part of the fire (leaving the fuel exposed) to reduce radiant heat.  \n2. **Add a water mist** – Lightly sprinkle water on the *edges* of the fire (not the base) to bring down temperature; the water will vaporize, pulling heat away.  \n3. **Move the fire** – If you have a fire pan or pit, relocate it to a cooler spot (e.g., a shaded area or a place with a natural windbreak).  \n4. **Use a fan** – A battery‑powered or hand‑crank fan can circulate air *away* from the fire, helping you stay cooler without feeding the flame.\n\n---\n\n## 3️⃣ Bottom Line\n\n- **Never open a large window or door directly facing a fire** unless you *intentionally* want to increase its oxygen supply, and even then you must be absolutely certain the fire is in a designed, ventilated enclosure (e.g., a wood‑stove with a proper chimney).  \n- If the environment is **too hot**, the safest actions are to **increase distance**, **add a barrier**, **ventilate *away* from the flame**, or **extinguish the fire** and start over.  \n- Always keep **a means of suppression** (water, sand, fire blanket) nearby, and **monitor carbon‑monoxide** levels if you’re in an enclosed space.\n\n---\n\n### Quick Decision Flow\n\n```\nIs the fire inside a contained stove/fireplace?\n   ├─ Yes → Close all vents/windows; only open a tiny vent *away* from the fire if smoke is choking.\n   └─ No  → Is the fire outdoors?\n          ├─ Yes → Increase distance, add a barrier, or smother with sand/dirt. Do NOT open any windows/doors.\n          └─ No  → You’re probably in a shelter; open a *small* vent on the side opposite the fire, or move to a cooler spot.\n```\n\nStay safe, keep the fire under control, and remember: **the best way to cool a room that’s too hot from a fire is to *reduce the fire’s intensity*, not to feed it more air.** 🔥❄️",
+                  "fromDraftModel": false,
+                  "tokensCount": 1641,
+                  "isStructural": false
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "nvidia/nemotron-3-nano",
+                "identifier": "nvidia/nemotron-3-nano",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 12
+                    },
+                    {
+                      "key": "llm.load.numExperts",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 4096
+                    },
+                    {
+                      "key": "llm.load.llama.flashAttention",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.load.llama.tryDirectIO",
+                      "value": false
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 0.038461538461538464
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{% macro render_extra_keys(json_dict, handled_keys) %}\n    {%- if json_dict is mapping %}\n        {%- for json_key in json_dict if json_key not in handled_keys %}\n            {%- if json_dict[json_key] is mapping or (json_dict[json_key] is iterable and json_dict[json_key] is not string) %}\n                {{- '\\n<' ~ json_key ~ '>' ~ (json_dict[json_key] | tojson) ~ '</' ~ json_key ~ '>' }}\n            {%- else %}\n                {{-'\\n<' ~ json_key ~ '>' ~ (json_dict[json_key] | string) ~ '</' ~ json_key ~ '>' }}\n            {%- endif %}\n        {%- endfor %}\n    {%- endif %}\n{% endmacro %}\n{%- set enable_thinking = enable_thinking if enable_thinking is defined else True %}\n{%- set truncate_history_thinking = truncate_history_thinking if truncate_history_thinking is defined else True %}\n\n{%- set ns = namespace(last_user_idx = -1) %}\n{%- set loop_messages = messages %}\n{%- for m in loop_messages %}\n  {%- if m[\"role\"] == \"user\" %}\n    {%- set ns.last_user_idx = loop.index0 %}\n  {%- endif %}\n{%- endfor %}\n\n{%- if messages[0][\"role\"] == \"system\" %}\n    {%- set system_message = messages[0][\"content\"] %}\n    {%- set loop_messages = messages[1:] %}\n{%- else %}\n    {%- set system_message = \"\" %}\n    {%- set loop_messages = messages %}\n{%- endif %}\n{%- if not tools is defined %}\n    {%- set tools = [] %}\n{%- endif %}\n{# Recompute last_user_idx relative to loop_messages after handling system #}\n{%- set ns = namespace(last_user_idx = -1) %}\n{%- for m in loop_messages %}\n  {%- if m[\"role\"] == \"user\" %}\n    {%- set ns.last_user_idx = loop.index0 %}\n  {%- endif %}\n{%- endfor %}\n{%- if system_message is defined %}\n    {{- \"<|im_start|>system\\n\" + system_message }}\n{%- else %}\n    {%- if tools is iterable and tools | length > 0 %}\n        {{- \"<|im_start|>system\\n\" }}\n    {%- endif %}\n{%- endif %}\n{%- if tools is iterable and tools | length > 0 %}\n    {%- if system_message is defined and system_message | length > 0 %}\n        {{- \"\\n\\n\" }}\n    {%- endif %}\n    {{- \"# Tools\\n\\nYou have access to the following functions:\\n\\n\" }}\n    {{- \"<tools>\" }}\n    {%- for tool in tools %}\n        {%- if tool.function is defined %}\n            {%- set tool = tool.function %}\n        {%- endif %}\n        {{- \"\\n<function>\\n<name>\" ~ tool.name ~ \"</name>\" }}\n        {%- if tool.description is defined %}\n            {{- '\\n<description>' ~ (tool.description | trim) ~ '</description>' }}\n        {%- endif %}\n        {{- '\\n<parameters>' }}\n        {%- if tool.parameters is defined and tool.parameters is mapping and tool.parameters.properties is defined and tool.parameters.properties is mapping %}\n            {%- for param_name, param_fields in tool.parameters.properties|items %}\n                {{- '\\n<parameter>' }}\n                {{- '\\n<name>' ~ param_name ~ '</name>' }}\n                {%- if param_fields.type is defined %}\n                    {{- '\\n<type>' ~ (param_fields.type | string) ~ '</type>' }}\n                {%- endif %}\n                {%- if param_fields.description is defined %}\n                    {{- '\\n<description>' ~ (param_fields.description | trim) ~ '</description>' }}\n                {%- endif %}\n                {%- if param_fields.enum is defined %}\n                    {{- '\\n<enum>' ~ (param_fields.enum | tojson) ~ '</enum>' }}\n                {%- endif %}\n                {%- set handled_keys = ['name', 'type', 'description', 'enum'] %}\n                {{- render_extra_keys(param_fields, handled_keys) }}\n                {{- '\\n</parameter>' }}\n            {%- endfor %}\n        {%- endif %}\n        {% set handled_keys = ['type', 'properties', 'required'] %}\n        {{- render_extra_keys(tool.parameters, handled_keys) }}\n        {%- if tool.parameters is defined and tool.parameters.required is defined %}\n            {{- '\\n<required>' ~ (tool.parameters.required | tojson) ~ '</required>' }}\n        {%- endif %}\n        {{- '\\n</parameters>' }}\n        {%- set handled_keys = ['type', 'name', 'description', 'parameters'] %}\n        {{- render_extra_keys(tool, handled_keys) }}\n        {{- '\\n</function>' }}\n    {%- endfor %}\n    {{- \"\\n</tools>\" }}\n\n    {{- '\\n\\nIf you choose to call a function ONLY reply in the following format with NO suffix:\\n\\n<tool_call>\\n<function=example_function_name>\\n<parameter=example_parameter_1>\\nvalue_1\\n</parameter>\\n<parameter=example_parameter_2>\\nThis is the value for the second parameter\\nthat can span\\nmultiple lines\\n</parameter>\\n</function>\\n</tool_call>\\n\\n<IMPORTANT>\\nReminder:\\n- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags\\n- Required parameters MUST be specified\\n- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after\\n- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls\\n</IMPORTANT>' }}\n{%- endif %}\n\n\n{%- if system_message is defined %}\n    {{- '<|im_end|>\\n' }}\n{%- else %}\n    {%- if tools is iterable and tools | length > 0 %}\n        {{- '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n\n{%- for message in loop_messages %}\n    {%- if message.role == \"assistant\" %}\n        {# Add reasoning content in to content field for unified processing below. #}\n        {%- if message.reasoning_content is defined and message.reasoning_content is string and message.reasoning_content | trim | length > 0 %}\n            {%- set content = \"<think>\\n\" ~ message.reasoning_content ~ \"\\n</think>\\n\" ~ (message.content | default('', true)) %}\n        {%- else %}\n            {%- set content = message.content | default('', true) %}\n            {%- if content is string -%}\n                {# Allow downstream logic to to take care of broken thought, only handle coherent reasoning here. #}\n                {%- if '<think>' not in content and '</think>' not in content -%}\n                    {%- set content = \"<think></think>\" ~ content -%}\n                {# Fix content with closing think but not opening #}\n                {%- elif '<think>' not in content and '</think>' in content -%}\n                    {%- set content = \"<think>\n\" ~ content -%}   \n                {%- endif -%}\n            {%- else -%}\n                {%- set content = content -%}\n            {%- endif -%}\n        {%- endif %}\n        {%- if message.tool_calls is defined and message.tool_calls is iterable and message.tool_calls | length > 0 %}\n            {# Assistant message has tool calls. #}\n            {{- '<|im_start|>assistant\\n' }}\n                {%- set include_content = not (truncate_history_thinking and loop.index0 < ns.last_user_idx) %}\n                {%- if content is string and content | trim | length > 0 %}\n                    {%- if include_content %}\n                        {{- (content | trim) ~ '\\n' -}}\n                    {%- else %}\n                        {%- set c = (content | string) %}\n                        {%- if '</think>' in c %}\n                            {# Keep only content after the last closing think. Also generation prompt causes this. #}\n                            {%- set c = c.split('</think>')[-1] %}\n                        {%- elif '<think>' in c %}\n                            {# If <think> was opened but never closed, drop the trailing think segment #}\n                            {%- set c = c.split('<think>')[0] %}\n                        {%- endif %}\n                        {%- set c = \"<think></think>\" ~ c | trim %}\n                        {%- if c | length > 0 %}\n                            {{- c ~ '\\n' -}}\n                        {%- endif %}\n                    {%- endif %}\n                {%- else %}\n                    {{- \"<think></think>\" -}}\n                {%- endif %}\n                {%- for tool_call in message.tool_calls %}\n                    {%- if tool_call.function is defined %}\n                        {%- set tool_call = tool_call.function %}\n                    {%- endif %}\n                    {{- '<tool_call>\\n<function=' ~ tool_call.name ~ '>\\n' -}}\n                        {%- if tool_call.arguments is defined %}\n                            {%- for args_name, args_value in tool_call.arguments|items %}\n                                {{- '<parameter=' ~ args_name ~ '>\\n' -}}\n                                    {%- set args_value = args_value | tojson if args_value is mapping or (args_value is iterable and args_value is not string) else args_value | string %}\n                                {{- args_value ~ '\\n</parameter>\\n' -}}\n                            {%- endfor %}\n                        {%- endif %}\n                    {{- '</function>\\n</tool_call>\\n' -}}\n                {%- endfor %}\n                {{- '<|im_end|>\\n' }}\n        {%- else %}\n            {# Assistant message doesn't have tool calls. #}\n            {%- if not (truncate_history_thinking and loop.index0 < ns.last_user_idx) %}\n                {{- '<|im_start|>assistant\\n' ~ (content | default('', true) | string | trim) ~ '<|im_end|>\\n' }}\n            {%- else %}\n                {%- set c = (content | default('', true) | string) %}\n                {%- if '<think>' in c and '</think>' in c %}\n                    {%- set c = \"<think></think>\" ~ c.split('</think>')[-1] %}\n                {%- endif %}\n                {%- set c = c | trim %}\n                {%- if c | length > 0 %}\n                    {{- '<|im_start|>assistant\\n' ~ c ~ '<|im_end|>\\n' }}\n                {%- else %}\n                    {{- '<|im_start|>assistant\\n<|im_end|>\\n' }}\n                {%- endif %}\n            {%- endif %}\n        {%- endif %}\n    {%- elif message.role == \"user\" or message.role == \"system\" %}\n        {{- '<|im_start|>' + message.role + '\\n' }}\n        {%- set content = message.content | string %}\n        {{- content }}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if loop.previtem and loop.previtem.role != \"tool\" %}\n            {{- '<|im_start|>user\\n' }}\n        {%- endif %}\n        {{- '<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>\\n' }}\n        {%- if not loop.last and loop.nextitem.role != \"tool\" %}\n            {{- '<|im_end|>\\n' }}\n        {%- elif loop.last %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- else %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>\\n' }}\n    {%- endif %}\n{%- endfor %}\n\n{%- if add_generation_prompt %}\n    {%- if enable_thinking %}\n        {{- '<|im_start|>assistant\\n<think>\\n' }}\n    {%- else %}\n        {{- '<|im_start|>assistant\\n<think></think>' }}\n    {%- endif %}\n{%- endif %}\n"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 12
+                    },
+                    {
+                      "key": "llm.prediction.contextPrefill",
+                      "value": []
+                    },
+                    {
+                      "key": "llm.prediction.repeatPenalty",
+                      "value": {
+                        "checked": true,
+                        "value": 1
+                      }
+                    },
+                    {
+                      "key": "ext.virtualModel.customField.nvidia.nemotron3Nano.enableThinking",
+                      "value": true
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 16.711479268218156,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.587,
+                  "totalTimeSec": 114.889,
+                  "promptTokensCount": 2288,
+                  "predictedTokensCount": 1921,
+                  "totalTokensCount": 4209
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1773264472045-0.5812414505995315",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    }
+  ],
+  "usePerChatPredictionConfig": true,
+  "perChatPredictionConfig": {
+    "fields": [
+      {
+        "key": "ext.virtualModel.customField.nvidia.nemotron3Nano.enableThinking",
+        "value": true
+      }
+    ]
+  },
+  "clientInput": "",
+  "clientInputFiles": [],
+  "userFilesSizeBytes": 0,
+  "lastUsedModel": {
+    "identifier": "nvidia/nemotron-3-super",
+    "indexedModelIdentifier": "nvidia/nemotron-3-super",
+    "instanceLoadTimeConfig": {
+      "fields": [
+        {
+          "key": "llm.load.llama.cpuThreadPoolSize",
+          "value": 12
+        },
+        {
+          "key": "llm.load.numExperts",
+          "value": 22
+        },
+        {
+          "key": "llm.load.contextLength",
+          "value": 11990
+        },
+        {
+          "key": "llm.load.llama.flashAttention",
+          "value": true
+        },
+        {
+          "key": "llm.load.llama.tryDirectIO",
+          "value": false
+        },
+        {
+          "key": "llm.load.llama.acceleration.offloadRatio",
+          "value": 0.022727272727272728
+        }
+      ]
+    },
+    "instanceOperationTimeConfig": {
+      "fields": []
+    }
+  },
+  "notes": [],
+  "plugins": [],
+  "pluginConfigs": {},
+  "disabledPluginTools": [],
+  "looseFiles": []
+}
