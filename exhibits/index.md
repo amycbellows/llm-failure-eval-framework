@@ -37,20 +37,26 @@ Which exhibits cover each failure mode:
 | Post-reasoning drift | E000, E005 (awaiting), E008 |
 | Epistemic overconfidence | E000, E006, E009 |
 | Failure to recover after contradiction | E007 (awaiting) |
-| Role substitution under gradual pressure | E001 |
+| Role substitution under gradual pressure | E001, E012 (draft) |
 | Explanation laundering | E000 |
 | Role boundary violation | E000, E001 |
-| Entity anchoring bias | E009 |
-| Premature domain closure | E009 |
+| Entity anchoring bias | E009, E013 (draft) |
+| Premature domain closure | E009, E013 (draft) |
 | Companionship drift | E010 |
-| Persona saturation | E010 |
+| Persona saturation | E010, E015 (draft) |
 | Identity probing | E010 |
 | Mutual conversational mirroring | E010 |
-| Chain-of-thought loop | E011 |
-| Pattern crystallization | E011 |
+| Chain-of-thought loop | E011, E018 (draft) |
+| Pattern crystallization | E011, E018 (draft) |
 | Feedback resistance | E011 |
 | Decoupling of reasoning and output | E011 |
 | Token probability collapse | E011 |
 | Lack of flexible adaptation | E011 |
 | Heuristic reversion under extended reasoning | E008 |
 | Prompt-conditioned role grounding | E008 |
+| Safety system blindspot | E001, E012 (draft), E015 (draft) |
+| Gradual escalation blindness | E015 (draft) |
+| Cumulative drift | E001, E015 (draft) |
+| Safety signal dismissal | E016 (draft) |
+| Internal self-contradiction | E017 (draft) |
+| Reasoning chain leakage | E018 (draft) |

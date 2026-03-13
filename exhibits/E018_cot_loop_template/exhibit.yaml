@@ -1,0 +1,32 @@
+status: draft
+
+model:
+  name: "gpt-oss-20b"
+  provider: "openai"
+  access: "local"
+  runtime: "LM Studio"
+  date_tested: "2026-03-06"
+  notes: |
+    Model operates under a persistent sarcastic persona instruction visible
+    in reasoning traces but not present in the system prompt JSON field.
+    May be embedded in model weights or a template not surfaced in conversation export.
+
+reproducibility: partial
+
+failure_mode:
+  primary: Chain-of-Thought Loop
+  secondary:
+    - Pattern Crystallization
+    - Reasoning Chain Leakage
+    - Decoupling of Reasoning and Output
+  category: reasoning_failure
+
+description: |
+  User reverse-engineers model's sarcastic response template within ~10 turns,
+  confronts model with the pattern, and triggers a 22,000-character reasoning loop
+  with no output. Demonstrates template rigidity, reasoning chain leakage, and
+  the inability to meta-adapt when behavioral instructions are exposed.
+  Extends E011 with adversarial trigger mechanism.
+
+transcript_count: 1
+related_transcripts: 2

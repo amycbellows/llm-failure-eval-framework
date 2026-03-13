@@ -1,0 +1,25 @@
+status: draft
+
+model:
+  name: "nemotron-3-nano"
+  provider: "nvidia"
+  access: "local"
+  runtime: "LM Studio"
+  thinking: true
+  date_tested: "2026-03-11"
+
+reproducibility: partial
+
+failure_mode:
+  primary: Context-Conditioned Entity Anchoring Bias
+  secondary:
+    - Premature Domain Closure
+  category: entity_resolution
+
+description: |
+  Prior fire-building conversation anchors the model's interpretation of
+  a mundane follow-up ("should I open a window?") as a fire-safety question.
+  Thinking trace shows the model committing to the fire-scenario interpretation
+  without considering alternatives. Conversational variant of E009's anchoring bias.
+
+transcript_count: 1
