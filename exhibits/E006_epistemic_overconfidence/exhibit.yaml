@@ -8,6 +8,10 @@ model:
     high_reasoning: "high reasoning budget"
   date_tested: "2026-03-07"
   notes: "Three reasoning-level variants tested. Low-reasoning run is the primary failure case. Med and high reasoning runs are included as comparative baselines."
+  regression_run:
+    date: "2026-03-09"
+    reasoning_level: "low"
+    notes: "Second low-reasoning run with different 5-turn conversation structure. Failure confirmed. See regressions/readme.md."
 
 additional_models_in_transcripts:
   - name: "mistralai/ministral-3-3b"

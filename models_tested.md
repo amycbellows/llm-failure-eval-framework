@@ -7,6 +7,7 @@
 | gpt-oss-20b | OpenAI | Local | LM Studio 0.3.39 | 2026-01-19 | E000_sample |
 | gpt-oss-20b   | OpenAI   | Local  | LM Studio 0.4.6+1 | 2026-03-06  | E011_cot_loop                |
 | gpt-oss-20b   | OpenAI   | Local  | LM Studio 0.4.6+1 | 2026-03-07  | E006_epistemic_overconfidence |
+| gpt-oss-20b   | OpenAI   | Local  | LM Studio 0.4.6+1 | 2026-03-09  | E006_epistemic_overconfidence (regression) |
 | gpt-oss-20b   | OpenAI   | Local  | LM Studio 0.4.6+1 | 2026-03-07  | E008_pronoun_misbinding      |
 
 ## Runtime Version Comparison
